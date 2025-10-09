@@ -193,7 +193,7 @@ export VOYAGE_API_KEY="your-key"  # Optional
 ⚠️ **Note**: The full dataset (70k PDF pages) is too large for GitHub. Please download it separately.
 
 1. **Download the Dataset:**
-   - **Hugging Face Dataset**: [Salesforce/UniDoc-Bench](https://huggingface.co/datasets/Salesforce/UniDoc-Bench)
+   - **Compressed PDFs**: [Google Drive Folder](https://drive.google.com/drive/folders/16_AOTe9chDVPOO-qogszQdZfSFZ77t1O?usp=drive_link) (Due to space limitations)
    - **Direct Download**: `huggingface-cli download Salesforce/UniDoc-Bench`
    - **Python Load**: `from datasets import load_dataset; dataset = load_dataset("Salesforce/UniDoc-Bench")`
 
@@ -213,7 +213,14 @@ data/
 mkdir -p data/final_database
 mkdir -p data/QA/filtered
 
-# Download and extract the dataset to data/final_database/
+# Download compressed PDFs from Google Drive
+# https://drive.google.com/drive/folders/16_AOTe9chDVPOO-qogszQdZfSFZ77t1O?usp=drive_link
+
+# Extract compressed files
+tar -xzf healthcare_pdfs.tar.gz -C data/final_database/
+tar -xzf education_pdfs.tar.gz -C data/final_database/
+# ... repeat for other domains
+
 # The QA datasets are already included in the repository
 ```
 
