@@ -1,5 +1,9 @@
 # UNIDOC-BENCH
 
+[![arXiv](https://img.shields.io/badge/arXiv-2510.03663-b31b1b.svg)](https://arxiv.org/abs/2510.03663)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+
 A unified benchmark for document-centric multimodal retrieval-augmented generation (MM-RAG). This project provides the first large-scale, realistic benchmark for MM-RAG built from 70k real-world PDF pages across eight domains, with tools for document tagging, dataset synthesis, baseline implementations, and evaluation frameworks.
 
 ## Overview
@@ -275,7 +279,7 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 
 For questions and support:
 - Open an issue on GitHub
-- Contact: [your-email@domain.com]
+- Contact: [becky.peng@salesforce.com]
 
 ## Acknowledgments
 
