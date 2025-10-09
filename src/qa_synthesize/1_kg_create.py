@@ -1,5 +1,3 @@
-import os
-import json
 from ragas.testset.graph import KnowledgeGraph
 from ragas.testset.graph import Node, NodeType
 from langchain_community.document_loaders import DirectoryLoader, JSONLoader
@@ -7,14 +5,9 @@ from ragas.testset.transforms import default_transforms, apply_transforms
 from ragas.embeddings import LangchainEmbeddingsWrapper
 from ragas.llms import LangchainLLMWrapper
 from langchain_openai import ChatOpenAI
-from langchain_openai import OpenAIEmbeddings
 from langchain_experimental.text_splitter import SemanticChunker
 from langchain_openai.embeddings import OpenAIEmbeddings
 from langchain_community.document_loaders import TextLoader
-from langchain_text_splitters import (
-    CharacterTextSplitter,
-    RecursiveCharacterTextSplitter,
-)
 import argparse
 
 if __name__ == "__main__":
