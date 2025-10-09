@@ -6,24 +6,6 @@ A unified benchmark for document-centric multimodal retrieval-augmented generati
 
 UNIDOC-BENCH is designed to evaluate and benchmark multimodal document understanding systems across various domains including healthcare, finance, legal, education, and more. The benchmark extracts and links evidence from text, tables, and figures, then generates 1,600 multimodal QA pairs spanning factual retrieval, comparison, summarization, and logical reasoning queries. It supports apples-to-apples comparison across four paradigms: (1) text-only, (2) image-only, (3) multimodal text-image fusion, and (4) multimodal joint retrieval.
 
-## Key Figures
-
-### Benchmark Overview
-![UNIDOC-BENCH Overview](https://via.placeholder.com/800x400/4A90E2/FFFFFF?text=UNIDOC-BENCH+Benchmark+Overview)
-
-*Figure 1: UNIDOC-BENCH benchmark overview showing the four evaluation paradigms and multimodal document processing pipeline.*
-
-### Dataset Statistics
-![Dataset Statistics](https://via.placeholder.com/600x300/7ED321/FFFFFF?text=70k+PDF+Pages+%7C+1.6k+QA+Pairs+%7C+8+Domains)
-
-*Figure 2: Dataset composition with 70,000 real-world PDF pages across 8 domains, generating 1,600 multimodal QA pairs.*
-
-
-### Performance Comparison
-![Performance Results](https://via.placeholder.com/700x400/F5A623/FFFFFF?text=Multimodal+Text-Image+Fusion+%3E+Unimodal+%3E+Joint+Retrieval)
-
-*Figure 4: Experimental results showing that multimodal text-image fusion RAG systems consistently outperform both unimodal and jointly multimodal embedding-based retrieval approaches.*
-
 ## Key Findings
 
 Based on the comprehensive evaluation in the [UNIDOC-BENCH paper](https://arxiv.org/abs/2510.03663), several important insights emerge:
