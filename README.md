@@ -1,8 +1,9 @@
 # UNIDOC-BENCH
 
 [![arXiv](https://img.shields.io/badge/arXiv-2510.03663-b31b1b.svg)](https://arxiv.org/abs/2510.03663)
-[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+[![Dataset](https://img.shields.io/badge/🤗%20Hugging%20Face-Dataset-blue)](https://huggingface.co/datasets/Salesforce/UniDoc-Bench)
 
 A unified benchmark for document-centric multimodal retrieval-augmented generation (MM-RAG). This project provides the first large-scale, realistic benchmark for MM-RAG built from 70k real-world PDF pages across eight domains, with tools for document tagging, dataset synthesis, baseline implementations, and evaluation frameworks.
 
@@ -189,15 +190,31 @@ export VOYAGE_API_KEY="your-key"  # Optional
 
 ### Data Preparation
 
-1. **Document Structure:**
+⚠️ **Note**: The full dataset (70k PDF pages) is too large for GitHub. Please download it separately.
+
+1. **Download the Dataset:**
+   - **Hugging Face Dataset**: [Salesforce/UniDoc-Bench](https://huggingface.co/datasets/Salesforce/UniDoc-Bench)
+   - **Direct Download**: `huggingface-cli download Salesforce/UniDoc-Bench`
+   - **Python Load**: `from datasets import load_dataset; dataset = load_dataset("Salesforce/UniDoc-Bench")`
+
+2. **Document Structure:**
 ```
 data/
 ├── final_database/
-│   ├── healthcare_database/     # Text chunks
-│   ├── healthcare_elements/     # Visual elements
+│   ├── healthcare/     # PDFs (download separately)
 │   └── ...
 └── QA/
-    └── filtered/               # Processed QA datasets
+    └── filtered/               # Processed QA datasets (included in repo)
+```
+
+3. **Setup Data Directory:**
+```bash
+# Create data directory structure
+mkdir -p data/final_database
+mkdir -p data/QA/filtered
+
+# Download and extract the dataset to data/final_database/
+# The QA datasets are already included in the repository
 ```
 
 ## Usage Examples
@@ -273,7 +290,11 @@ If you use UNIDOC-BENCH in your research, please cite:
 
 ## License
 
-This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE.txt) file for details.
+This project is licensed under the [Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/) - see the [LICENSE](LICENSE.txt) file for details.
+
+### Important Usage Notice
+
+**This dataset was generated using GPT-4.1 and should not be used to develop models that compete with OpenAI.**
 
 ## Support
 
