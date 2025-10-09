@@ -6,7 +6,40 @@
 
 A unified benchmark for document-centric multimodal retrieval-augmented generation (MM-RAG). This project provides the first large-scale, realistic benchmark for MM-RAG built from 70k real-world PDF pages across eight domains, with tools for document tagging, dataset synthesis, baseline implementations, and evaluation frameworks.
 
-<img src="https://github.com/SalesforceAIResearch/UniDoc-Bench/blob/main/image_README/sunburst_fig_domains.png" alt="UNIDOC-BENCH Domain Distribution" width="50%">
+<img src="https://github.com/SalesforceAIResearch/UniDoc-Bench/blob/main/image_README/sunburst_fig_domains.png" alt="UNIDOC-BENCH Domain Distribution" width="50%" style="display: block; margin: 0 auto;">
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Key Findings](#key-findings)
+  - [Performance Insights](#-performance-insights)
+  - [Benchmark Characteristics](#-benchmark-characteristics)
+  - [Analysis Capabilities](#-analysis-capabilities)
+- [Project Structure](#project-structure)
+- [Main Components](#main-components)
+  - [Document Tagging](#1-document-tagging-srcvllm_taggingpy)
+  - [Dataset Synthesis](#2-dataset-synthesis-srcqa_synthesize)
+  - [Baseline Implementations](#3-baseline-implementations-srcbaselines)
+  - [Evaluation Framework](#4-evaluation-framework-srcevaluation)
+- [Quick Start](#quick-start)
+  - [Prerequisites](#prerequisites)
+  - [Document Tagging](#1-document-tagging-1)
+  - [Dataset Synthesis](#2-dataset-synthesis-1)
+  - [Run Baselines](#3-run-baselines)
+  - [Evaluation](#4-evaluation)
+- [Configuration](#configuration)
+  - [Environment Setup](#environment-setup)
+  - [Data Preparation](#data-preparation)
+- [Usage Examples](#usage-examples)
+  - [Document Processing](#document-processing)
+  - [QA Generation](#qa-generation)
+  - [Evaluation](#evaluation-1)
+- [Contributing](#contributing)
+  - [Development Setup](#development-setup)
+- [Citation](#citation)
+- [License](#license)
+- [Support](#support)
+- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
