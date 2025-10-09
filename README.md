@@ -2,12 +2,11 @@
 
 [![arXiv](https://img.shields.io/badge/arXiv-2510.03663-b31b1b.svg)](https://arxiv.org/abs/2510.03663)
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
-[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![Dataset](https://img.shields.io/badge/🤗%20Hugging%20Face-Dataset-blue)](https://huggingface.co/datasets/Salesforce/UniDoc-Bench)
 
 A unified benchmark for document-centric multimodal retrieval-augmented generation (MM-RAG). This project provides the first large-scale, realistic benchmark for MM-RAG built from 70k real-world PDF pages across eight domains, with tools for document tagging, dataset synthesis, baseline implementations, and evaluation frameworks.
 
-![UNIDOC-BENCH Domain Distribution](https://github.com/SalesforceAIResearch/UniDoc-Bench/blob/main/image_README/sunburst_fig_domains.png)
+<img src="https://github.com/SalesforceAIResearch/UniDoc-Bench/blob/main/image_README/sunburst_fig_domains.png" alt="UNIDOC-BENCH Domain Distribution" width="50%">
 
 ## Overview
 
