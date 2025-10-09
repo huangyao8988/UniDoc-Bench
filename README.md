@@ -193,9 +193,8 @@ export VOYAGE_API_KEY="your-key"  # Optional
 ⚠️ **Note**: The full dataset (70k PDF pages) is too large for GitHub. Please download it separately.
 
 1. **Download the Dataset:**
-   - **Compressed PDFs**: [Google Drive Folder](https://drive.google.com/drive/folders/16_AOTe9chDVPOO-qogszQdZfSFZ77t1O?usp=drive_link) (Due to space limitations)
-   - **Direct Download**: `huggingface-cli download Salesforce/UniDoc-Bench`
-   - **Python Load**: `from datasets import load_dataset; dataset = load_dataset("Salesforce/UniDoc-Bench")`
+   - > 📁 **Compressed PDFs**: [Google Drive Folder](https://drive.google.com/drive/folders/16_AOTe9chDVPOO-qogszQdZfSFZ77t1O?usp=drive_link) (Due to space limitations)
+
 
 2. **Document Structure:**
 ```
@@ -299,9 +298,9 @@ If you use UNIDOC-BENCH in your research, please cite:
 
 This project is licensed under the [Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/) - see the [LICENSE](LICENSE.txt) file for details.
 
-### Important Usage Notice
+### ⚠️ Important Usage Notice
 
-**This dataset was generated using GPT-4.1 and should not be used to develop models that compete with OpenAI.**
+**🚫 This dataset was generated using GPT-4.1 and should not be used to develop models that compete with OpenAI.**
 
 ## Support
 
