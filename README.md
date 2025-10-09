@@ -7,6 +7,8 @@
 
 A unified benchmark for document-centric multimodal retrieval-augmented generation (MM-RAG). This project provides the first large-scale, realistic benchmark for MM-RAG built from 70k real-world PDF pages across eight domains, with tools for document tagging, dataset synthesis, baseline implementations, and evaluation frameworks.
 
+![UNIDOC-BENCH Domain Distribution](https://github.com/SalesforceAIResearch/UniDoc-Bench/blob/main/image_README/sunburst_fig_domains.png)
+
 ## Overview
 
 UNIDOC-BENCH is designed to evaluate and benchmark multimodal document understanding systems across various domains including healthcare, finance, legal, education, and more. The benchmark extracts and links evidence from text, tables, and figures, then generates 1,600 multimodal QA pairs spanning factual retrieval, comparison, summarization, and logical reasoning queries. It supports apples-to-apples comparison across four paradigms: (1) text-only, (2) image-only, (3) multimodal text-image fusion, and (4) multimodal joint retrieval.
@@ -193,8 +195,31 @@ export VOYAGE_API_KEY="your-key"  # Optional
 ⚠️ **Note**: The full dataset (70k PDF pages) is too large for GitHub. Please download it separately.
 
 1. **Download the Dataset:**
-   - > 📁 **Compressed PDFs**: [Google Drive Folder](https://drive.google.com/drive/folders/16_AOTe9chDVPOO-qogszQdZfSFZ77t1O?usp=drive_link) (Due to space limitations)
+   - > 📁 **Hugging Face Dataset**: [Salesforce/UniDoc-Bench](https://huggingface.co/datasets/Salesforce/UniDoc-Bench) - Complete dataset with all PDFs and QA pairs
 
+   The dataset includes compressed PDF files for each domain that can be used for RAG database construction:
+
+   - [commerce_manufacturing_pdfs.tar.gz](https://huggingface.co/datasets/Salesforce/UniDoc-Bench/blob/main/commerce_manufacturing_pdfs.tar.gz) (529 MB)
+   - [construction_pdfs.tar.gz](https://huggingface.co/datasets/Salesforce/UniDoc-Bench/blob/main/construction_pdfs.tar.gz) (885 MB)
+   - [crm_pdfs.tar.gz](https://huggingface.co/datasets/Salesforce/UniDoc-Bench/blob/main/crm_pdfs.tar.gz) (704 MB)
+   - [education_pdfs.tar.gz](https://huggingface.co/datasets/Salesforce/UniDoc-Bench/blob/main/education_pdfs.tar.gz) (816 MB)
+   - [energy_pdfs.tar.gz](https://huggingface.co/datasets/Salesforce/UniDoc-Bench/blob/main/energy_pdfs.tar.gz) (708 MB)
+   - [finance_pdfs.tar.gz](https://huggingface.co/datasets/Salesforce/UniDoc-Bench/blob/main/finance_pdfs.tar.gz) (360 MB)
+   - [healthcare_pdfs.tar.gz](https://huggingface.co/datasets/Salesforce/UniDoc-Bench/blob/main/healthcare_pdfs.tar.gz) (1.19 GB)
+   - [legal_pdfs.tar.gz](https://huggingface.co/datasets/Salesforce/UniDoc-Bench/blob/main/legal_pdfs.tar.gz) (541 MB)
+
+   ### 📊 Compressed File Sizes
+
+   | Domain | File Size | PDF Count |
+   |--------|-----------|-----------|
+   | 🏥 Healthcare | 1.19 GB | 1,100 |
+   | 🎓 Education | 816.9 MB | 812 |
+   | 🏗️ Construction | 844.2 MB | 736 |
+   | ⚡ Energy | 708.4 MB | 766 |
+   | 👥 CRM | 704.7 MB | 776 |
+   | ⚖️ Legal | 541.4 MB | 911 |
+   | 🏭 Commerce & Manufacturing | 504.9 MB | 719 |
+   | 💰 Finance | 360.8 MB | 57 |
 
 2. **Document Structure:**
 ```
@@ -212,13 +237,24 @@ data/
 mkdir -p data/final_database
 mkdir -p data/QA/filtered
 
-# Download compressed PDFs from Google Drive
-# https://drive.google.com/drive/folders/16_AOTe9chDVPOO-qogszQdZfSFZ77t1O?usp=drive_link
+# Download dataset from Hugging Face
+from huggingface_hub import hf_hub_download
+import tarfile
 
-# Extract compressed files
-tar -xzf healthcare_pdfs.tar.gz -C data/final_database/
-tar -xzf education_pdfs.tar.gz -C data/final_database/
-# ... repeat for other domains
+# Download and extract PDFs for each domain
+domains = ["healthcare", "education", "construction", "crm", "energy", "finance", "commerce_manufacturing", "legal"]
+
+for domain in domains:
+    # Download PDF archive
+    archive_path = hf_hub_download(
+        repo_id="Salesforce/UniDoc-Bench",
+        filename=f"{domain}_pdfs.tar.gz",
+        repo_type="dataset"
+    )
+    
+    # Extract to data directory
+    with tarfile.open(archive_path, 'r:gz') as tar:
+        tar.extractall("data/final_database/")
 
 # The QA datasets are already included in the repository
 ```
