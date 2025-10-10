@@ -2,6 +2,7 @@
 
 [![arXiv](https://img.shields.io/badge/arXiv-2510.03663-b31b1b.svg)](https://arxiv.org/abs/2510.03663)
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-black?logo=github)](https://github.com/SalesforceAIResearch/UniDoc-Bench)
 [![Dataset](https://img.shields.io/badge/🤗%20Hugging%20Face-Dataset-blue)](https://huggingface.co/datasets/Salesforce/UniDoc-Bench)
 
 A unified benchmark for document-centric multimodal retrieval-augmented generation (MM-RAG). This project provides the first large-scale, realistic benchmark for MM-RAG built from 70k real-world PDF pages across eight domains, with tools for document tagging, dataset synthesis, baseline implementations, and evaluation frameworks.
@@ -242,16 +243,16 @@ export VOYAGE_API_KEY="your-key"  # Optional
 
    ### 📊 Compressed File Sizes
 
-   | Domain | File Size | PDF Count |
-   |--------|-----------|-----------|
-   | 🏥 Healthcare | 1.19 GB | 1,100 |
-   | 🎓 Education | 816.9 MB | 812 |
-   | 🏗️ Construction | 844.2 MB | 736 |
-   | ⚡ Energy | 708.4 MB | 766 |
-   | 👥 CRM | 704.7 MB | 776 |
-   | ⚖️ Legal | 541.4 MB | 911 |
-   | 🏭 Commerce & Manufacturing | 504.9 MB | 719 |
-   | 💰 Finance | 360.8 MB | 57 |
+| Domain | File Size | PDF Count |
+|--------|-----------|-----------|
+| 🏥 Healthcare | 1.19 GB | 1,098 |
+| 🎓 Education | 816.9 MB | 812 |
+| 🏗️ Construction | 844.2 MB | 736 |
+| ⚡ Energy | 708.4 MB | 766 |
+| 👥 CRM | 704.7 MB | 776 |
+| ⚖️ Legal | 541.4 MB | 909 |
+| 🏭 Commerce & Manufacturing | 504.9 MB | 719 |
+| 💰 Finance | 360.8 MB | 621 |
 
 2. **Document Structure:**
 ```
