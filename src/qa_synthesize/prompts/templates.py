@@ -754,9 +754,9 @@ def encode_image(image_path):
         return base64.b64encode(image_file.read()).decode("utf-8")
 
 Contexts = ["<<fig-80a961247206cffc00d575b5be36fb93>> FY 2013-14 Actuals FY 2014-15 Actuals FY 2015-16 Actuals FY 2016-17 FY 2017-18 Projections Requested Even though no two audits are the same, the number of audits produced is an industry (ALGA) accepted performance metric as well as a performance metric reported by the Auditor\u2019s Office. The ALGA Benchmarking and Best Practices report states that \u201c\u2026slightly more than three quarters of respondents indicated their audit department used performance measures\u2026(and) 85% agree that the performance measures have been successfully integrated into ongoing management of the audit shop\u201d. The data indicates the Auditor\u2019s Office is producing less than one third of an audit department with 11-16 staff and approximately two thirds of what an audit department with 6-10 staff produce. CBO recognizes that the number of audits issued is not a perfect measure due to variation in scope. However, CBO strongly encourages audit services to review its performance against its peers and use performance management to ensure it is providing the highest quality services at the lowest possible cost. Decision Package Analysis & Recommendations IPR Asst. Program Manager to Full Time, AU_01, $69,870, 0.5 FTE This package requests that the current IPR Assistant Program Manager transition from 0.5 FTE to 1.0 FTE. This request addresses requirements set forth by the state in House Bill 2002 and by the U.S. Department of Justice (DOJ) settlement agreement. A key element of the DOJ settlement is that all investigations be complete within 180 days. To meet this, IPR must complete their portion within a 60-day time frame. IPR strives to complete 45% of cases in a 60- day time frame. The percent of (estimated) cases that are projected to meet that goal in FY 2016-17 fell 5 percentage points from 29% in FY 2015-16 down to 24% in FY 2016-17. These percentages are misleading as they do not adequately reflect changes in workload. Among other things, increased workload and process inefficiencies pose challenges to IPR achieving their goal. As expected, there has been an increase in the total volume of complaints. There are two kinds of complaints: community initiated and Portland Police Bureau (PPB) initiated complaints. Each complaint requires some measure of intake and analysis from the IPR team. Bureau Initated Complaints are Growing Faster than Community Initiated \u2022 The composition of complaints is important because community-initiated 600 complaints often involve force, 500 65% growth and the majority of these are 400 12% growth referred for investigation either by internal affairs or IPR. 300 \u2022 Bureau-initiated complaints 200 Number of PPB Initiated grew 65% in the last year while 100 Complaints community initiated complaints 0 FY 2015-16 Actuals FY 2016-17 Projection Number of Community Initiated Complaints grew 12%. \u2022 Currently, the assistant manager is responsible for reviewing the majority of bureau initiated complaints, which are more time intensive because they include: officer involved shootings, in-custody deaths, and interpersonal workplace conflicts. To offset the additional workload, Council approved two additional investigators in FY 2016-17 bringing the total number of investigators to seven; however, until recently, only six of the seven positions were filled. Legislation that took effect in January 2016 changed criteria such that a significantly higher portion of cases are investigated. The number of cases referred requiring investigation grew 76% in the last year.", "Requested Appropriations With the fiscal year half-way completed, departments have had the opportunity to re-evaluate their current operations and identify any unforeseen needs that have become known. Staff is requesting the Council\u2019s consideration of budget appropriation changes for the General Fund totaling $457,952 with a revenue offset of $391,152. As discussed below, the net cost of $66,800 from these appropriations can be absorbed within the current General Fund budget with no actual cost impact. The appropriations requested for the Wastewater Fund total $50,700 which is the before-mentioned generator carried over from FY 2018-19). Below is further detail on these requested appropriation changes and pending Council direction on these requests, staff will return to the Council at a subsequent meeting for formal approval of these change: City Management"]
-img_path = "YOUR_DATA_PATH/selected_documents/by_class_finance_lang_english_pages_3_textp_85/Corporate_Finance_figures/5406059/figure-3-5.jpg"
-fig = "<<fig-80a961247206cffc00d575b5be36fb93>>"
-img = encode_image(img_path)
+# img_path = "YOUR_DATA_PATH/selected_documents/by_class_finance_lang_english_pages_3_textp_85/Corporate_Finance_figures/5406059/figure-3-5.jpg"
+# fig = "<<fig-80a961247206cffc00d575b5be36fb93>>"
+# img = encode_image(img_path)
 
 user_prompt = [
         {
@@ -765,12 +765,12 @@ user_prompt = [
             + "\n\nThese are the tables and images in the above chunks:",
         }
     ]
-user_prompt += [
-            {
-                "type": "image_url",
-                "image_url": {"url": f"data:image/png;base64,{img}", "name": f"This is the image for {fig} in the above context."},
-            }
-        ]
+# user_prompt += [
+#             {
+#                 "type": "image_url",
+#                 "image_url": {"url": f"data:image/png;base64,{img}", "name": f"This is the image for {fig} in the above context."},
+#             }
+#         ]
 
 assistant_output = """```
 [
