@@ -26,7 +26,7 @@ def is_text_chunk(chunk):
 
 def is_image_chunk(chunk):
     """判断是否为图片类型chunks"""
-    return chunk.get("doc_type_kwd", "") == "image"
+    return chunk.get("doc_type_kwd", "") == "image" and "<table>" not in chunk.get("content", "")
 
 
 def is_table_chunk(chunk):
