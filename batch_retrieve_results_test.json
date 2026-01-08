@@ -10136,7 +10136,2334 @@
       "query_question": "道路交通信息服务 术语",
       "query_index": 2,
       "original_question": "道路交通信息服务 术语"
-    }
+    },
+    {
+      "code": 0,
+      "data": {
+        "chunks": [
+          {
+            "content": "<table><caption>表2识别代码表2识别代码 (续)表2识别代码 (续)</caption>\n<tr><th  >序号</th><th  >代码位数</th><th  >要求</th><th  >举</th><th  >例</th><th></th></tr>\n<tr><td></td><td></td><td  >首行左侧的3位代码表示卸船港，用联合国</td><td></td><td></td><td></td></tr>\n<tr><td></td><td></td><td  >LoCode,不使用国名前缀</td><td></td><td></td><td></td></tr>\n<tr><td></td><td></td><td  >首行第4位标注海运公司集装箱的运输状</td><td></td><td></td><td></td></tr>\n<tr><td></td><td></td><td  >况，用1位阿拉伯数字表示：</td><td></td><td></td><td></td></tr>\n<tr><td></td><td></td><td  >整箱货（FCL)；2一 -拼箱货（LCL）; 一 空箱；4— -船舶转运；5—— 一附加运输</td><td></td><td></td><td></td></tr>\n<tr><td></td><td></td><td  >方式经预先核准以后,经营者根据特别需要</td><td></td><td></td><td></td></tr>\n<tr><td></td><td></td><td  >使用6～9的数码或字母</td><td></td><td></td><td></td></tr>\n<tr><td></td><td></td><td  >首行右侧3位代码为装船港，用联合国Lo Code,不使用国名前缀</td><td></td><td></td><td></td></tr>\n<tr><td></td><td></td><td  >第2行,左侧3位代码示出集装箱总重,单 位为千克(kg)(约值)</td><td></td><td></td><td></td></tr>\n<tr><td></td><td></td><td  >第2行后面的4位代码表示箱主代码（按</td><td></td><td></td><td></td></tr>\n<tr><td></td><td></td><td  >GB/T 1836 的要求)</td><td></td><td></td><td></td></tr>\n<tr><td></td><td></td><td  >第3行的7位代码示出箱号及其核对数字 (按 GB/T 1836 的要求)</td><td  >2 3</td><td></td><td></td></tr>\n<tr><td></td><td></td><td  >第4行左侧3位代码表示集装箱的营运 者,如果是箱主自行营运,则示出GB/T1836 所规定箱主代码的前3位码,后面的“U\"字 省略</td><td></td><td></td><td></td></tr>\n<tr><td></td><td></td><td  >第4行随后的 4位代码表示箱体尺寸和类 型代码(按 GB/T1836的要求)</td><td></td><td  >0</td><td  >2</td></tr>\n<tr><td  >第5行为箱内货物的有关信息，可填人以下 内容。 a）1 危险货物的识别代码： 左侧第1位标出“D”系危险货物代 码,后面的两位代码表示按 IMOIM- DG CODE划分的危险性等级。 b) ）冷藏货物的控温范围： 装运对温度敏感的货物需要非常精确 的控温范围。温度代码“C\"表示摄氏温 度,随后3位代码表示温度的低限。如 “C十13.5”表示温度的低限为十13.5℃。 此类对温度非常敏感的货物应控制其 高限温度尽可能与低限温度接近。</td><td  >D 4] 1</td><td></td><td></td></tr>\n<tr><td  rowspan=2 >9</td><td  rowspan=2 >最多为7</td><td  >c）尺寸超标的货物的识别代码： 1）当货物超宽时,在第4 位示“W”,其 左侧3 位数表示左侧（观察者面向 箱门)超出的尺寸;其右侧3 位数 表示右侧超出的尺寸,单位为厘米 (cm)。 2）当货物超高时,在首位标“H\",随后 的3位数表示超出的尺寸,单位为 厘米(cm)。</td><td  >0|2|0|W|0|4l5 H l0l3l0</td><td></td><td></td></tr>\n<tr><td  >3）当货物既超高又超宽时,前3位数 表示超高有关数据,后 4 位数表示 总的超宽有关数据，如H25W080。 d） 有关货物的特殊情况，如果不能用7位 代码表示清楚，则在首位以“×”示 之,并在报告的后面用文字进行描述</td><td></td><td></td><td></td></tr>\n</table>",
+            "content_ltks": "表 2 识别 代码 表 2 识别 代码 续 表 2 识别 代码 续 序号 代码 位数 要求 举 例 首行 左侧 的 3 位 代码 表示 卸船 港 用 联合国 locod 不 使用 国名 前缀 首行 第 4 位 标注 海运公司 集装箱 的 运输 状 况 用 1 位 阿拉伯数字 表示 整箱 货 fcl 2 一 拼 箱 货 lcl 一 空箱 4 船舶 转运 5 一 附加 运输 方式 经 预先 核准 以后 经营者 根据 特别 需要 使用 69 的 数码 或 字母 首行 右侧 3 位 代码 为 装船 港 用 联合国 lo code 不 使用 国名 前缀 第 2 行 左侧 3 位 代码 示 出 集装箱 总重 单 位 为 千克 kg 约值 第 2 行 后面 的 4 位 代码 表示 箱 主 代码 按 gbt 1836 的 要求 第 3 行 的 7 位 代码 示 出 箱 号 及其 核对 数字 按 gbt 1836 的 要求 23 第 4 行 左侧 3 位 代码 表示 集装箱 的 营运 者 如果 是 箱 主 自行 营运 则 示 出 gb t1836 所 规定 箱 主 代码 的 前 3 位码 后面 的 u 字 省略 第 4 行 随后 的 4 位 代码 表示 箱体 尺寸 和 类 型 代码 按 gb t1836 的 要求 02 第 5 行为 箱内 货物 的 有关 信息 可 填 人 以下 内容 a1 危险 货物 的 识别 代码 左侧 第1 位 标出 d 系 危险 货物 代 码 后面 的 两位 代码 表示 按 imoim dg code 划分 的 危险性 等级 b 冷藏 货物 的 控温 范围 装运 对 温度 敏感 的 货物 需要 非常 精确 的 控温 范围 温度 代码 c 表示 摄氏 温 度 随后 3 位 代码 表示 温度 的 低 限 如 c 十 135 表示 温度 的 低 限为 十 135 此类 对 温度 非常 敏感 的 货物 应 控制 其 高 限 温度 尽可能 与 低 限 温度 接近 d4 19 最多 为 7 c 尺寸 超标 的 货物 的 识别 代码 1 当 货物 超宽 时 在 第 4 位 示 w 其 左侧 3 位数 表示 左侧 观察者 面向 箱门 超出 的 尺寸 其 右侧 3 位数 表示 右侧 超出 的 尺寸 单位 为 厘米 cm 2 当 货物 超高 时 在 首位 标 h 随后 的 3 位数 表示 超出 的 尺寸 单位 为 厘米 cm 02 0 w 0 4l5 h l0l3l0 3 当 货物 既 超高 又 超宽 时 前 3 位数 表示 超高 有关 数据 后 4 位数 表示 总 的 超宽 有关 数据 如 h25w080 d 有关 货物 的 特殊 情况 如果 不能 用 7 位 代码 表示 清楚 则 在 首位 以 示 之 并 在 报告 的 后面 用 文字 进行 描述",
+            "dataset_id": "7ebd0a808e2711f0a685620ff33f7526",
+            "doc_type_kwd": "image",
+            "document_id": "d2da11628e2711f0bdfa620ff33f7526",
+            "document_keyword": "005_已解密.pdf",
+            "highlight": "表2 <em>识别</em> <em>代码</em>表2 <em>识别</em> <em>代码</em>续表 2 <em>识别</em> <em>代码</em>续序号<em>代码</em>位数要求举例首行左侧的 3位<em>代码</em>表示卸船港用联合国locod不使用国名前缀首行第...根据特别需要使用69的数码或字母首行右侧3位<em>代码</em>为装船港用联合国lo code不使用国名前缀第 2行左侧3位<em>代码</em>示出 <em>集装箱</em>总重单位...要求23第4行左侧3位<em>代码</em>表示<em>集装箱</em>的营运者如果是箱主自行营运则示出 gb t1836所规定箱主<em>代码</em>的前 3位码后面的 u字省略第...4行随后的 4位<em>代码</em>表示箱体尺寸和类型 <em>代码</em>按gb t1836的要求02第5行为箱内货物的有关信息可填人以下内容a1危险货物的 <em>识别</em> <em>代码</em>...应控制其高限温度尽可能与低限温度接近d4 19最多为 7 c尺寸超标的货物的 <em>识别</em> <em>代码</em> 1当货物超宽时在第 4位示 w其左侧3位数表示",
+            "id": "07a68fd2ac3ca3d6",
+            "image_id": "7ebd0a808e2711f0a685620ff33f7526-07a68fd2ac3ca3d6",
+            "important_keywords": [],
+            "positions": [
+              [
+                8,
+                61,
+                525,
+                531,
+                771
+              ],
+              [
+                9,
+                68,
+                534,
+                124,
+                764
+              ],
+              [
+                10,
+                61,
+                526,
+                128,
+                556
+              ]
+            ],
+            "similarity": 0.7636674519751522,
+            "term_similarity": 0.8231341077145613,
+            "vector_similarity": 0.624911921916531
+          },
+          {
+            "content": "关键：字内贸箱外贸箱、标识数据元：类型字、符型数据格式：：n1 JT /T 697. 3—2013值域内贸外贸4313：51 -集装，箱2-。. . 尺寸代码分. 类. 编号数据元名：称GK集03装01箱03尺00寸5代码英文名称：中文全拼：ContainerSizeCodema定义不同：j尺i-z寸hu的an集g-x装ia箱ng的-ch相i-c应un代-d码ai-。关键字：集装箱尺寸、代码数据元：类型字、符型数据格式：：an2备注例如为长度是英尺，宽度为2 591mm的标准箱。4313：6 危，险22 品箱或藏20 . . 冷箱代码分. 类. 编号数据元名称：GK危03险01品03箱00或6冷藏箱代码英文名称：erCode中文全拼：DangerousCargoContainerOrRefrigerationContain-cang-xiang-dai-ma定义危险：w品e箱i-x或ian冷-p藏in-箱xia的ng相-h应uo代-le码ng。关键：字危险品箱冷藏箱、代码数据元：类型字符、型数据格式：：an14. 3. 137 集装箱吞吐量分. 类. 编号数据元名：称GK集03装01箱03吞00吐7量英文名称：中文全拼：ContainerThroughput：ji-zhuang-xiang-tun-tu-liang同义名称港口集装箱吞吐量集装箱吞吐箱量，在港口拆装箱的集装箱吞吐量相关环境：交通统计信息基础，数据元定义统计：时间内的集装箱吞吐量。关键：字集装箱吞吐量数据元：类型数、字型数据格式：计量单位：标n. 准. 12箱，2TEU)",
+            "content_ltks": "关键 字 内贸 箱 外贸 箱 标识 数据 元 类型 字 符 型 数据格式 n1 jtt 697 3 2013 值域 内贸 外贸 4313 51 集装 箱 2 尺寸 代码 分 类 编号 数据 元 名 称 gk 集 03 装 01 箱 03 尺 00 寸 5 代码 英文名称 中文 全拼 containersizecodema 定义 不同 j 尺 iz 寸 hu 的 an 集 gx 装 ia 箱 ng 的 ch 相 ic 应 un 代 d 码 ai 关键字 集装箱 尺寸 代码 数据 元 类型 字 符 型 数据格式 an2 备注 例如 为 长度 是 英尺 宽度 为 2 591mm 的 标准箱 4313 6 危 险 22 品 箱 或 藏 20 冷 箱 代码 分 类 编号 数据 元 名称 gk 危 03 险 01 品 03 箱 00 或 6 冷藏箱 代码 英文名称 ercod 中文 全拼 dangerouscargocontainerorrefrigerationcontain cang xiang dai ma 定义 危险 w 品 e 箱 ix 或 ian 冷 p 藏 in 箱 xia 的 ng 相 h 应 uo 代 le 码 ng 关键 字 危险品 箱 冷藏箱 代码 数据 元 类型 字符 型 数据格式 an14 3 137 集装箱 吞吐量 分 类 编号 数据 元 名 称 gk 集 03 装 01 箱 03 吞 00 吐 7 量 英文名称 中文 全拼 containerthroughput ji zhuang xiang tun tu liang 同义 名称 港口 集装箱 吞吐量 集装箱 吞吐 箱 量 在 港口 拆 装箱 的 集装箱 吞吐量 相关 环境 交通 统计 信息 基础 数据 元 定义 统计 时间 内 的 集装箱 吞吐量 关键 字 集装箱 吞吐量 数据 元 类型 数 字型 数据格式 计量单位 标 n 准 12 箱 2teu",
+            "dataset_id": "7ebd0a808e2711f0a685620ff33f7526",
+            "doc_type_kwd": "",
+            "document_id": "d32747988e2711f0bdfa620ff33f7526",
+            "document_keyword": "028_已解密.pdf",
+            "highlight": "关键字内贸箱外贸箱标识数据元类型字符型数据格式n1 jtt 697 3 2013值域内贸外贸4313 51集装箱 2尺寸<em>代码</em>分类编号数据元名称...ch相ic应un代d码ai关键字<em>集装箱</em>尺寸<em>代码</em>数据元类型字符型数据格式an2备注例如为长度是英尺宽度为 2 591mm的标准箱4313 6...危险 22品箱或藏 20冷箱 <em>代码</em>分类编号数据元名称gk危03险01品03箱00或6冷藏箱<em>代码</em>英文名称ercod中文全拼dangerouscargocontainerorrefrigerationcontain...ji zhuang xiang tun tu liang同义名称港口<em>集装箱</em>吞吐量<em>集装箱</em>吞吐箱量在港口拆 <em>装箱</em>的<em>集装箱</em>吞吐量相关环境交通统计信息基础数据元...定义统计时间内的<em>集装箱</em>吞吐量关键字 <em>集装箱</em>吞吐量数据元类型数字型数据格式计量单位标 n准12箱2teu",
+            "id": "68de41c94c463193",
+            "image_id": "7ebd0a808e2711f0a685620ff33f7526-68de41c94c463193",
+            "important_keywords": [],
+            "positions": [
+              [
+                77,
+                88,
+                440,
+                719,
+                731
+              ],
+              [
+                77,
+                87,
+                439,
+                735,
+                747
+              ],
+              [
+                78,
+                66,
+                417,
+                63,
+                74
+              ],
+              [
+                78,
+                88,
+                440,
+                90,
+                102
+              ],
+              [
+                78,
+                65,
+                417,
+                106,
+                118
+              ],
+              [
+                78,
+                87,
+                439,
+                137,
+                150
+              ],
+              [
+                78,
+                87,
+                439,
+                169,
+                181
+              ],
+              [
+                78,
+                87,
+                439,
+                185,
+                197
+              ],
+              [
+                78,
+                86,
+                438,
+                199,
+                214
+              ],
+              [
+                78,
+                86,
+                437,
+                214,
+                228
+              ],
+              [
+                78,
+                88,
+                440,
+                247,
+                259
+              ],
+              [
+                78,
+                65,
+                417,
+                263,
+                275
+              ],
+              [
+                78,
+                88,
+                440,
+                294,
+                307
+              ],
+              [
+                78,
+                86,
+                437,
+                324,
+                339
+              ],
+              [
+                78,
+                87,
+                439,
+                342,
+                354
+              ],
+              [
+                78,
+                87,
+                438,
+                355,
+                370
+              ],
+              [
+                78,
+                64,
+                416,
+                403,
+                418
+              ],
+              [
+                78,
+                87,
+                439,
+                436,
+                448
+              ],
+              [
+                78,
+                86,
+                437,
+                465,
+                481
+              ],
+              [
+                78,
+                87,
+                439,
+                483,
+                495
+              ],
+              [
+                78,
+                88,
+                440,
+                499,
+                511
+              ],
+              [
+                78,
+                87,
+                439,
+                515,
+                527
+              ],
+              [
+                78,
+                88,
+                440,
+                530,
+                543
+              ],
+              [
+                78,
+                87,
+                439,
+                545,
+                557
+              ],
+              [
+                78,
+                85,
+                436,
+                575,
+                590
+              ]
+            ],
+            "similarity": 0.7540993777730737,
+            "term_similarity": 0.8353759393409699,
+            "vector_similarity": 0.5644540674479825
+          },
+          {
+            "content": "关键：字内贸箱外贸箱、标识数据元：类型字、符型数据格式：：n1 JT /T 697. 3—2013值域内贸外贸4313：51 -集装，箱2-。. . 尺寸代码分. 类. 编号数据元名：称GK集03装01箱03尺00寸5代码英文名称：中文全拼：ContainerSizeCodema定义不同：j尺i-z寸hu的an集g-x装ia箱ng的-ch相i-c应un代-d码ai-。关键字：集装箱尺寸、代码数据元：类型字、符型数据格式：：an2备注例如为长度是英尺，宽度为2 591mm的标准箱。4313：6 危，险22 品箱或藏20 . . 冷箱代码分. 类. 编号数据元名称：GK危03险01品03箱00或6冷藏箱代码英文名称：erCode中文全拼：DangerousCargoContainerOrRefrigerationContain-cang-xiang-dai-ma定义危险：w品e箱i-x或ian冷-p藏in-箱xia的ng相-h应uo代-le码ng。关键：字危险品箱冷藏箱、代码数据元：类型字符、型数据格式：：an14. 3. 137 集装箱吞吐量分. 类. 编号数据元名：称GK集03装01箱03吞00吐7量英文名称：中文全拼：ContainerThroughput：ji-zhuang-xiang-tun-tu-liang同义名称港口集装箱吞吐量集装箱吞吐箱量，在港口拆装箱的集装箱吞吐量相关环境：交通统计信息基础，数据元定义统计：时间内的集装箱吞吐量。关键：字集装箱吞吐量数据元：类型数、字型数据格式：计量单位：标n. 准. 12箱，2TEU)",
+            "content_ltks": "关键 字 内贸 箱 外贸 箱 标识 数据 元 类型 字 符 型 数据格式 n1 jtt 697 3 2013 值域 内贸 外贸 4313 51 集装 箱 2 尺寸 代码 分 类 编号 数据 元 名 称 gk 集 03 装 01 箱 03 尺 00 寸 5 代码 英文名称 中文 全拼 containersizecodema 定义 不同 j 尺 iz 寸 hu 的 an 集 gx 装 ia 箱 ng 的 ch 相 ic 应 un 代 d 码 ai 关键字 集装箱 尺寸 代码 数据 元 类型 字 符 型 数据格式 an2 备注 例如 为 长度 是 英尺 宽度 为 2 591mm 的 标准箱 4313 6 危 险 22 品 箱 或 藏 20 冷 箱 代码 分 类 编号 数据 元 名称 gk 危 03 险 01 品 03 箱 00 或 6 冷藏箱 代码 英文名称 ercod 中文 全拼 dangerouscargocontainerorrefrigerationcontain cang xiang dai ma 定义 危险 w 品 e 箱 ix 或 ian 冷 p 藏 in 箱 xia 的 ng 相 h 应 uo 代 le 码 ng 关键 字 危险品 箱 冷藏箱 代码 数据 元 类型 字符 型 数据格式 an14 3 137 集装箱 吞吐量 分 类 编号 数据 元 名 称 gk 集 03 装 01 箱 03 吞 00 吐 7 量 英文名称 中文 全拼 containerthroughput ji zhuang xiang tun tu liang 同义 名称 港口 集装箱 吞吐量 集装箱 吞吐 箱 量 在 港口 拆 装箱 的 集装箱 吞吐量 相关 环境 交通 统计 信息 基础 数据 元 定义 统计 时间 内 的 集装箱 吞吐量 关键 字 集装箱 吞吐量 数据 元 类型 数 字型 数据格式 计量单位 标 n 准 12 箱 2teu",
+            "dataset_id": "54887ce6975411f0851bb6a7ca88af7c",
+            "doc_type_kwd": "",
+            "document_id": "96a35e70975411f0b3aeb6a7ca88af7c",
+            "document_keyword": "015_已解密.pdf",
+            "highlight": "关键字内贸箱外贸箱标识数据元类型字符型数据格式n1 jtt 697 3 2013值域内贸外贸4313 51集装箱 2尺寸<em>代码</em>分类编号数据元名称...ch相ic应un代d码ai关键字<em>集装箱</em>尺寸<em>代码</em>数据元类型字符型数据格式an2备注例如为长度是英尺宽度为 2 591mm的标准箱4313 6...危险 22品箱或藏 20冷箱 <em>代码</em>分类编号数据元名称gk危03险01品03箱00或6冷藏箱<em>代码</em>英文名称ercod中文全拼dangerouscargocontainerorrefrigerationcontain...ji zhuang xiang tun tu liang同义名称港口<em>集装箱</em>吞吐量<em>集装箱</em>吞吐箱量在港口拆 <em>装箱</em>的<em>集装箱</em>吞吐量相关环境交通统计信息基础数据元...定义统计时间内的<em>集装箱</em>吞吐量关键字 <em>集装箱</em>吞吐量数据元类型数字型数据格式计量单位标 n准12箱2teu",
+            "id": "603422dde9d9254e",
+            "image_id": "54887ce6975411f0851bb6a7ca88af7c-603422dde9d9254e",
+            "important_keywords": [],
+            "positions": [
+              [
+                77,
+                88,
+                440,
+                719,
+                731
+              ],
+              [
+                77,
+                87,
+                439,
+                735,
+                747
+              ],
+              [
+                78,
+                66,
+                417,
+                63,
+                74
+              ],
+              [
+                78,
+                88,
+                440,
+                90,
+                102
+              ],
+              [
+                78,
+                65,
+                417,
+                106,
+                118
+              ],
+              [
+                78,
+                87,
+                439,
+                137,
+                150
+              ],
+              [
+                78,
+                87,
+                439,
+                169,
+                181
+              ],
+              [
+                78,
+                87,
+                439,
+                185,
+                197
+              ],
+              [
+                78,
+                86,
+                438,
+                199,
+                214
+              ],
+              [
+                78,
+                86,
+                437,
+                214,
+                228
+              ],
+              [
+                78,
+                88,
+                440,
+                247,
+                259
+              ],
+              [
+                78,
+                65,
+                417,
+                263,
+                275
+              ],
+              [
+                78,
+                88,
+                440,
+                294,
+                307
+              ],
+              [
+                78,
+                86,
+                437,
+                324,
+                339
+              ],
+              [
+                78,
+                87,
+                439,
+                342,
+                354
+              ],
+              [
+                78,
+                87,
+                438,
+                355,
+                370
+              ],
+              [
+                78,
+                64,
+                416,
+                403,
+                418
+              ],
+              [
+                78,
+                87,
+                439,
+                436,
+                448
+              ],
+              [
+                78,
+                86,
+                437,
+                465,
+                481
+              ],
+              [
+                78,
+                87,
+                439,
+                483,
+                495
+              ],
+              [
+                78,
+                88,
+                440,
+                499,
+                511
+              ],
+              [
+                78,
+                87,
+                439,
+                515,
+                527
+              ],
+              [
+                78,
+                88,
+                440,
+                530,
+                543
+              ],
+              [
+                78,
+                87,
+                439,
+                545,
+                557
+              ],
+              [
+                78,
+                85,
+                436,
+                575,
+                590
+              ]
+            ],
+            "similarity": 0.7537240252361951,
+            "term_similarity": 0.8353759393409699,
+            "vector_similarity": 0.5632028923250539
+          },
+          {
+            "content": "<table><caption>表10服务需求代码</caption>\n<tr><td  >代码</td><td  >名 。</td><td  >说</td><td  >明</td></tr>\n<tr><td  >1</td><td  >承运人装货</td><td  >货物由承运人装入设备</td><td></td></tr>\n<tr><td  >2</td><td  >名</td><td  >说明</td><td></td></tr>\n<tr><td  >3</td><td  >承运</td><td  > 货物由承运人装入设备</td><td></td></tr>\n<tr><td  >4</td><td  >整箱</td><td  > 集装箱的装箱或拆</td><td></td></tr>\n<tr><td  >5</td><td  >交付</td><td  > 集装箱的装</td><td></td></tr>\n<tr><td  >6</td><td  >托</td><td  > 货物由托运人装入设备</td><td></td></tr>\n<tr><td  >7</td><td  >交</td><td  > 货物应按</td><td></td></tr>\n<tr><td  >8</td><td  >保</td><td  > 货物应予保留</td><td></td></tr>\n<tr><td  >9</td><td  >允许转</td><td  > 允许转运</td><td></td></tr>\n</table>",
+            "content_ltks": "表 10 服务 需求 代码 代码 名 说 明 1 承运人 装货 货物 由 承运人 装入 设备 2 名 说明 3 承运 货物 由 承运人 装入 设备 4 整箱 集装箱 的 装箱 或 拆 5 交付 集装箱 的 装 6 托 货物 由 托运人 装入 设备 7 交 货物 应 按 8 保 货物 应予 保留 9 允许 转 允许 转运",
+            "dataset_id": "c3f50858944611f09a1f260dfe58132f",
+            "doc_type_kwd": "image",
+            "document_id": "ddcca998944611f09be3260dfe58132f",
+            "document_keyword": "033_已解密.pdf",
+            "highlight": "表10服务需求<em>代码</em> <em>代码</em>名说明1承运人装货货物由承运人装入设备2名说明3承运货物由承运人装入设备4整箱<em>集装箱</em>的<em>装箱</em>或拆 5交付<em>集装箱</em>",
+            "id": "bffcd4b84b3fb1d4",
+            "image_id": "c3f50858944611f09a1f260dfe58132f-bffcd4b84b3fb1d4",
+            "important_keywords": [],
+            "positions": [
+              [
+                146,
+                65,
+                529,
+                574,
+                758
+              ]
+            ],
+            "similarity": 0.7501422800301073,
+            "term_similarity": 0.8353759393409699,
+            "vector_similarity": 0.5512637416380946
+          },
+          {
+            "content": "<table><caption>表10服务需求代码</caption>\n<tr><td  >代码</td><td  >名 。</td><td  >说</td><td  >明</td></tr>\n<tr><td  >1</td><td  >承运人装货</td><td  >货物由承运人装入设备</td><td></td></tr>\n<tr><td  >2</td><td  >名</td><td  >说明</td><td></td></tr>\n<tr><td  >3</td><td  >承运</td><td  > 货物由承运人装入设备</td><td></td></tr>\n<tr><td  >4</td><td  >整箱</td><td  > 集装箱的装箱或拆</td><td></td></tr>\n<tr><td  >5</td><td  >交付</td><td  > 集装箱的装</td><td></td></tr>\n<tr><td  >6</td><td  >托</td><td  > 货物由托运人装入设备</td><td></td></tr>\n<tr><td  >7</td><td  >交</td><td  > 货物应按</td><td></td></tr>\n<tr><td  >8</td><td  >保</td><td  > 货物应予保留</td><td></td></tr>\n<tr><td  >9</td><td  >允许转</td><td  > 允许转运</td><td></td></tr>\n</table>",
+            "content_ltks": "表 10 服务 需求 代码 代码 名 说 明 1 承运人 装货 货物 由 承运人 装入 设备 2 名 说明 3 承运 货物 由 承运人 装入 设备 4 整箱 集装箱 的 装箱 或 拆 5 交付 集装箱 的 装 6 托 货物 由 托运人 装入 设备 7 交 货物 应 按 8 保 货物 应予 保留 9 允许 转 允许 转运",
+            "dataset_id": "7ebd0a808e2711f0a685620ff33f7526",
+            "doc_type_kwd": "image",
+            "document_id": "d1d37a928e2711f0bdfa620ff33f7526",
+            "document_keyword": "171_已解密.pdf",
+            "highlight": "表10服务需求<em>代码</em> <em>代码</em>名说明1承运人装货货物由承运人装入设备2名说明3承运货物由承运人装入设备4整箱<em>集装箱</em>的<em>装箱</em>或拆 5交付<em>集装箱</em>",
+            "id": "382b2e1edc8fe497",
+            "image_id": "7ebd0a808e2711f0a685620ff33f7526-382b2e1edc8fe497",
+            "important_keywords": [],
+            "positions": [
+              [
+                146,
+                65,
+                529,
+                574,
+                758
+              ]
+            ],
+            "similarity": 0.7493017608985307,
+            "term_similarity": 0.8353759393409699,
+            "vector_similarity": 0.5484620111995061
+          },
+          {
+            "content": "\n- Visual Type: Diagram (Hierarchical Structure / Data Model Diagram)\n- Title: 集装箱信息结构示意图\n- Axes / Legends / Labels: \n  - The diagram uses a hierarchical layout with numbered levels (0, 1, 2, 3) indicated by dotted lines and arrows along the top and bottom edges.\n  - Level 0: \"集装箱和货物信息\" (Container and Cargo Information), multiplicity: 1..999\n  - Level 1: \"集装箱信息\" (Container Information), multiplicity: 1..999\n  - Level 2: Contains multiple attributes under \"集装箱信息\", each with specific multiplicities:\n    - 记录类型标识 (Record Type Identifier): 1..9\n    - 集装箱箱号 (Container Number): 1..9\n    - 集装箱尺寸 (Container Size): 1..1\n    - 集装箱类型 (Container Type): 1..1\n    - 集装箱状态 (Container Status): 1..1\n    - 装箱时间 (Packing Time): 1..1\n    - 铅封号 (Seal Number): 1..1\n    - 箱经营人代码 (Container Operator Code): 0..1\n    - 箱经营人名称 (Container Operator Name): 0..1\n    - 箱自重 (Tare Weight): 1..9\n    - 箱总重 (Gross Weight): 1..1\n    - 前超 (Front Overhang): 0..1\n    - 后超 (Rear Overhang): 0..1\n    - 右超 (Right Overhang): 0..1\n    - 左超 (Left Overhang): 0..1\n    - 超高 (Overheight): 0..1\n    - 装箱单位 (Packing Unit): 0..1\n    - 装箱单位地址 (Packing Unit Address): 0..1\n    - 装箱联系人及联系人电话 (Packing Contact and Phone): 0..1\n    - 特殊装载要求 (Special Loading Requirements): 0..1\n  - Level 3: Indicates continuation with text \"接图4（续）\" (Continued in Figure 4).\n- Data Points: \n  - Each box represents a data field with its name and cardinality (e.g., \"集装箱箱号 1..9\").\n  - Multiplicities range from 0..1 (optional) to 1..999 (repeating).\n- Trends / Insights:\n  - The structure is hierarchical, showing that \"集装箱和货物信息\" contains one or more \"集装箱信息\" records.\n  - Each container information record includes a fixed set of mandatory fields (multiplicity 1..1) and optional fields (0..1), as well as some repeatable fields (e.g., \"记录类型标识\" up to 9 times).\n  - Fields like overhangs (前超, 后超, etc.) and special requirements are optional, indicating flexibility in data entry.\n  - The diagram emphasizes standardization of container data elements used in logistics or customs documentation.\n- Captions / Annotations:\n  - \"接图4（续）\" at the bottom indicates that this diagram continues in another figure (Figure 4).\n  - The watermark \"5ZIC\" appears near the center but is not part of the diagram content.图 4集装箱信息结构\nX\nX\nX\n?\n集装箱和货物信息\n集装箱信息\n记录类型标识\n1..999\n1.. 999\n1..9\n集装箱箱号\n1..9\n集装箱尺寸\n1..1\n集装箱类型\n1..1\n集装箱状态\n1..1\n装箱时间\n1.. 1\n铅封号\n1.. 1\n箱经营人代码\n0..1\n箱经营人名称\n0..1\n箱自重\n1..9\n箱总重\n1..1\n前超\n0..1\n后超\n0..1\n右超\n0..1\n左超\n0..1\n超高\n0..1\n装箱单位\n0..1\n装箱单位地址\n0..1\n装箱联系人及联系人\n电话0..1\n特殊装载要求\n0..1\n接图4(续)\nX\n3\n",
+            "content_ltks": "visual type diagram hierarch structur datamodel diagram titl 集装箱 信息结构 示意图 ax legend label the diagram usa hierarch layout with number level 01 23 indic by dot line and arrow along thetop and bottom edg level 0 集装箱 和 货物 信息 contain and cargo inform multipl 1 999 level 1 集装箱 信息 contain inform multipl 1 999 level 2 contain multipl attribut under 集装箱 信息 each with specif multipl 记录 类型 标识 record type identifi 19 集装箱 箱 号 contain number 19 集装箱 尺寸 contain size 11 集装箱 类型 contain type 11 集装箱 状态 contain statu 11 装箱 时间 pack time 11 铅 封号 seal number 11 箱 经营 人 代码 contain oper code 01 箱 经营 人 名称 contain oper name 01 箱 自重 tare weight 19 箱 总重 gross weight 11 前 超 front overhang 01 后 超 rear overhang 01 右 超 right overhang 01 左 超 left overhang 01 超高 overheight 01 装箱 单位 pack unit 01 装箱 单位地址 pack unit address 01 装箱 联系人 及 联系人 电话 pack contact and phone 01 特殊 装载 要求 special load requir 01 level 3 indic continu with text 接 图 4 续 continu in figur 4 datapoint each box represa datafield with it name and cardin eg 集装箱 箱 号 19 multipl rang from 01 option to 1 999 repeat trend insight the structur is hierarch show that 集装箱 和 货物 信息 contain one or more 集装箱 信息 record each contain inform record includ afix setof mandatori field multipl 11 and option field 01 a wella some repeat field eg 记录 类型 标识 upto 9 time field like overhang 前 超 后 超 etc and special requir are option indic flexibl indata entri the diagram emphas standard of contain data element use in logist or custom document caption annot 接 图 4 续 at the bottom indic that thi diagram continu in anoth figur figur 4 the watermark 5zic appear near the center but isnot partof the diagram content 图 4 集装箱 信息结构 xxx 集装箱 和 货物 信息 集装箱 信息 记录 类型 标识 1 999 1 999 19 集装箱 箱 号 19 集装箱 尺寸 11 集装箱 类型 11 集装箱 状态 11 装箱 时间 11 铅 封号 11 箱 经营 人 代码 01 箱 经营 人 名称 01 箱 自重 19 箱 总重 11 前 超 01 后 超 01 右 超 01 左 超 01 超高 01 装箱 单位 01 装箱 单位地址 01 装箱 联系人 及 联系人 电话 01 特殊 装载 要求 01 接 图 4 续 x 3",
+            "dataset_id": "7ebd0a808e2711f0a685620ff33f7526",
+            "doc_type_kwd": "image",
+            "document_id": "37da527699da11f09a8172d72fdd2e6b",
+            "document_keyword": "186_已解密_扫描版.pdf",
+            "highlight": "number 19 <em>集装箱</em>尺寸contain size 11 <em>集装箱</em>类型contain type 11 <em>集装箱</em>状态contain statu 11 <em>装箱</em>时间pack time 11铅...封号seal number 11箱经营人 <em>代码</em> contain oper code 01箱经营人名称contain oper name 01箱自重tare weight 19...单位pack unit 01 <em>装箱</em>单位地址pack unit address 01 <em>装箱</em>联系人及联系人电话pack contact and phone 01特殊装载要求special...信息结构xxx <em>集装箱</em>和货物信息<em>集装箱</em>信息记录类型标识1 999 1 999 19 <em>集装箱</em>箱号 19 <em>集装箱</em>尺寸11 <em>集装箱</em>类型11 <em>集装箱</em>状态11 <em>装箱</em>时间11...铅封号11箱经营人 <em>代码</em> 01箱经营人名称01箱自重19箱总重11前超 01后超 01右超 01左超 01超高01 <em>装箱</em>单位01 <em>装箱</em>单位地址",
+            "id": "3aca6d063112b1af",
+            "image_id": "7ebd0a808e2711f0a685620ff33f7526-3aca6d063112b1af",
+            "important_keywords": [],
+            "positions": [
+              [
+                8,
+                93,
+                510,
+                160,
+                727
+              ]
+            ],
+            "similarity": 0.7492062174253891,
+            "term_similarity": 0.8353759393409699,
+            "vector_similarity": 0.5481435329557006
+          },
+          {
+            "content": "a)b)设；c)箱号；JT/T1093-20164.2箱主代码4.2.1箱主代码为多式联运运载单元所有人唯一的注册号,由3个大写拉丁字母表示。4. 2 箱主代码4. 2. 1 箱主代码为多式联运运4. 2. 2 已在箱箱主代码，GB /T 1836。4. 3 设备识别码设备识别码由个大写拉丁字母表示所有1 的集装箱；———U表示集装箱所———J ———Z表示集装箱拖4. 4箱号———T。4. 4 箱号箱补足6 (：1234 ，001234 )。4. 5 校验码法，通过箱5 标识要5.1.1标识可供目视判读或自动设备识别。5. 1 可识别性5. 1. 1 标识512 所有. . 、。尺寸及颜色5. 2 521 箱主代码设备识别码箱号和校验码的字符高度应与箱体外高度于. . 、、100mm。1）ISO 668、ISO1496/1～1496/5 和ISO 8323 规定的集装箱,其标识参见 GB/T 1836。JT/T1093-20165.3排列及位置2)53 排. 5. 3. 1 排列531. 1 箱主代码应与设备识别码连在一起，与箱号间至少应有一个字有. 一. 个字符的间距；校验码应设在方框之内5312 箱主代码设备识别码箱号和校。验码一般为单行排列见示例ABCS0012348箱主代码为ABC，设备识别码为S，箱号为001234，校验码为8 的交换箱，可按如下所示布置排列。",
+            "content_ltks": "ab 设 c 箱 号 jt t1093 20164 2 箱 主 代码 42 1 箱 主 代码 为 多 式 联运 运载 单元 所有人 唯一 的 注册号 由 3 个 大写 拉丁字母 表示 42 箱 主 代码 42 1 箱 主 代码 为 多 式 联运 运 42 2 已 在 箱箱 主 代码 gbt 1836 43 设备 识别码 设备 识别码 由 个 大写 拉丁字母 表示 所有 1 的 集装箱 u 表示 集装箱 所 jz 表示 集装箱 拖 44 箱 号 t4 4 箱 号 箱 补足 6 1234 001234 45 校验码 法 通过 箱 5 标识 要 511 标识 可供 目视判读 或 自动 设备 识别 51 可 识别性 511 标识 512 所有 尺寸 及 颜色 52 521 箱 主 代码 设备 识别码 箱 号 和 校验码 的 字符 高度 应 与 箱体 外 高度 于 100mm 1 iso 668 iso1496 1 1496 5 和 iso 8323 规定 的 集装箱 其 标识 参见 gbt 1836 jt t1093 20165 3 排列 及 位置 2 53 排 53 1 排列 531 1 箱 主 代码 应 与 设备 识别码 连在一起 与 箱 号 间 至少 应有 一个 字 有 一 个字符 的 间距 校验码 应 设在 方框 之内 5312 箱 主 代码 设备 识别码 箱 号 和 校 验 码 一般 为 单行 排列 见 示例 abcs0012348 箱 主 代码 为 abc 设备 识别码 为 s 箱 号 为 001234 校验码 为 8 的 交换 箱 可 按 如下 所示 布置 排列",
+            "dataset_id": "7ebd0a808e2711f0a685620ff33f7526",
+            "doc_type_kwd": "",
+            "document_id": "d0f98a948e2711f0bdfa620ff33f7526",
+            "document_keyword": "141_已解密.pdf",
+            "highlight": "ab设c箱号 jt t1093 20164 2箱主 <em>代码</em> 42 1箱主 <em>代码</em>为多式联运运载单元所有人唯一的注册号由 3个大写拉丁字母表示42箱主 <em>代码</em>...42 1箱主 <em>代码</em>为多式联运运 42 2已在箱箱主 <em>代码</em> gbt 1836 43设备识别码设备识别码由个大写拉丁字母表示所有1的<em>集装箱</em> u表示<em>集装箱</em>...所jz表示<em>集装箱</em>拖44箱号 t4 4箱号箱补足6 1234 001234 45校验码法通过箱 5标识要 511标识可供目视判读或自动设备<em>识别</em> 51可...1 1496 5和iso 8323规定的 <em>集装箱</em>其标识参见gbt 1836 jt t1093 20165 3排列及位置2 53排53 1排列531 1箱主 <em>代码</em>应...排列见示例abcs0012348箱主 <em>代码</em>为abc设备识别码为 s箱号为001234校验码为 8的交换箱可按如下所示布置排列",
+            "id": "ed32c596a49e6495",
+            "image_id": "7ebd0a808e2711f0a685620ff33f7526-ed32c596a49e6495",
+            "important_keywords": [],
+            "positions": [
+              [
+                5,
+                66,
+                530,
+                206,
+                217
+              ],
+              [
+                5,
+                66,
+                530,
+                222,
+                234
+              ],
+              [
+                5,
+                66,
+                530,
+                237,
+                250
+              ],
+              [
+                5,
+                65,
+                529,
+                263,
+                274
+              ],
+              [
+                5,
+                87,
+                551,
+                285,
+                297
+              ],
+              [
+                5,
+                103,
+                567,
+                301,
+                314
+              ],
+              [
+                5,
+                92,
+                556,
+                319,
+                330
+              ],
+              [
+                5,
+                103,
+                567,
+                335,
+                346
+              ],
+              [
+                5,
+                92,
+                556,
+                350,
+                363
+              ],
+              [
+                5,
+                103,
+                567,
+                366,
+                378
+              ],
+              [
+                5,
+                66,
+                530,
+                429,
+                442
+              ],
+              [
+                5,
+                88,
+                552,
+                478,
+                490
+              ],
+              [
+                5,
+                66,
+                530,
+                495,
+                506
+              ],
+              [
+                5,
+                64,
+                528,
+                577,
+                588
+              ],
+              [
+                5,
+                65,
+                529,
+                594,
+                605
+              ],
+              [
+                5,
+                64,
+                528,
+                617,
+                628
+              ],
+              [
+                5,
+                65,
+                529,
+                641,
+                654
+              ],
+              [
+                5,
+                64,
+                528,
+                673,
+                685
+              ],
+              [
+                5,
+                64,
+                528,
+                689,
+                701
+              ],
+              [
+                5,
+                85,
+                549,
+                753,
+                764
+              ],
+              [
+                6,
+                63,
+                527,
+                97,
+                112
+              ],
+              [
+                6,
+                67,
+                531,
+                159,
+                172
+              ],
+              [
+                6,
+                64,
+                528,
+                175,
+                187
+              ],
+              [
+                6,
+                84,
+                548,
+                204,
+                216
+              ],
+              [
+                6,
+                65,
+                529,
+                240,
+                252
+              ]
+            ],
+            "similarity": 0.7478502083006776,
+            "term_similarity": 0.8231341077145613,
+            "vector_similarity": 0.5721877763349492
+          },
+          {
+            "content": "本文件适用于沿船舶纵向放置的国际标准(ISO)集装箱的数据代码应用,非国际标准(ISO)集装箱参照使用。2规范性引用文件下列文件中的内容通过文中的规范性引用而构成本文件必不可少的条款。其中,注日期的引用文件,仅该日期对应的版本适用于本文件;不注日期的引用文件,其最新版本(包括所有的修改单)适用于本文件。GB/T1836集装箱代码、识别和标记GB/T 7408数据元和交换格式信息交换日期和时间表示法GB/T 17272.1集装箱在船舶上的信息第1部分:箱位坐标代码IMO IMDG CODE国际海运危险货物规则（International Maritime Dangerous Goods Code)3术语和定义本文件没有需要界定的术语和定义。4电传数据代码4.1构成电传数据代码涉及船舶的全部有关数据,包括吃水、稳性、纵向力矩、到港和离港时间等。电传数据代码分为两组：a）第一组为与船舶有关的数据代码（见4.2);b）第二组为与集装箱和货物有关的数据代码（见4.3和4.4）。4.2与船舶有关的数据代码在第一组中应提供以下信息。a）报告的名称，包括箱位坐标代码及其序号。b）电文发出的日期及电传代码。c）船舶识别:SZAC1）代码名称(国际呼号);2）经营者（箱主代码，按GB/T1836）；3）航次(由经营者提供);4）发送港(按联合国口岸及有关地点代码)；5）下一次挂港的名称(按联合国口岸及有关地点代码)；",
+            "content_ltks": "本 文件 适用 于 沿 船舶 纵向 放置 的 国际标准 iso 集装箱 的 数据 代码 应用 非 国际标准 iso 集装箱 参照 使用 2 规范性 引用 文件 下列 文件 中的 内容 通过 文中 的 规范性 引用 而 构成 本 文件 必不可少 的 条款 其中 注 日期 的 引用 文件 仅 该 日期 对应 的 版本 适用 于 本 文件 不 注 日期 的 引用 文件 其 最新 版本 包括 所有 的 修改 单 适用 于 本 文件 gb t1836 集装箱 代码 识别 和 标记 gbt 7408 数据 元和 交换 格式 信息 交换 日期 和 时间 表示法 gbt 17272 1 集装箱 在 船舶 上 的 信息 第1 部分 箱 位 坐标 代码 imo imdg code 国际 海运 危险 货物 规则 intern maritim danger good code 3 术语 和定 义本 文件 没有 需要 界定 的 术语 和 定义 4 电传 数据 代码 4 1 构成 电传 数据 代码 涉及 船舶 的 全部 有关 数据 包括 吃水 稳 性 纵向 力矩 到 港 和 离 港 时间 等 电传 数据 代码 分为 两组 a 第一组 为 与 船舶 有关 的 数据 代码 见 42 b 第二组 为 与 集装箱 和 货物 有关 的 数据 代码 见 43 和 44 42 与 船舶 有关 的 数据 代码 在 第一组 中 应 提供 以下 信息 a 报告 的 名称 包括 箱 位 坐标 代码 及其 序号 b 电文 发出 的 日期 及 电传 代码 c 船舶 识别 szac1 代码 名称 国际 唿 号 2 经营者 箱 主 代码 按 gb t1836 3 航次 由 经营者 提供 4 发送 港 按 联合国 口岸 及 有关 地点 代码 5 下 一次 挂 港 的 名称 按 联合国 口岸 及 有关 地点 代码",
+            "dataset_id": "7ebd0a808e2711f0a685620ff33f7526",
+            "doc_type_kwd": "",
+            "document_id": "d2da11628e2711f0bdfa620ff33f7526",
+            "document_keyword": "005_已解密.pdf",
+            "highlight": "本文件适用于沿船舶纵向放置的国际标准iso <em>集装箱</em>的数据<em>代码</em>应用非国际标准iso <em>集装箱</em>参照使用2规范性引用文件下列文件中的内容通过文中的规范性...条款其中注日期的引用文件仅该日期对应的版本适用于本文件不注日期的引用文件其最新版本包括所有的修改单适用于本文件gb t1836 <em>集装箱</em>...<em>代码</em> <em>识别</em>和标记gbt 7408数据元和交换格式信息交换日期和时间表示法gbt 17272 1 <em>集装箱</em>在船舶上的信息第1部分箱位坐标<em>代码</em> imo imdg...42 b第二组为与<em>集装箱</em>和货物有关的数据<em>代码</em>见43和44 42与船舶有关的数据<em>代码</em>在第一组中应提供以下信息a报告的名称包括箱位坐标...<em>代码</em>及其序号b电文发出的日期及电传<em>代码</em> c船舶<em>识别</em> szac1 <em>代码</em>名称国际唿号2经营者箱主<em>代码</em>按gb t1836 3航次由经营者提供4发送港",
+            "id": "5f0017111f1a49d5",
+            "image_id": "7ebd0a808e2711f0a685620ff33f7526-5f0017111f1a49d5",
+            "important_keywords": [],
+            "positions": [
+              [
+                5,
+                92,
+                552,
+                246,
+                258
+              ],
+              [
+                5,
+                69,
+                529,
+                294,
+                306
+              ],
+              [
+                5,
+                93,
+                553,
+                324,
+                336
+              ],
+              [
+                5,
+                71,
+                531,
+                342,
+                353
+              ],
+              [
+                5,
+                91,
+                552,
+                373,
+                385
+              ],
+              [
+                5,
+                91,
+                552,
+                389,
+                401
+              ],
+              [
+                5,
+                91,
+                552,
+                405,
+                417
+              ],
+              [
+                5,
+                90,
+                551,
+                420,
+                432
+              ],
+              [
+                5,
+                91,
+                552,
+                483,
+                495
+              ],
+              [
+                5,
+                92,
+                552,
+                569,
+                580
+              ],
+              [
+                5,
+                90,
+                551,
+                600,
+                612
+              ],
+              [
+                5,
+                90,
+                551,
+                617,
+                629
+              ],
+              [
+                5,
+                71,
+                531,
+                641,
+                652
+              ],
+              [
+                5,
+                91,
+                552,
+                664,
+                676
+              ],
+              [
+                5,
+                90,
+                551,
+                680,
+                693
+              ],
+              [
+                5,
+                89,
+                550,
+                695,
+                707
+              ],
+              [
+                5,
+                90,
+                551,
+                712,
+                724
+              ],
+              [
+                5,
+                110,
+                571,
+                727,
+                739
+              ],
+              [
+                5,
+                110,
+                571,
+                744,
+                756
+              ],
+              [
+                5,
+                111,
+                572,
+                760,
+                772
+              ],
+              [
+                6,
+                103,
+                564,
+                100,
+                111
+              ],
+              [
+                6,
+                103,
+                564,
+                115,
+                127
+              ]
+            ],
+            "similarity": 0.7439228876484546,
+            "term_similarity": 0.8231341077145613,
+            "vector_similarity": 0.5590967074942059
+          },
+          {
+            "content": "<table><caption>表16 (续)表16 </caption>\n<tr><th  >中文名称</th><th  >英文名称</th><th  >说 明</th><th></th><th  >（续）</th><th  >值 域</th><th  >约束/ 条件</th><th  >备 注</th></tr>\n<tr><td  >中文</td><td  >称英文</td><td  >说明 名称</td><td  >数</td><td  >类型数</td><td  >格式值 相关规定</td><td  >M</td><td></td></tr>\n<tr><td  >包装类型代码</td><td  >型Packa Code</td><td  >pe 说明货物的种类的名称 的包装类型的代码</td><td  >字符型</td><td  >an2</td><td  >35 相关规GB 定/T  相关规定</td><td  >0</td><td></td></tr>\n<tr><td  >货物体积</td><td  >Cube</td><td  >pe 标识货物或 的包装类型的 由件包或  设</td><td  >数字型</td><td  >n..9</td><td></td><td  >0</td><td  >O 立方米 计</td></tr>\n<tr><td  >集装箱号</td><td  >ContainerNumber</td><td  >大值的乘积、得 计量值 装箱识  集记由</td><td  >字符型</td><td  >an..12</td><td></td><td  >0</td><td></td></tr>\n<tr><td  >集装箱箱型</td><td  >ContainerType</td><td  >mber 备，识别码、箱 校验码组成 根据集</td><td  >」字符型</td><td  >a2</td><td  >2 — 1836 中的相关 规定</td><td  >0</td><td></td></tr>\n<tr><td  >集装箱尺寸</td><td  >ContainerSize</td><td  > 型进行分类 Type 示例如 ，GP根据集装箱 40等</td><td  >等</td><td  >n..2</td><td  >1836 中的规定 1836中的相关 规定</td><td  >0</td><td></td></tr>\n<tr><td  >集装箱 货物</td><td  >尺寸Containe OrNot</td><td  >ize 表示，例如 40 等</td><td  >字20、</td><td  >nl</td><td  > 1836  规定</td><td  >M</td><td></td></tr>\n<tr><td  >是否 货</td><td  >危险物Dangerou Number</td><td  >oods 标识运输货 ot 否普通货物</td><td  >布</td><td  >型</td><td  > 1—是否 n1 0</td><td  >0</td><td></td></tr>\n<tr><td  >货物 标识</td><td  >编号Number 物 Class</td><td  >oods 定的GB 危1险22货68  义,对危险品所适  根据相关权则的等级编号</td><td  >字符型</td><td  >n..2</td><td  >的相关规定 相关规定</td><td  >0</td><td></td></tr>\n<tr><td  >残损类型</td><td  >C</td><td  >义，对危险品用危险级别的 的残损类型的描述</td><td  >标识</td><td  >an..35</td><td  >2 相关规定 的相关规定</td><td  >0</td><td></td></tr>\n<tr><td  >残损类型代码</td><td  >型Dama Code</td><td  >pe 的残损类型的 表示</td><td  >描述</td><td  >an..3</td><td  >35 的相关GB 规/T 定 的相关规定</td><td></td><td></td></tr>\n<tr><td  >残损程度</td><td  >Code </td><td  >pe 残损类型的表示 言描述</td><td  >字符型</td><td  >an..35</td><td></td><td  >0</td><td></td></tr>\n</table>",
+            "content_ltks": "表 16 续 表 16 中文名称 英文名称 说 明 续 值 域 约束 条件 备 注 中文 称 英文 说明 名称 数 类型 数 格式 值 相关 规定 m 包装 类型 代码 型 packa code pe 说明 货物 的 种类 的 名称 的 包装 类型 的 代码 字符 型 an2 35 相关 规 gb 定 t 相关 规定 0 货物 体积 cube pe 标识 货物 或 的 包装 类型 的 由 件 包 或 设 数字型 n 90 o 立方米 计 集装箱 号 containernumb 大值 的 乘积 得 计量 值 装箱 识 集 记 由 字符 型 an 120 集装箱 箱 型 containertyp mber 备 识别码 箱 校验码 组成 根据 集 字符 型 a2 2 1836 中的 相关 规定 0 集装箱 尺寸 containers 型 进行 分类 type 示 例如 gp 根据 集装箱 40 等 等 n 2 1836 中的 规定 1836 中的 相关 规定 0 集装箱 货物 尺寸 contain ornot ize 表示 例如 40 等 字 20 nl 1836 规定 m 是否 货 危险物 danger number ood 标识 运输 货 ot 否 普通 货物 布 型 1 是否 n1 0 0 货物 标识 编号 number 物 class ood 定 的 gb 危 1 险 22 货 68 义 对 危险品 所 适 根据 相关 权 则 的 等级 编号 字符 型 n 2 的 相关 规定 相关 规定 0 残损 类型 c 义 对 危险品 用 危险 级别 的 的 残损 类型 的 描述 标识 an 352 相关 规定 的 相关 规定 0 残损 类型 代码 型 dama code pe 的 残损 类型 的 表示 描述 an 3 35 的 相关 gb 规 t 定 的 相关 规定 残损 程度 code pe 残损 类型 的 表示 言 描述 字符 型 an 35 0",
+            "dataset_id": "7ebd0a808e2711f0a685620ff33f7526",
+            "doc_type_kwd": "image",
+            "document_id": "d1dc77148e2711f0bdfa620ff33f7526",
+            "document_keyword": "174_已解密.pdf",
+            "highlight": "表16续表 16中文名称英文名称说明续值域约束条件备注中文称英文说明名称数类型数格式值相关规定m包装类型<em>代码</em>型packa code pe...说明货物的种类的名称的包装类型的 <em>代码</em>字符型 an2 35相关规 gb定t相关规定0货物体积cube pe标识货物或的包装类型的由件包或...设数字型n 90 o立方米计 <em>集装箱</em>号containernumb大值的乘积得计量值 <em>装箱</em>识集记由字符型 an 120 <em>集装箱</em>箱型 containertyp mber...备识别码箱校验码组成根据集字符型 a2 2 1836中的相关规定0 <em>集装箱</em>尺寸containers型进行分类type示例如gp根据<em>集装箱</em> 40等等 n...编号字符型 n 2的相关规定相关规定0残损类型c义对危险品用危险级别的的残损类型的描述标识an 352相关规定的相关规定0残损类型<em>代码</em>",
+            "id": "b4c4de75340e1592",
+            "image_id": "7ebd0a808e2711f0a685620ff33f7526-b4c4de75340e1592",
+            "important_keywords": [],
+            "positions": [
+              [
+                20,
+                64,
+                529,
+                107,
+                760
+              ]
+            ],
+            "similarity": 0.742220747401947,
+            "term_similarity": 0.8353759393409699,
+            "vector_similarity": 0.5248586328775604
+          },
+          {
+            "content": "<table><caption>表６３（续）７．７．４１６　集装箱堆存信息集．装箱堆存信息见表６４。</caption>\n<tr><td  >序 号</td><td  >字段中文名称</td><td  >字　段　名</td><td  >主键</td><td  >数据 类型</td><td  >格　</td><td  >式</td><td  >是否 为空</td><td  >说　 明</td></tr>\n<tr><td  >１６</td><td  >危规编号</td><td  >ＷＧＢＨ</td><td  >否</td><td  >ｓｔｒｉｎｇ</td><td  >ａｎ．．３２</td><td></td><td  >是</td><td></td></tr>\n<tr><td  >１７</td><td  >海运污染</td><td  >ＨＹＷＲ</td><td  >否</td><td  >ｓｔｒｉｎｇ</td><td  >ｎ１</td><td></td><td  >是</td><td  >Ｙ：有污染；Ｎ：无污染</td></tr>\n<tr><td  >１</td><td  >卸货港口</td><td  >ＰＯＲＴ＿ＣＯＤＥ</td><td  >否</td><td  >ｓｔｒｉｎｇ</td><td  >ａｎ６</td><td></td><td  >是</td><td  >港口代码</td></tr>\n</table>",
+            "content_ltks": "表 63 续 77 416 集装箱 堆存 信息 集 装箱 堆存 信息 见 表 64 序 号 字段 中文名称 字 段 名 主键 数据 类型 格 式 是否 为 空 说 明 16 危 规 编号 wgbh 否 string an 32 是 17 海运 污染 hywr 否 string n1 是 y 有 污染 n 无污染 1 卸货 港口 port code 否 string an6 是 港口 代码",
+            "dataset_id": "54887ce6975411f0851bb6a7ca88af7c",
+            "doc_type_kwd": "image",
+            "document_id": "94e10c54975411f0b3aeb6a7ca88af7c",
+            "document_keyword": "106_已解密.pdf",
+            "highlight": "表63续77 416 <em>集装箱</em>堆存信息集 <em>装箱</em>堆存信息见表64序号字段中文名称字段名主键数据类型格式是否为空说明16危规编号wgbh否...string an 32是17海运污染hywr否string n1是y有污染n无污染1卸货港口port code否string an6是港口<em>代码</em>",
+            "id": "dc3704866746d3fe",
+            "image_id": "54887ce6975411f0851bb6a7ca88af7c-dc3704866746d3fe",
+            "important_keywords": [],
+            "positions": [
+              [
+                50,
+                74,
+                537,
+                120,
+                212
+              ]
+            ],
+            "similarity": 0.7410991649481776,
+            "term_similarity": 0.8353759393409699,
+            "vector_similarity": 0.5211200246983292
+          },
+          {
+            "content": "<table><caption>表６３（续）７．７．４１６　集装箱堆存信息集．装箱堆存信息见表６４。</caption>\n<tr><td  >序 号</td><td  >字段中文名称</td><td  >字　段　名</td><td  >主键</td><td  >数据 类型</td><td  >格　</td><td  >式</td><td  >是否 为空</td><td  >说　 明</td></tr>\n<tr><td  >１６</td><td  >危规编号</td><td  >ＷＧＢＨ</td><td  >否</td><td  >ｓｔｒｉｎｇ</td><td  >ａｎ．．３２</td><td></td><td  >是</td><td></td></tr>\n<tr><td  >１７</td><td  >海运污染</td><td  >ＨＹＷＲ</td><td  >否</td><td  >ｓｔｒｉｎｇ</td><td  >ｎ１</td><td></td><td  >是</td><td  >Ｙ：有污染；Ｎ：无污染</td></tr>\n<tr><td  >１</td><td  >卸货港口</td><td  >ＰＯＲＴ＿ＣＯＤＥ</td><td  >否</td><td  >ｓｔｒｉｎｇ</td><td  >ａｎ６</td><td></td><td  >是</td><td  >港口代码</td></tr>\n</table>",
+            "content_ltks": "表 63 续 77 416 集装箱 堆存 信息 集 装箱 堆存 信息 见 表 64 序 号 字段 中文名称 字 段 名 主键 数据 类型 格 式 是否 为 空 说 明 16 危 规 编号 wgbh 否 string an 32 是 17 海运 污染 hywr 否 string n1 是 y 有 污染 n 无污染 1 卸货 港口 port code 否 string an6 是 港口 代码",
+            "dataset_id": "7ebd0a808e2711f0a685620ff33f7526",
+            "doc_type_kwd": "image",
+            "document_id": "d0a7e6bc8e2711f0bdfa620ff33f7526",
+            "document_keyword": "184_已解密.pdf",
+            "highlight": "表63续77 416 <em>集装箱</em>堆存信息集 <em>装箱</em>堆存信息见表64序号字段中文名称字段名主键数据类型格式是否为空说明16危规编号wgbh否...string an 32是17海运污染hywr否string n1是y有污染n无污染1卸货港口port code否string an6是港口<em>代码</em>",
+            "id": "46ea0a5bd6290fad",
+            "image_id": "7ebd0a808e2711f0a685620ff33f7526-46ea0a5bd6290fad",
+            "important_keywords": [],
+            "positions": [
+              [
+                50,
+                74,
+                537,
+                120,
+                212
+              ]
+            ],
+            "similarity": 0.741093988129302,
+            "term_similarity": 0.8353759393409699,
+            "vector_similarity": 0.5211027686354106
+          },
+          {
+            "content": "<table><caption>表8 堆场用途代码</caption>\n<tr><td  >代</td><td  >码</td><td  >名</td><td  >  称</td><td  >代  </td><td  >码</td><td  >名 称</td></tr>\n<tr><td  > 01 </td><td  >集装箱堆场</td><td></td><td></td><td  >04 </td><td  >洗箱场</td><td></td></tr>\n<tr><td  >02 </td><td  >冷藏箱堆场</td><td></td><td></td><td  >05 </td><td  >件杂货堆场</td><td></td></tr>\n<tr><td  >03 </td><td  >拆装箱堆场</td><td></td><td></td><td  >06 </td><td  >干散货堆场</td><td></td></tr>\n</table>",
+            "content_ltks": "表 8 堆场 用途 代码 代 码 名 称 代 码 名 称 01 集装箱 堆场 04 洗 箱 场 02 冷藏箱 堆场 05 件 杂货 堆场 03 拆 装箱 堆场 06 干散货 堆场",
+            "dataset_id": "7ebd0a808e2711f0a685620ff33f7526",
+            "doc_type_kwd": "image",
+            "document_id": "d32747988e2711f0bdfa620ff33f7526",
+            "document_keyword": "028_已解密.pdf",
+            "highlight": "表8堆场用途<em>代码</em>代码名称代码名称 01 <em>集装箱</em>堆场04洗箱场02冷藏箱堆场05件杂货堆场03拆<em>装箱</em>堆场06干散货堆场",
+            "id": "6a35b66116bdf168",
+            "image_id": "7ebd0a808e2711f0a685620ff33f7526-6a35b66116bdf168",
+            "important_keywords": [],
+            "positions": [
+              [
+                95,
+                65,
+                529,
+                692,
+                763
+              ]
+            ],
+            "similarity": 0.7373273095223782,
+            "term_similarity": 0.8353759393409699,
+            "vector_similarity": 0.5085471732789977
+          },
+          {
+            "content": "<table><caption>表8 堆场用途代码</caption>\n<tr><td  >代</td><td  >码</td><td  >名</td><td  >  称</td><td  >代  </td><td  >码</td><td  >名 称</td></tr>\n<tr><td  > 01 </td><td  >集装箱堆场</td><td></td><td></td><td  >04 </td><td  >洗箱场</td><td></td></tr>\n<tr><td  >02 </td><td  >冷藏箱堆场</td><td></td><td></td><td  >05 </td><td  >件杂货堆场</td><td></td></tr>\n<tr><td  >03 </td><td  >拆装箱堆场</td><td></td><td></td><td  >06 </td><td  >干散货堆场</td><td></td></tr>\n</table>",
+            "content_ltks": "表 8 堆场 用途 代码 代 码 名 称 代 码 名 称 01 集装箱 堆场 04 洗 箱 场 02 冷藏箱 堆场 05 件 杂货 堆场 03 拆 装箱 堆场 06 干散货 堆场",
+            "dataset_id": "54887ce6975411f0851bb6a7ca88af7c",
+            "doc_type_kwd": "image",
+            "document_id": "96a35e70975411f0b3aeb6a7ca88af7c",
+            "document_keyword": "015_已解密.pdf",
+            "highlight": "表8堆场用途<em>代码</em>代码名称代码名称 01 <em>集装箱</em>堆场04洗箱场02冷藏箱堆场05件杂货堆场03拆<em>装箱</em>堆场06干散货堆场",
+            "id": "d8b0137d05f2c1d0",
+            "image_id": "54887ce6975411f0851bb6a7ca88af7c-d8b0137d05f2c1d0",
+            "important_keywords": [],
+            "positions": [
+              [
+                95,
+                65,
+                529,
+                692,
+                763
+              ]
+            ],
+            "similarity": 0.7369025256753446,
+            "term_similarity": 0.8353759393409699,
+            "vector_similarity": 0.5071312271222193
+          },
+          {
+            "content": "英文名称: Equipmentmodel定义为标明相同结构设计的设备分组而指定的参考,标明设备的性能、规格和大小。对象: 类词: 设备特性词规格型号表示词: 描述数据类: 型字符型数据格式: : an..35中文名称设备状况内部标识: 符: 2114英文名称: Equipment status定义: E与qu设ip备m有en关ts的tat行us动指示的描述。对象类词: 设备特性词: 状况表示词描述数据类: 型字符型数据格式: : an..35备注: 主要包括:进口、出口、转运、移位、修理等。中文名称设备状况代码内部标识: 符: 2115英文名称: Equipment status code定义E标qu识ip与m设en备ts有tat关us的c行od动e指示的代码。对象: 类词: 设备特性词: 状况表示词: 代码数据类型字符型数据格式: : an..10值域: 见GB/T16833中相应数据元的代码。5.2.2 集装箱中文名称集装箱号内部标识: 符: 2202英文名称: 2202定义C集on装ta箱in识er别nu标m记ber,由箱主代码、设备识别码、箱号与校验码组成。对象: 类词: 集装箱特性词: 标识表示词号码数据类: 型: 字符型数据格式: an..12值域见中规定的集装箱识别标记。同义: 名称: 集装GB箱/T识1别83标6记中文名称集装箱尺寸分类内部标识: 符: 2207英文名称: Container size classification定义C根on据ta集in装er箱siz的e外cla部ss尺ifi寸cat进io行n分类的表示,例如20、40等。",
+            "content_ltks": "英文名称 equipmentmodel 定义 为 标明 相同 结构设计 的 设备 分组 而 指定 的 参考 标明 设备 的 性能 规格 和 大小 对象 类 词 设备 特性 词 规格型号 表示 词 描述 数据 类 型 字符 型 数据格式 an 35 中文名称 设备 状况 内部 标识 符 2114 英文名称 equip statu 定义 e 与 qu 设 ip 备 m 有 en 关 t 的 tat 行 u 动 指示 的 描述 对象 类 词 设备 特性 词 状况 表示 词 描述 数据 类 型 字符 型 数据格式 an 35 备注 主要 包括 进口 出口 转运 移位 修理 等 中文名称 设备 状况 代码 内部 标识 符 2115 英文名称 equip statu code 定义 e 标 qu 识 ip 与 m 设 en 备 t 有 tat 关 u 的 c 行 od 动 e 指示 的 代码 对象 类 词 设备 特性 词 状况 表示 词 代码 数据类型 字符 型 数据格式 an 10 值域 见 gb t16833 中 相应 数据 元 的 代码 52 2 集装箱 中文名称 集装箱 号 内部 标识 符 2202 英文名称 2202 定义 c 集 on 装 ta 箱 in 识 er 别 nu 标 m 记 ber 由 箱 主 代码 设备 识别码 箱 号 与 校验码 组成 对象 类 词 集装箱 特性 词 标识 表示 词 号码 数据 类 型 字符 型 数据格式 an 12 值域 见 中 规定 的 集装箱 识别 标记 同义 名称 集装 gb 箱 t 识 1 别 83 标 6 记 中文名称 集装箱 尺寸 分类 内部 标识 符 2207 英文名称 contain size classif 定义 c 根 on 据 ta 集 in 装 er 箱 siz 的 e 外 cla 部 s 尺 ifi 寸 cat 进 io 行 n 分类 的 表示 例如 2040 等",
+            "dataset_id": "c3f50858944611f09a1f260dfe58132f",
+            "doc_type_kwd": "",
+            "document_id": "dda865a6944611f09be3260dfe58132f",
+            "document_keyword": "024_已解密.pdf",
+            "highlight": "行u动指示的描述对象类词设备特性词状况表示词描述数据类型字符型数据格式an 35备注主要包括进口出口转运移位修理等中文名称设备状况<em>代码</em>...内部标识符 2115英文名称equip statu code定义e标qu识ip与m设en备t有tat关u的c行od动e指示的 <em>代码</em>对象类词...设备特性词状况表示词 <em>代码</em>数据类型字符型数据格式an 10值域见 gb t16833中相应数据元的<em>代码</em> 52 2 <em>集装箱</em>中文名称<em>集装箱</em>号内部标识符 2202...英文名称2202定义c集on装ta箱in识er别nu标m记ber由箱主<em>代码</em>设备识别码箱号与校验码组成对象类词<em>集装箱</em>特性词标识表示...词号码数据类型字符型数据格式an 12值域见中规定的 <em>集装箱</em> <em>识别</em>标记同义名称集装gb箱t识1别83标6记中文名称<em>集装箱</em>尺寸分类内部标识",
+            "id": "d3b516028b5d48f0",
+            "image_id": "c3f50858944611f09a1f260dfe58132f-d3b516028b5d48f0",
+            "important_keywords": [],
+            "positions": [
+              [
+                17,
+                86,
+                527,
+                342,
+                354
+              ],
+              [
+                17,
+                86,
+                526,
+                357,
+                371
+              ],
+              [
+                17,
+                86,
+                527,
+                373,
+                386
+              ],
+              [
+                17,
+                86,
+                527,
+                467,
+                481
+              ],
+              [
+                17,
+                86,
+                527,
+                483,
+                496
+              ],
+              [
+                17,
+                86,
+                527,
+                514,
+                528
+              ],
+              [
+                17,
+                86,
+                527,
+                546,
+                559
+              ],
+              [
+                17,
+                86,
+                527,
+                609,
+                622
+              ],
+              [
+                17,
+                86,
+                526,
+                655,
+                670
+              ],
+              [
+                17,
+                86,
+                527,
+                671,
+                685
+              ],
+              [
+                17,
+                86,
+                527,
+                703,
+                716
+              ],
+              [
+                17,
+                86,
+                526,
+                718,
+                732
+              ],
+              [
+                17,
+                86,
+                527,
+                734,
+                748
+              ],
+              [
+                18,
+                86,
+                527,
+                122,
+                134
+              ],
+              [
+                18,
+                65,
+                506,
+                171,
+                183
+              ],
+              [
+                18,
+                86,
+                527,
+                218,
+                232
+              ],
+              [
+                18,
+                86,
+                527,
+                251,
+                264
+              ],
+              [
+                18,
+                86,
+                527,
+                267,
+                280
+              ],
+              [
+                18,
+                86,
+                527,
+                282,
+                296
+              ],
+              [
+                18,
+                86,
+                527,
+                314,
+                328
+              ],
+              [
+                18,
+                86,
+                527,
+                347,
+                360
+              ],
+              [
+                18,
+                86,
+                527,
+                363,
+                376
+              ],
+              [
+                18,
+                87,
+                528,
+                412,
+                425
+              ],
+              [
+                18,
+                87,
+                528,
+                429,
+                442
+              ],
+              [
+                18,
+                86,
+                527,
+                460,
+                473
+              ]
+            ],
+            "similarity": 0.7354183068897124,
+            "term_similarity": 0.8231341077145613,
+            "vector_similarity": 0.5307481049650653
+          },
+          {
+            "content": "英文名称: Equipmentmodel定义为标明相同结构设计的设备分组而指定的参考,标明设备的性能、规格和大小。对象: 类词: 设备特性词规格型号表示词: 描述数据类: 型字符型数据格式: : an..35中文名称设备状况内部标识: 符: 2114英文名称: Equipment status定义: E与qu设ip备m有en关ts的tat行us动指示的描述。对象类词: 设备特性词: 状况表示词描述数据类: 型字符型数据格式: : an..35备注: 主要包括:进口、出口、转运、移位、修理等。中文名称设备状况代码内部标识: 符: 2115英文名称: Equipment status code定义E标qu识ip与m设en备ts有tat关us的c行od动e指示的代码。对象: 类词: 设备特性词: 状况表示词: 代码数据类型字符型数据格式: : an..10值域: 见GB/T16833中相应数据元的代码。5.2.2 集装箱中文名称集装箱号内部标识: 符: 2202英文名称: 2202定义C集on装ta箱in识er别nu标m记ber,由箱主代码、设备识别码、箱号与校验码组成。对象: 类词: 集装箱特性词: 标识表示词号码数据类: 型: 字符型数据格式: an..12值域见中规定的集装箱识别标记。同义: 名称: 集装GB箱/T识1别83标6记中文名称集装箱尺寸分类内部标识: 符: 2207英文名称: Container size classification定义C根on据ta集in装er箱siz的e外cla部ss尺ifi寸cat进io行n分类的表示,例如20、40等。",
+            "content_ltks": "英文名称 equipmentmodel 定义 为 标明 相同 结构设计 的 设备 分组 而 指定 的 参考 标明 设备 的 性能 规格 和 大小 对象 类 词 设备 特性 词 规格型号 表示 词 描述 数据 类 型 字符 型 数据格式 an 35 中文名称 设备 状况 内部 标识 符 2114 英文名称 equip statu 定义 e 与 qu 设 ip 备 m 有 en 关 t 的 tat 行 u 动 指示 的 描述 对象 类 词 设备 特性 词 状况 表示 词 描述 数据 类 型 字符 型 数据格式 an 35 备注 主要 包括 进口 出口 转运 移位 修理 等 中文名称 设备 状况 代码 内部 标识 符 2115 英文名称 equip statu code 定义 e 标 qu 识 ip 与 m 设 en 备 t 有 tat 关 u 的 c 行 od 动 e 指示 的 代码 对象 类 词 设备 特性 词 状况 表示 词 代码 数据类型 字符 型 数据格式 an 10 值域 见 gb t16833 中 相应 数据 元 的 代码 52 2 集装箱 中文名称 集装箱 号 内部 标识 符 2202 英文名称 2202 定义 c 集 on 装 ta 箱 in 识 er 别 nu 标 m 记 ber 由 箱 主 代码 设备 识别码 箱 号 与 校验码 组成 对象 类 词 集装箱 特性 词 标识 表示 词 号码 数据 类 型 字符 型 数据格式 an 12 值域 见 中 规定 的 集装箱 识别 标记 同义 名称 集装 gb 箱 t 识 1 别 83 标 6 记 中文名称 集装箱 尺寸 分类 内部 标识 符 2207 英文名称 contain size classif 定义 c 根 on 据 ta 集 in 装 er 箱 siz 的 e 外 cla 部 s 尺 ifi 寸 cat 进 io 行 n 分类 的 表示 例如 2040 等",
+            "dataset_id": "7ebd0a808e2711f0a685620ff33f7526",
+            "doc_type_kwd": "",
+            "document_id": "d31aec148e2711f0bdfa620ff33f7526",
+            "document_keyword": "024_已解密.pdf",
+            "highlight": "行u动指示的描述对象类词设备特性词状况表示词描述数据类型字符型数据格式an 35备注主要包括进口出口转运移位修理等中文名称设备状况<em>代码</em>...内部标识符 2115英文名称equip statu code定义e标qu识ip与m设en备t有tat关u的c行od动e指示的 <em>代码</em>对象类词...设备特性词状况表示词 <em>代码</em>数据类型字符型数据格式an 10值域见 gb t16833中相应数据元的<em>代码</em> 52 2 <em>集装箱</em>中文名称<em>集装箱</em>号内部标识符 2202...英文名称2202定义c集on装ta箱in识er别nu标m记ber由箱主<em>代码</em>设备识别码箱号与校验码组成对象类词<em>集装箱</em>特性词标识表示...词号码数据类型字符型数据格式an 12值域见中规定的 <em>集装箱</em> <em>识别</em>标记同义名称集装gb箱t识1别83标6记中文名称<em>集装箱</em>尺寸分类内部标识",
+            "id": "7de1af82b02fa553",
+            "image_id": "7ebd0a808e2711f0a685620ff33f7526-7de1af82b02fa553",
+            "important_keywords": [],
+            "positions": [
+              [
+                17,
+                86,
+                527,
+                342,
+                354
+              ],
+              [
+                17,
+                86,
+                526,
+                357,
+                371
+              ],
+              [
+                17,
+                86,
+                527,
+                373,
+                386
+              ],
+              [
+                17,
+                86,
+                527,
+                467,
+                481
+              ],
+              [
+                17,
+                86,
+                527,
+                483,
+                496
+              ],
+              [
+                17,
+                86,
+                527,
+                514,
+                528
+              ],
+              [
+                17,
+                86,
+                527,
+                546,
+                559
+              ],
+              [
+                17,
+                86,
+                527,
+                609,
+                622
+              ],
+              [
+                17,
+                86,
+                526,
+                655,
+                670
+              ],
+              [
+                17,
+                86,
+                527,
+                671,
+                685
+              ],
+              [
+                17,
+                86,
+                527,
+                703,
+                716
+              ],
+              [
+                17,
+                86,
+                526,
+                718,
+                732
+              ],
+              [
+                17,
+                86,
+                527,
+                734,
+                748
+              ],
+              [
+                18,
+                86,
+                527,
+                122,
+                134
+              ],
+              [
+                18,
+                65,
+                506,
+                171,
+                183
+              ],
+              [
+                18,
+                86,
+                527,
+                218,
+                232
+              ],
+              [
+                18,
+                86,
+                527,
+                251,
+                264
+              ],
+              [
+                18,
+                86,
+                527,
+                267,
+                280
+              ],
+              [
+                18,
+                86,
+                527,
+                282,
+                296
+              ],
+              [
+                18,
+                86,
+                527,
+                314,
+                328
+              ],
+              [
+                18,
+                86,
+                527,
+                347,
+                360
+              ],
+              [
+                18,
+                86,
+                527,
+                363,
+                376
+              ],
+              [
+                18,
+                87,
+                528,
+                412,
+                425
+              ],
+              [
+                18,
+                87,
+                528,
+                429,
+                442
+              ],
+              [
+                18,
+                86,
+                527,
+                460,
+                473
+              ]
+            ],
+            "similarity": 0.7354183068897124,
+            "term_similarity": 0.8231341077145613,
+            "vector_similarity": 0.5307481049650653
+          },
+          {
+            "content": "本文件主要起草人:曹文胜、周受钦、邹伟宏、邢虎松、窦路、张立丽、吴怡、高隽、陈智勇、李继春、赵洁婷、王婧。本文件于1998年首次发布，本次为第一次修订。GB/T17272.2-2023引I言为提高集装箱装卸船的效率,避免集装箱装卸误操作,参照坐标的方法,船公司将集装箱在船上的位置信息进行了标注,建立了箱位坐标代码。为便于船公司把箱位坐标等信息发送给港口,便利集装箱装卸作业,船公司和港口又建立了电传数据规则，从而形成了一套完整的集装箱在船舶上的箱位坐标代码和电传数据代码,并拓展到货运代理、船舶代理等相关业务方。GB/T17272《集装箱在船舶上的信息》旨在规范集装箱在船舶上的信息，从而提高集装箱装卸作业效率，减少误操作，由两个部分组成一第1部分:箱位坐标代码。目的在于规定船舶装载集装箱的定位方法,应用这种方法能够对所载的每个集装箱进行空间定位。第2部分：电传数据代码。目的在于规定船舶装箱计划数据传输所需要的统一代码,通过电传或传真服务，在短时间内，把有关信息传递给装船/卸船的所在地。集装箱在船舶上的信息第2部分：电传数据代码1范围本文件规定了船舶装箱计划数据传输所需要的统一代码及其数据表达方式。",
+            "content_ltks": "本 文件 主要 起草人 曹 文胜 周 受 钦 邹 伟宏 邢 虎 松 窦 路 张 立 丽 吴 怡 高 隽 陈 智勇 李 继 春 赵 洁 婷 王 婧 本 文件 于 1998 年 首次 发布 本次 为 第一次 修订 gb t17272 2 2023 引 i 言 为 提高 集装箱 装卸 船 的 效率 避免 集装箱 装卸 误操作 参照 坐标 的 方法 船 公司 将 集装箱 在 船上 的 位置 信息 进行 了 标注 建立 了 箱 位 坐标 代码 为 便于 船 公司 把 箱 位 坐标 等 信息 发送给 港口 便利 集装箱 装卸 作业 船 公司 和 港口 又 建立 了 电传 数据 规则 从而 形成 了 一套 完整 的 集装箱 在 船舶 上 的 箱 位 坐标 代码 和 电传 数据 代码 并 拓展 到 货运代理 船舶 代理 等 相关 业务 方 gb t17272 集装箱 在 船舶 上 的 信息 旨在 规范 集装箱 在 船舶 上 的 信息 从而 提高 集装箱 装卸 作业 效率 减少 误操作 由 两个 部分 组成 一 第1 部分 箱 位 坐标 代码 目的 在于 规定 船舶 装载 集装箱 的 定位 方法 应用 这种 方法 能够 对 所载 的 每个 集装箱 进行 空间 定位 第 2 部分 电传 数据 代码 目的 在于 规定 船舶 装箱 计划 数据 传输 所 需要 的 统一 代码 通过 电传 或 传真 服务 在 短时间 内 把 有关 信息 传递 给 装船 卸船 的 所在地 集装箱 在 船舶 上 的 信息 第 2 部分 电传 数据 代码 1 范围 本 文件 规定 了 船舶 装箱 计划 数据 传输 所 需要 的 统一 代码 及其 数据 表达方式",
+            "dataset_id": "7ebd0a808e2711f0a685620ff33f7526",
+            "doc_type_kwd": "",
+            "document_id": "d2da11628e2711f0bdfa620ff33f7526",
+            "document_keyword": "005_已解密.pdf",
+            "highlight": "装卸船的效率避免<em>集装箱</em>装卸误操作参照坐标的方法船公司将 <em>集装箱</em>在船上的位置信息进行了标注建立了箱位坐标<em>代码</em>为便于船公司把箱位坐标...等信息发送给港口便利<em>集装箱</em>装卸作业船公司和港口又建立了电传数据规则从而形成了一套完整的 <em>集装箱</em>在船舶上的箱位坐标<em>代码</em>和电传数据<em>代码</em>...由两个部分组成一第1部分箱位坐标<em>代码</em>目的在于规定船舶装载<em>集装箱</em>的定位方法应用这种方法能够对所载的每个<em>集装箱</em>进行空间定位第 2部分电传...数据<em>代码</em>目的在于规定船舶<em>装箱</em>计划数据传输所需要的统一<em>代码</em>通过电传或传真服务在短时间内把有关信息传递给装船卸船的所在地<em>集装箱</em>在船舶上...的信息第 2部分电传数据<em>代码</em> 1范围本文件规定了船舶<em>装箱</em>计划数据传输所需要的统一<em>代码</em>及其数据表达方式",
+            "id": "806b885ee8e8b7f3",
+            "image_id": "7ebd0a808e2711f0a685620ff33f7526-806b885ee8e8b7f3",
+            "important_keywords": [],
+            "positions": [
+              [
+                3,
+                91,
+                552,
+                360,
+                372
+              ],
+              [
+                3,
+                71,
+                532,
+                377,
+                389
+              ],
+              [
+                3,
+                92,
+                553,
+                393,
+                405
+              ],
+              [
+                4,
+                62,
+                523,
+                72,
+                83
+              ],
+              [
+                4,
+                84,
+                545,
+                172,
+                184
+              ],
+              [
+                4,
+                63,
+                524,
+                188,
+                201
+              ],
+              [
+                4,
+                63,
+                524,
+                205,
+                216
+              ],
+              [
+                4,
+                63,
+                524,
+                220,
+                232
+              ],
+              [
+                4,
+                63,
+                525,
+                237,
+                246
+              ],
+              [
+                4,
+                91,
+                552,
+                251,
+                263
+              ],
+              [
+                4,
+                103,
+                565,
+                266,
+                279
+              ],
+              [
+                4,
+                103,
+                565,
+                283,
+                294
+              ],
+              [
+                4,
+                104,
+                566,
+                299,
+                310
+              ],
+              [
+                5,
+                223,
+                684,
+                127,
+                139
+              ],
+              [
+                5,
+                219,
+                681,
+                147,
+                162
+              ],
+              [
+                5,
+                93,
+                554,
+                230,
+                242
+              ]
+            ],
+            "similarity": 0.7352423021588091,
+            "term_similarity": 0.8353759393409699,
+            "vector_similarity": 0.5015971487337674
+          },
+          {
+            "content": "<table><caption>表６５　集装箱装拆箱信息７．７．４．１８　集装箱装卸船信息主表</caption>\n<tr><th  >序 号</th><th  >字段中文名称</th><th  >字　段　名</th><th  >主键</th><th  >数据 类型</th><th  >格　 式</th><th  >是否 为空</th><th  >说 　　明</th></tr>\n<tr><td></td><td  >装拆箱记录代码</td><td  >ＺＣＸＤＭ</td><td  >是</td><td  >ｓｔｒｉｎｇ</td><td  >ａｎ．．３２</td><td  >否</td><td></td></tr>\n<tr><td></td><td  >提单号</td><td  >ＴＤＨＭ</td><td  >否</td><td  >ｓｔｒｉｎｇ</td><td  >ａｎ．．３２</td><td  >是</td><td></td></tr>\n<tr><td></td><td  >港口代码</td><td  >ＰＯＲＴ＿ＣＯＤＥ</td><td  >否</td><td  >ｓｔｒｉｎｇ</td><td  >ａｎ６</td><td  >是</td><td></td></tr>\n<tr><td></td><td  >堆场代码</td><td  >ＤＣＤＭ</td><td  >否</td><td  >ｓｔｒｉｎｇ</td><td  >ａｎ．．６</td><td  >是</td><td></td></tr>\n<tr><td></td><td  >箱号</td><td  >ＪＺＸＤＭ</td><td  >否</td><td  >ｓｔｒｉｎｇ</td><td  >ａｎ．．１０</td><td  >是</td><td></td></tr>\n<tr><td></td><td  >箱经营人</td><td  >ＸＪＹＲ</td><td  >否</td><td  >ｓｔｒｉｎｇ</td><td  >ａｎ．．１００</td><td  >是</td><td  rowspan=2 >集装箱经营单位或自然人</td></tr>\n<tr><td></td><td  >集装箱尺寸类型</td><td  >ＪＺＸＬＸ</td><td  >否</td><td  >ｓｔｒｉｎｇ</td><td  >ｎ．．４</td><td  >是</td></tr>\n<tr><td  >８</td><td  >集装箱状态</td><td  >ＪＺＸＺＴ</td><td  >否</td><td  >ｓｔｒｉｎｇ</td><td  >ｎ１</td><td  >是</td><td  rowspan=3 >Ｅ：空；Ｆ：整；Ｌ：拼</td></tr>\n<tr><td></td><td  >铅封号</td><td  >ＣＦＨ</td><td  >否</td><td  >ｓｔｒｉｎｇ</td><td  >ａｎ．．１０</td><td  >是</td></tr>\n<tr><td  >１０</td><td  >件数</td><td  >ＪＳ</td><td  >否</td><td  >ｉｎｔ</td><td  >ｎ．．８</td><td  >是</td></tr>\n<tr><td  >１１</td><td  >箱皮重</td><td  >ＸＰＺ</td><td  >否</td><td  >ｆｌｏａｔ</td><td  >ｎ．．１０</td><td  >是</td><td  >单位为千克（ｋｇ）</td></tr>\n<tr><td  >１２</td><td  >箱内货净重</td><td  >ＪＺ</td><td  >否</td><td  >ｆｌｏａｔ</td><td  >ｎ．．１０</td><td  >是</td><td  rowspan=6 >单位为千克（ｋｇ）</td></tr>\n<tr><td  >１３</td><td  >危险品种类</td><td  >ＷＸＰＺＬ</td><td  >否</td><td  >ｓｔｒｉｎｇ</td><td  >ａｎ．．３２</td><td  >是</td></tr>\n<tr><td  >14</td><td  >危险品装运形式</td><td  >ＺＹＸＳ</td><td  >否</td><td  >ｓｔｒｉｎｇ</td><td  >ａｎ．．３２</td><td  >是</td></tr>\n<tr><td  >１５</td><td  >货物名称</td><td  >ＨＷＭＣ</td><td  >否</td><td  >ｓｔｒｉｎｇ</td><td  >ａｎ．．８０</td><td  >是</td></tr>\n<tr><td  >１６</td><td  >危规编号</td><td  >ＷＧＢＨ</td><td  >否</td><td  >ｓｔｒｉｎｇ</td><td  >ａｎ．．３２</td><td  >是</td></tr>\n<tr><td  >１７</td><td  >装箱时间</td><td  >ＺＸＳＪ</td><td  >否</td><td  >ＤＡＴＥ</td><td  >ＹＤ ＹＹＹ⁃ＭＭ⁃Ｄｈｈ：ｍｍ：ｓｓ</td><td  >是</td></tr>\n<tr><td  >１８</td><td  >拆箱时间</td><td  >ＣＸＳＪ</td><td  >否</td><td  >ＤＡＴＥ</td><td  >ＹＤ ＹＹＹ⁃ＭＭ⁃Ｄｈｈ：ｍｍ：ｓｓ</td><td  >是</td><td></td></tr>\n<tr><td  >１９</td><td  >是否危货</td><td  >ＳＦＷＨ</td><td  >否</td><td  >ｉｎｔ</td><td  >ｎ１</td><td  >是</td><td  >０：非危险品；１：危险品</td></tr>\n</table>",
+            "content_ltks": "表 65 集装箱 装 拆 箱 信息 77 4 18 集装箱 装卸 船 信息 主表 序 号 字段 中文名称 字 段 名 主键 数据 类型 格 式 是否 为 空 说 明 装 拆 箱 记录 代码 zcxdm 是 string an 32 否 提单 号 tdhm 否 string an 32 是 港口 代码 port code 否 string an6 是 堆场 代码 dcdm 否 string an 6 是 箱 号 jzxdm 否 string an 10 是 箱 经营 人 xjyr 否 string an 100 是 集装箱 经营 单位 或 自然人 集装箱 尺寸 类型 jzxlx 否 string n 4 是 8 集装箱 状态 jzxzt 否 string n1 是 e 空 f 整 l 拼 铅 封号 cfh 否 string an 10 是 10 件数 j 否 int n8 是 11 箱 皮重 xpz 否 float n 10 是 单位 为 千克 kg 12 箱内 货 净重 jz 否 float n 10 是 单位 为 千克 kg 13 危险品 种类 wxpzl 否 string an 32 是 14 危险品 装运 形式 zyx 否 string an 32 是 15 货物 名称 hwmc 否 string an 80 是 16 危 规 编号 wgbh 否 string an 32 是 17 装箱 时间 zxsj 否 date yd yyy mm dhh mm s 是 18 拆 箱 时间 cxsj 否 date yd yyy mm dhh mm s 是 19 是否 危 货 sfwh 否 int n1 是 0 非 危险品 1 危险品",
+            "dataset_id": "54887ce6975411f0851bb6a7ca88af7c",
+            "doc_type_kwd": "image",
+            "document_id": "94e10c54975411f0b3aeb6a7ca88af7c",
+            "document_keyword": "106_已解密.pdf",
+            "highlight": "表65 <em>集装箱</em>装拆箱信息77 4 18 <em>集装箱</em>装卸船信息主表序号字段中文名称字段名主键数据类型格式是否为空说明装拆箱记录<em>代码</em> zcxdm...是string an 32否提单号 tdhm否string an 32是港口<em>代码</em> port code否string an6是堆场<em>代码</em> dcdm否string an 6是...箱号 jzxdm否string an 10是箱经营人 xjyr否string an 100是<em>集装箱</em>经营单位或自然人<em>集装箱</em>尺寸类型jzxlx否string n...4是8 <em>集装箱</em>状态jzxzt否string n1是e空f整l拼铅封号cfh否string an 10是10件数j否int n8是11箱皮重xpz...14危险品装运形式zyx否string an 32是15货物名称hwmc否string an 80是16危规编号wgbh否string an 32是17 <em>装箱</em>",
+            "id": "fae971cd807216c1",
+            "image_id": "54887ce6975411f0851bb6a7ca88af7c-fae971cd807216c1",
+            "important_keywords": [],
+            "positions": [
+              [
+                51,
+                73,
+                538,
+                161,
+                570
+              ]
+            ],
+            "similarity": 0.7344597890143902,
+            "term_similarity": 0.8353759393409699,
+            "vector_similarity": 0.4989887715857045
+          },
+          {
+            "content": "<table><caption>表６５　集装箱装拆箱信息７．７．４．１８　集装箱装卸船信息主表</caption>\n<tr><th  >序 号</th><th  >字段中文名称</th><th  >字　段　名</th><th  >主键</th><th  >数据 类型</th><th  >格　 式</th><th  >是否 为空</th><th  >说 　　明</th></tr>\n<tr><td></td><td  >装拆箱记录代码</td><td  >ＺＣＸＤＭ</td><td  >是</td><td  >ｓｔｒｉｎｇ</td><td  >ａｎ．．３２</td><td  >否</td><td></td></tr>\n<tr><td></td><td  >提单号</td><td  >ＴＤＨＭ</td><td  >否</td><td  >ｓｔｒｉｎｇ</td><td  >ａｎ．．３２</td><td  >是</td><td></td></tr>\n<tr><td></td><td  >港口代码</td><td  >ＰＯＲＴ＿ＣＯＤＥ</td><td  >否</td><td  >ｓｔｒｉｎｇ</td><td  >ａｎ６</td><td  >是</td><td></td></tr>\n<tr><td></td><td  >堆场代码</td><td  >ＤＣＤＭ</td><td  >否</td><td  >ｓｔｒｉｎｇ</td><td  >ａｎ．．６</td><td  >是</td><td></td></tr>\n<tr><td></td><td  >箱号</td><td  >ＪＺＸＤＭ</td><td  >否</td><td  >ｓｔｒｉｎｇ</td><td  >ａｎ．．１０</td><td  >是</td><td></td></tr>\n<tr><td></td><td  >箱经营人</td><td  >ＸＪＹＲ</td><td  >否</td><td  >ｓｔｒｉｎｇ</td><td  >ａｎ．．１００</td><td  >是</td><td  rowspan=2 >集装箱经营单位或自然人</td></tr>\n<tr><td></td><td  >集装箱尺寸类型</td><td  >ＪＺＸＬＸ</td><td  >否</td><td  >ｓｔｒｉｎｇ</td><td  >ｎ．．４</td><td  >是</td></tr>\n<tr><td  >８</td><td  >集装箱状态</td><td  >ＪＺＸＺＴ</td><td  >否</td><td  >ｓｔｒｉｎｇ</td><td  >ｎ１</td><td  >是</td><td  rowspan=3 >Ｅ：空；Ｆ：整；Ｌ：拼</td></tr>\n<tr><td></td><td  >铅封号</td><td  >ＣＦＨ</td><td  >否</td><td  >ｓｔｒｉｎｇ</td><td  >ａｎ．．１０</td><td  >是</td></tr>\n<tr><td  >１０</td><td  >件数</td><td  >ＪＳ</td><td  >否</td><td  >ｉｎｔ</td><td  >ｎ．．８</td><td  >是</td></tr>\n<tr><td  >１１</td><td  >箱皮重</td><td  >ＸＰＺ</td><td  >否</td><td  >ｆｌｏａｔ</td><td  >ｎ．．１０</td><td  >是</td><td  >单位为千克（ｋｇ）</td></tr>\n<tr><td  >１２</td><td  >箱内货净重</td><td  >ＪＺ</td><td  >否</td><td  >ｆｌｏａｔ</td><td  >ｎ．．１０</td><td  >是</td><td  rowspan=6 >单位为千克（ｋｇ）</td></tr>\n<tr><td  >１３</td><td  >危险品种类</td><td  >ＷＸＰＺＬ</td><td  >否</td><td  >ｓｔｒｉｎｇ</td><td  >ａｎ．．３２</td><td  >是</td></tr>\n<tr><td  >14</td><td  >危险品装运形式</td><td  >ＺＹＸＳ</td><td  >否</td><td  >ｓｔｒｉｎｇ</td><td  >ａｎ．．３２</td><td  >是</td></tr>\n<tr><td  >１５</td><td  >货物名称</td><td  >ＨＷＭＣ</td><td  >否</td><td  >ｓｔｒｉｎｇ</td><td  >ａｎ．．８０</td><td  >是</td></tr>\n<tr><td  >１６</td><td  >危规编号</td><td  >ＷＧＢＨ</td><td  >否</td><td  >ｓｔｒｉｎｇ</td><td  >ａｎ．．３２</td><td  >是</td></tr>\n<tr><td  >１７</td><td  >装箱时间</td><td  >ＺＸＳＪ</td><td  >否</td><td  >ＤＡＴＥ</td><td  >ＹＤ ＹＹＹ⁃ＭＭ⁃Ｄｈｈ：ｍｍ：ｓｓ</td><td  >是</td></tr>\n<tr><td  >１８</td><td  >拆箱时间</td><td  >ＣＸＳＪ</td><td  >否</td><td  >ＤＡＴＥ</td><td  >ＹＤ ＹＹＹ⁃ＭＭ⁃Ｄｈｈ：ｍｍ：ｓｓ</td><td  >是</td><td></td></tr>\n<tr><td  >１９</td><td  >是否危货</td><td  >ＳＦＷＨ</td><td  >否</td><td  >ｉｎｔ</td><td  >ｎ１</td><td  >是</td><td  >０：非危险品；１：危险品</td></tr>\n</table>",
+            "content_ltks": "表 65 集装箱 装 拆 箱 信息 77 4 18 集装箱 装卸 船 信息 主表 序 号 字段 中文名称 字 段 名 主键 数据 类型 格 式 是否 为 空 说 明 装 拆 箱 记录 代码 zcxdm 是 string an 32 否 提单 号 tdhm 否 string an 32 是 港口 代码 port code 否 string an6 是 堆场 代码 dcdm 否 string an 6 是 箱 号 jzxdm 否 string an 10 是 箱 经营 人 xjyr 否 string an 100 是 集装箱 经营 单位 或 自然人 集装箱 尺寸 类型 jzxlx 否 string n 4 是 8 集装箱 状态 jzxzt 否 string n1 是 e 空 f 整 l 拼 铅 封号 cfh 否 string an 10 是 10 件数 j 否 int n8 是 11 箱 皮重 xpz 否 float n 10 是 单位 为 千克 kg 12 箱内 货 净重 jz 否 float n 10 是 单位 为 千克 kg 13 危险品 种类 wxpzl 否 string an 32 是 14 危险品 装运 形式 zyx 否 string an 32 是 15 货物 名称 hwmc 否 string an 80 是 16 危 规 编号 wgbh 否 string an 32 是 17 装箱 时间 zxsj 否 date yd yyy mm dhh mm s 是 18 拆 箱 时间 cxsj 否 date yd yyy mm dhh mm s 是 19 是否 危 货 sfwh 否 int n1 是 0 非 危险品 1 危险品",
+            "dataset_id": "7ebd0a808e2711f0a685620ff33f7526",
+            "doc_type_kwd": "image",
+            "document_id": "d0a7e6bc8e2711f0bdfa620ff33f7526",
+            "document_keyword": "184_已解密.pdf",
+            "highlight": "表65 <em>集装箱</em>装拆箱信息77 4 18 <em>集装箱</em>装卸船信息主表序号字段中文名称字段名主键数据类型格式是否为空说明装拆箱记录<em>代码</em> zcxdm...是string an 32否提单号 tdhm否string an 32是港口<em>代码</em> port code否string an6是堆场<em>代码</em> dcdm否string an 6是...箱号 jzxdm否string an 10是箱经营人 xjyr否string an 100是<em>集装箱</em>经营单位或自然人<em>集装箱</em>尺寸类型jzxlx否string n...4是8 <em>集装箱</em>状态jzxzt否string n1是e空f整l拼铅封号cfh否string an 10是10件数j否int n8是11箱皮重xpz...14危险品装运形式zyx否string an 32是15货物名称hwmc否string an 80是16危规编号wgbh否string an 32是17 <em>装箱</em>",
+            "id": "077100a4d060ec24",
+            "image_id": "7ebd0a808e2711f0a685620ff33f7526-077100a4d060ec24",
+            "important_keywords": [],
+            "positions": [
+              [
+                51,
+                73,
+                538,
+                161,
+                570
+              ]
+            ],
+            "similarity": 0.7340551448319312,
+            "term_similarity": 0.8353759393409699,
+            "vector_similarity": 0.4976399576441743
+          },
+          {
+            "content": "引言本标准符合国际组织的可扩展置标语言简称及联合国W3CExtensibleMarkupLanguage(:XML)1.0(UN/CEFACT)与OASIS国际组织共同组成的ebXML———基于XML的电子商务系列标准。集装箱多式联运电子数据交换基于XML的装/卸报告报文1 范围本标准规定了集装箱运输过程中相关的参与方之间进行电子数据交换中所采用的集装箱装/卸报告报文格式的结构和标记的定义以及,,报文的格式本标XM准L适用于集装箱码头报告集装箱装X卸ML装Sc卸hema或卸。、(/、单卸、溢卸短)的状况。2 规范性引用文件下列文件中的条款通过本标准的引用而成为本标准的条款。凡是注日期的引用文件,其随后所有的修改单不包括勘误的内容或修订版均不适用于本标准然而鼓励根据本标准达成协议的各方研究是否可使(用这些文件的最新版)本凡是不注日期的引用文,其,。件,最新版本适用于本标准。/集装箱代码、识别和标记(/—,:GBT1836/ 世界各国和地区名称代码GBT18361997idtISO63461995)(GB/T2659—2000,eqvISO3166-1:1997)GBT2659 /运输方式代码GBT6512 /中国及世界主要海运贸易港口代码GBT7407 /中华人民共和国口岸及有关地点代码GBT15514 /货物类型、包装类型和包装材料类型代码(/—,/)GBT16472 GB/T16833 用于行政商业和运输业电子数据交换的代G码B表T164721996eqvUNECE21(GB/T16833—2000,idtUN/EDI-",
+            "content_ltks": "引言 本 标准 符合国际 组织 的 可 扩展 置标语言 简称 及 联合国 w3cextensiblemarkuplanguag xml 10 un cefact 与 oasi 国际 组织 共同 组成 的 ebxml 基于 xml 的 电子商务 系列 标准 集装箱 多 式 联运 电子数据交换 基于 xml 的 装 卸 报告 报文 1 范围 本 标准规定 了 集装箱运输 过程 中 相关 的 参与方 之间 进行 电子数据交换 中所 采用 的 集装箱 装 卸 报告 报文格式 的 结构 和 标记 的 定义 以及 报文 的 格式 本 标 xm 准 l 适用 于 集装箱 码头 报告 集装箱 装 x 卸 ml 装 sc 卸 hema 或 卸 单 卸 溢 卸 短 的 状况 2 规范性 引用 文件 下列 文件 中的 条款 通过 本 标准 的 引用 而 成为 本 标准 的 条款 凡是 注 日期 的 引用 文件 其 随后 所有 的 修改 单 不 包括 勘误 的 内容 或 修订版 均 不适 用于 本 标准 然而 鼓励 根据 本 标准 达成协议 的 各方 研究 是否 可使 用 这些 文件 的 最新版 本 凡是 不 注 日期 的 引用 文 其 件 最新 版本 适用 于 本 标准 集装箱 代码 识别 和 标记 gbt1836 世界 各国 和 地区 名称 代码 gbt18361997idtiso63461995 gb t2659 2000 eqviso3166 1 1997 gbt2659 运输 方式 代码 gbt6512 中国 及 世界 主要 海运 贸易 港口 代码 gbt7407 中华人民共和国 口岸 及 有关 地点 代码 gbt15514 货物 类型 包装 类型 和 包装材料 类型 代码 gbt16472 gb t16833 用于 行政 商业 和 运输业 电子数据交换 的 代 g 码 b 表 t164721996eqvunece21 gb t16833 2000 idtun edi",
+            "dataset_id": "7ebd0a808e2711f0a685620ff33f7526",
+            "doc_type_kwd": "",
+            "document_id": "d0893fbe8e2711f0bdfa620ff33f7526",
+            "document_keyword": "163_已解密.pdf",
+            "highlight": "简称及联合国w3cextensiblemarkuplanguag xml 10 un cefact与oasi国际组织共同组成的 ebxml基于xml的电子商务系列标准<em>集装箱</em>...多式联运电子数据交换基于xml的装卸报告报文1范围本标准规定了集装箱运输过程中相关的参与方之间进行电子数据交换中所采用的 <em>集装箱</em>装卸报告报文格式...的结构和标记的定义以及报文的格式本标xm准l适用于 <em>集装箱</em>码头报告<em>集装箱</em>装x卸ml装sc卸hema或卸单卸溢卸短的状况2规范性...<em>代码</em> <em>识别</em>和标记gbt1836世界各国和地区名称<em>代码</em> gbt18361997idtiso63461995 gb t2659 2000 eqviso3166 1 1997 gbt2659...运输方式<em>代码</em> gbt6512中国及世界主要海运贸易港口<em>代码</em> gbt7407中华人民共和国口岸及有关地点<em>代码</em> gbt15514货物类型包装类型和包装材料类型",
+            "id": "4db0b9b23f3f1e71",
+            "image_id": "7ebd0a808e2711f0a685620ff33f7526-4db0b9b23f3f1e71",
+            "important_keywords": [],
+            "positions": [
+              [
+                4,
+                88,
+                550,
+                151,
+                163
+              ],
+              [
+                4,
+                67,
+                529,
+                165,
+                177
+              ],
+              [
+                5,
+                196,
+                658,
+                115,
+                127
+              ],
+              [
+                5,
+                200,
+                662,
+                133,
+                148
+              ],
+              [
+                5,
+                88,
+                550,
+                202,
+                214
+              ],
+              [
+                5,
+                67,
+                529,
+                218,
+                229
+              ],
+              [
+                5,
+                88,
+                550,
+                234,
+                245
+              ],
+              [
+                5,
+                65,
+                527,
+                258,
+                269
+              ],
+              [
+                5,
+                88,
+                550,
+                281,
+                293
+              ],
+              [
+                5,
+                66,
+                528,
+                295,
+                308
+              ],
+              [
+                5,
+                67,
+                529,
+                312,
+                323
+              ],
+              [
+                5,
+                86,
+                548,
+                328,
+                340
+              ],
+              [
+                5,
+                87,
+                549,
+                343,
+                354
+              ],
+              [
+                5,
+                86,
+                548,
+                360,
+                371
+              ],
+              [
+                5,
+                87,
+                549,
+                375,
+                386
+              ],
+              [
+                5,
+                87,
+                549,
+                391,
+                402
+              ],
+              [
+                5,
+                88,
+                550,
+                407,
+                418
+              ],
+              [
+                5,
+                87,
+                549,
+                423,
+                433
+              ]
+            ],
+            "similarity": 0.7333399477214532,
+            "term_similarity": 0.8231341077145613,
+            "vector_similarity": 0.5238202410708679
+          },
+          {
+            "content": "<table><caption>表8 货物信息数据体</caption>\n<tr><th  >中文名称</th><th  >英文名称</th><th  >说 明</th><th  >数据类型</th><th  >数据 格式</th><th  >值域</th><th  >约束 条件/</th><th  >备注</th></tr>\n<tr><td  >订单号</td><td  >OrderingNumber </td><td  >甩挂运输货物的订单编号</td><td  >字符型</td><td  >an. . 35 </td><td></td><td  >M</td><td></td></tr>\n<tr><td  >提货单位</td><td  >Picncy kupAgeName </td><td  >甩挂运输货物提货单位 的名称，可以是收货人、货 代等</td><td  >字符型</td><td  >an. . 100 </td><td></td><td  >O</td><td></td></tr>\n<tr><td  >货物名称</td><td  >GoodsName </td><td  >用普通语言对一种货物 的描述</td><td  >字符型</td><td  >an. . 200 </td><td></td><td  >M</td><td></td></tr>\n<tr><td  >货物类型</td><td  >GoodsType </td><td  >对运输工具上载运的或 将要载运的货物按照其一 般的外观进行的分类</td><td  >字符型</td><td  >an. . 35 </td><td  >见2 的G相B /关T 规16定47</td><td  >O</td><td></td></tr>\n<tr><td  >货物类型 代码</td><td  >GoodsTypeCode </td><td  >标识货物类型的代码</td><td  >字符型</td><td  >an. . 10 </td><td  >见2 的G相B /关T 规16定47</td><td  >O</td><td></td></tr>\n<tr><td  >货物价值</td><td  >GoodsValue </td><td  >说明货物的价值</td><td  >数字型</td><td  >n. . 15 </td><td></td><td  >O </td><td  >金额单位：元</td></tr>\n<tr><td  >货物体积</td><td  >Cube </td><td  >由件包或运输设备的 长宽高、最大值的乘积得 出、的计、量值</td><td  >数字型</td><td  >n. . 9 </td><td></td><td  >O </td><td  >计量单位 立方米：(m3)</td></tr>\n<tr><td  >件数</td><td  >PackagesNumber</td><td  >说明货物的件数</td><td  >数字型</td><td  >n..6</td><td></td><td  >O</td><td></td></tr>\n<tr><td  >质量</td><td  >Weight </td><td  >包括包装物但不包括承 运人设备的货物质量</td><td  >数字型</td><td  >n. . 12，2 </td><td></td><td  >M </td><td  >计量单位 千克：(kg)</td></tr>\n<tr><td  >集装箱号</td><td  >Container ContainerNumber </td><td  >集装箱识别标记由箱主  代码设备识别码，、箱号与 校验、码组成</td><td  >字符型</td><td  >an. . 12 </td><td></td><td  >O </td><td  >用于集装 箱运单</td></tr>\n<tr><td  >集装箱 箱型</td><td  >ContainerType </td><td  >根据集装箱的类型进行 分类的表示，例如GP等</td><td  >字符型</td><td  >a2 </td><td  >采用 中的G相B 关/T 规18定36</td><td></td><td  >用于集装 箱运单</td></tr>\n<tr><td  >集装箱型 尺寸</td><td  >ContainerSize </td><td  >根据集装箱的外部尺寸进  行分类的表示，例如20、40等</td><td  >字符型</td><td  >n. . 2 </td><td  >采用 中的G相B 关/T 规18定36</td><td  >O </td><td  >用于集装 箱运单</td></tr>\n</table>",
+            "content_ltks": "表 8 货物 信息 数据 体 中文名称 英文名称 说 明 数据类型 数据 格式 值域 约束 条件 备注 订单号 orderingnumb 甩 挂 运输 货物 的 订单 编号 字符 型 an 35 m 提货 单位 picnci kupagenam 甩 挂 运输 货物 提货 单位 的 名称 可以 是 收货人 货 代 等 字符 型 an 100 o 货物 名称 goodsnam 用 普通 语言 对 一种 货物 的 描述 字符 型 an 200 m 货物 类型 goodstyp 对 运输工具 上 载运 的 或 将要 载运 的 货物 按照 其一 般的 外观 进行 的 分类 字符 型 an 35 见 2 的 g 相 b 关 t 规 16 定 47 o 货物 类型 代码 goodstypecod 标识 货物 类型 的 代码 字符 型 an 10 见 2 的 g 相 b 关 t 规 16 定 47 o 货物 价值 goodsvalu 说明 货物 的 价值 数字型 n 15 o 金额 单位 元 货物 体积 cube 由 件 包 或 运输设备 的 长宽 高 最大值 的 乘积 得 出 的 计 量值 数字型 n 9 o 计量单位 立方米 m3 件数 packagesnumb 说明 货物 的 件数 数字型 n 6 o 质量 weight 包括 包装物 但 不 包括 承 运 人 设备 的 货物 质量 数字型 n 12 2m 计量单位 千克 kg 集装箱 号 contain containernumb 集装箱 识别 标记 由 箱 主 代码 设备 识别码 箱 号 与 校验 码 组成 字符 型 an 12 o 用于 集装 箱 运单 集装箱 箱 型 containertyp 根据 集装箱 的 类型 进行 分类 的 表示 例如 gp 等 字符 型 a2 采用 中的 g 相 b 关 t 规 18 定 36 用于 集装 箱 运单 集装箱 型 尺寸 containers 根据 集装箱 的 外部 尺寸 进 行 分类 的 表示 例如 2040 等 字符 型 n 2 采用 中的 g 相 b 关 t 规 18 定 36 o 用于 集装 箱 运单",
+            "dataset_id": "7ebd0a808e2711f0a685620ff33f7526",
+            "doc_type_kwd": "image",
+            "document_id": "d1df57368e2711f0bdfa620ff33f7526",
+            "document_keyword": "175_已解密.pdf",
+            "highlight": "goodstyp对运输工具上载运的或将要载运的货物按照其一般的外观进行的分类字符型 an 35见2的g相b关t规16定47 o货物类型<em>代码</em>...goodstypecod标识货物类型的 <em>代码</em>字符型 an 10见2的g相b关t规16定47 o货物价值goodsvalu说明货物的价值数字型n 15...件数packagesnumb说明货物的件数数字型n 6 o质量weight包括包装物但不包括承运人设备的货物质量数字型n 12 2m计量单位千克kg <em>集装箱</em>...号contain containernumb <em>集装箱</em> <em>识别</em>标记由箱主 <em>代码</em>设备识别码箱号与校验码组成字符型 an 12 o用于集装箱运单<em>集装箱</em>箱型 containertyp...根据<em>集装箱</em>的类型进行分类的表示例如gp等字符型 a2采用中的g相b关t规18定36用于集装箱运单<em>集装箱</em>型尺寸containers根据<em>集装箱</em>",
+            "id": "23525e66a8a04261",
+            "image_id": "7ebd0a808e2711f0a685620ff33f7526-23525e66a8a04261",
+            "important_keywords": [],
+            "positions": [
+              [
+                10,
+                65,
+                529,
+                171,
+                645
+              ]
+            ],
+            "similarity": 0.7331294412476266,
+            "term_similarity": 0.8231341077145613,
+            "vector_similarity": 0.5231185528247793
+          },
+          {
+            "content": "05 5. 5 单位类型代码06 5. 6 性别代码5.7人员从事海事业务范围代码：DM_XBDM，GB /T2261. 1 5. 7 人员从事海事业务范围代码03 5. 8 申报类型代码09 10 装箱5. 9 申报单状态与结果代码5.1017 8 5. 10 货物流向代码5.11装运形式代码5. 11 装运形式代码5.124 车辆5. 12 托/承运单位属性代码5.134 5. 13 港口顺序属性代码5.1414 型代码包装类型代码5. 14 包装类5.1599 其5. 15 集装箱尺寸类型代码5.16代码标识为：DM_JZXCCLXDM，5. 16 附件清单类别代码5.1734 危险5. 17 压载/污水舱类型代码2 5. 18 水质种类代码13 代码标识为:DM_KMCLDM,代码根据《国际海运危险货物规则》,按照每个包件内外包装的最大净5. 19 可免除量代码5.20E5 5. 20 危险货物种类代码参考文献献参考文",
+            "content_ltks": "05 55 单位 类型 代码 06 56 性别 代码 57 人员 从事 海事 业务范围 代码 dm _ xbdm gb t2261 15 7 人员 从事 海事 业务范围 代码 03 58 申报 类型 代码 09 10 装箱 59 申报单 状态 与 结果 代码 5 1017 85 10 货物 流向 代码 511 装运 形式 代码 511 装运 形式 代码 5 124 车辆 5 12 托 承运 单位 属性 代码 5 134 513 港口 顺序 属性 代码 5 1414 型 代码 包装 类型 代码 5 14 包装 类 5 1599 其 515 集装箱 尺寸 类型 代码 5 16 代码 标识 为 dm _ jzxcclxdm 5 16 附件 清单 类别 代码 5 1734 危险 517 压载 污水 舱 类型 代码 25 18 水质 种类 代码 13 代码 标识 为 dm _ kmcldm 代码 根据 国际 海运 危险 货物 规则 按照 每个 包 件 内外 包装 的 最大 净 519 可 免除 量 代码 5 20e5 520 危险 货物 种类 代码 参考文献 献 参考 文",
+            "dataset_id": "7ebd0a808e2711f0a685620ff33f7526",
+            "doc_type_kwd": "",
+            "document_id": "d37c88028e2711f0bdfa620ff33f7526",
+            "document_keyword": "036_已解密.pdf",
+            "highlight": "05 55单位类型<em>代码</em> 06 56性别<em>代码</em> 57人员从事海事业务范围<em>代码</em> dm_xbdm gb t2261 15 7人员从事海事业务范围<em>代码</em> 03 58申报类型<em>代码</em>...09 10 <em>装箱</em> 59申报单状态与结果<em>代码</em> 5 1017 85 10货物流向<em>代码</em> 511装运形式<em>代码</em> 511装运形式<em>代码</em> 5 124车辆5 12托承运单位属性...<em>代码</em> 5 134 513港口顺序属性<em>代码</em> 5 1414型<em>代码</em>包装类型<em>代码</em> 5 14包装类 5 1599其515 <em>集装箱</em>尺寸类型<em>代码</em> 5 16 <em>代码</em>标识为 dm_jzxcclxdm...5 16附件清单类别<em>代码</em> 5 1734危险517压载污水舱类型<em>代码</em> 25 18水质种类<em>代码</em> 13 <em>代码</em>标识为 dm_kmcldm <em>代码</em>根据国际海运危险货物...规则按照每个包件内外包装的最大净 519可免除量 <em>代码</em> 5 20e5 520危险货物种类<em>代码</em>参考文献献参考文",
+            "id": "6b4515f73c2dd6b8",
+            "image_id": "7ebd0a808e2711f0a685620ff33f7526-6b4515f73c2dd6b8",
+            "important_keywords": [],
+            "positions": [
+              [
+                121,
+                87,
+                527,
+                276,
+                288
+              ],
+              [
+                121,
+                87,
+                527,
+                502,
+                514
+              ],
+              [
+                121,
+                63,
+                503,
+                525,
+                537
+              ],
+              [
+                121,
+                87,
+                527,
+                549,
+                562
+              ],
+              [
+                121,
+                86,
+                526,
+                717,
+                729
+              ],
+              [
+                122,
+                87,
+                527,
+                345,
+                357
+              ],
+              [
+                122,
+                87,
+                527,
+                605,
+                618
+              ],
+              [
+                123,
+                62,
+                502,
+                99,
+                111
+              ],
+              [
+                123,
+                87,
+                527,
+                124,
+                136
+              ],
+              [
+                123,
+                64,
+                504,
+                289,
+                301
+              ],
+              [
+                123,
+                87,
+                527,
+                313,
+                325
+              ],
+              [
+                123,
+                87,
+                527,
+                504,
+                516
+              ],
+              [
+                123,
+                64,
+                503,
+                706,
+                721
+              ],
+              [
+                124,
+                87,
+                527,
+                434,
+                446
+              ],
+              [
+                124,
+                64,
+                504,
+                457,
+                470
+              ],
+              [
+                124,
+                86,
+                526,
+                481,
+                493
+              ],
+              [
+                125,
+                65,
+                505,
+                520,
+                530
+              ],
+              [
+                125,
+                87,
+                527,
+                543,
+                556
+              ],
+              [
+                125,
+                87,
+                527,
+                715,
+                727
+              ],
+              [
+                126,
+                87,
+                527,
+                230,
+                243
+              ],
+              [
+                126,
+                66,
+                505,
+                247,
+                259
+              ],
+              [
+                126,
+                87,
+                527,
+                510,
+                522
+              ]
+            ],
+            "similarity": 0.7321767891586679,
+            "term_similarity": 0.8353759393409699,
+            "vector_similarity": 0.49137877206662983
+          },
+          {
+            "content": "05 5. 5 单位类型代码06 5. 6 性别代码5.7人员从事海事业务范围代码：DM_XBDM，GB /T2261. 1 5. 7 人员从事海事业务范围代码03 5. 8 申报类型代码09 10 装箱5. 9 申报单状态与结果代码5.1017 8 5. 10 货物流向代码5.11装运形式代码5. 11 装运形式代码5.124 车辆5. 12 托/承运单位属性代码5.134 5. 13 港口顺序属性代码5.1414 型代码包装类型代码5. 14 包装类5.1599 其5. 15 集装箱尺寸类型代码5.16代码标识为：DM_JZXCCLXDM，5. 16 附件清单类别代码5.1734 危险5. 17 压载/污水舱类型代码2 5. 18 水质种类代码13 代码标识为:DM_KMCLDM,代码根据《国际海运危险货物规则》,按照每个包件内外包装的最大净5. 19 可免除量代码5.20E5 5. 20 危险货物种类代码参考文献献参考文",
+            "content_ltks": "05 55 单位 类型 代码 06 56 性别 代码 57 人员 从事 海事 业务范围 代码 dm _ xbdm gb t2261 15 7 人员 从事 海事 业务范围 代码 03 58 申报 类型 代码 09 10 装箱 59 申报单 状态 与 结果 代码 5 1017 85 10 货物 流向 代码 511 装运 形式 代码 511 装运 形式 代码 5 124 车辆 5 12 托 承运 单位 属性 代码 5 134 513 港口 顺序 属性 代码 5 1414 型 代码 包装 类型 代码 5 14 包装 类 5 1599 其 515 集装箱 尺寸 类型 代码 5 16 代码 标识 为 dm _ jzxcclxdm 5 16 附件 清单 类别 代码 5 1734 危险 517 压载 污水 舱 类型 代码 25 18 水质 种类 代码 13 代码 标识 为 dm _ kmcldm 代码 根据 国际 海运 危险 货物 规则 按照 每个 包 件 内外 包装 的 最大 净 519 可 免除 量 代码 5 20e5 520 危险 货物 种类 代码 参考文献 献 参考 文",
+            "dataset_id": "54887ce6975411f0851bb6a7ca88af7c",
+            "doc_type_kwd": "",
+            "document_id": "96c538c4975411f0b3aeb6a7ca88af7c",
+            "document_keyword": "024_已解密.pdf",
+            "highlight": "05 55单位类型<em>代码</em> 06 56性别<em>代码</em> 57人员从事海事业务范围<em>代码</em> dm_xbdm gb t2261 15 7人员从事海事业务范围<em>代码</em> 03 58申报类型<em>代码</em>...09 10 <em>装箱</em> 59申报单状态与结果<em>代码</em> 5 1017 85 10货物流向<em>代码</em> 511装运形式<em>代码</em> 511装运形式<em>代码</em> 5 124车辆5 12托承运单位属性...<em>代码</em> 5 134 513港口顺序属性<em>代码</em> 5 1414型<em>代码</em>包装类型<em>代码</em> 5 14包装类 5 1599其515 <em>集装箱</em>尺寸类型<em>代码</em> 5 16 <em>代码</em>标识为 dm_jzxcclxdm...5 16附件清单类别<em>代码</em> 5 1734危险517压载污水舱类型<em>代码</em> 25 18水质种类<em>代码</em> 13 <em>代码</em>标识为 dm_kmcldm <em>代码</em>根据国际海运危险货物...规则按照每个包件内外包装的最大净 519可免除量 <em>代码</em> 5 20e5 520危险货物种类<em>代码</em>参考文献献参考文",
+            "id": "47e6339c5e21db65",
+            "image_id": "54887ce6975411f0851bb6a7ca88af7c-47e6339c5e21db65",
+            "important_keywords": [],
+            "positions": [
+              [
+                121,
+                87,
+                527,
+                276,
+                288
+              ],
+              [
+                121,
+                87,
+                527,
+                502,
+                514
+              ],
+              [
+                121,
+                63,
+                503,
+                525,
+                537
+              ],
+              [
+                121,
+                87,
+                527,
+                549,
+                562
+              ],
+              [
+                121,
+                86,
+                526,
+                717,
+                729
+              ],
+              [
+                122,
+                87,
+                527,
+                345,
+                357
+              ],
+              [
+                122,
+                87,
+                527,
+                605,
+                618
+              ],
+              [
+                123,
+                62,
+                502,
+                99,
+                111
+              ],
+              [
+                123,
+                87,
+                527,
+                124,
+                136
+              ],
+              [
+                123,
+                64,
+                504,
+                289,
+                301
+              ],
+              [
+                123,
+                87,
+                527,
+                313,
+                325
+              ],
+              [
+                123,
+                87,
+                527,
+                504,
+                516
+              ],
+              [
+                123,
+                64,
+                503,
+                706,
+                721
+              ],
+              [
+                124,
+                87,
+                527,
+                434,
+                446
+              ],
+              [
+                124,
+                64,
+                504,
+                457,
+                470
+              ],
+              [
+                124,
+                86,
+                526,
+                481,
+                493
+              ],
+              [
+                125,
+                65,
+                505,
+                520,
+                530
+              ],
+              [
+                125,
+                87,
+                527,
+                543,
+                556
+              ],
+              [
+                125,
+                87,
+                527,
+                715,
+                727
+              ],
+              [
+                126,
+                87,
+                527,
+                230,
+                243
+              ],
+              [
+                126,
+                66,
+                505,
+                247,
+                259
+              ],
+              [
+                126,
+                87,
+                527,
+                510,
+                522
+              ]
+            ],
+            "similarity": 0.7319179630358941,
+            "term_similarity": 0.8353759393409699,
+            "vector_similarity": 0.49051601832405056
+          },
+          {
+            "content": "<table><caption>表3从事受海事监管业务范围代码</caption>\n<tr><td  >代</td><td  >码</td><td  >名</td><td  >称</td><td  >事监</td><td  >管业</td><td  >称</td></tr>\n<tr><td  >01</td><td></td><td  >外/内贸包件货申报</td><td></td><td  >06</td><td  >外/内贸过驳申报</td><td></td></tr>\n<tr><td  >02</td><td></td><td  >名</td><td></td><td  >07</td><td  >集装箱装箱</td><td></td></tr>\n<tr><td  >03</td><td></td><td  > 外/内贸包件货</td><td></td><td  >08</td><td  > </td><td></td></tr>\n<tr><td  >04</td><td></td><td  > 外/内贸液货货</td><td></td><td  >09</td><td  > 集装箱</td><td></td></tr>\n<tr><td  >05</td><td></td><td  > 外/内贸包件</td><td></td><td  >10</td><td  > 充罐</td><td></td></tr>\n</table>",
+            "content_ltks": "表 3 从事 受 海事 监管 业务范围 代码 代 码 名 称 事 监 管业 称 01 外 内贸 包 件 货 申报 06 外 内贸 过驳 申报 02 名 07 集装箱 装箱 03 外 内贸 包 件 货 08 04 外 内贸 液 货 货 09 集装箱 05 外 内贸 包 件 10 充 罐",
+            "dataset_id": "7ebd0a808e2711f0a685620ff33f7526",
+            "doc_type_kwd": "image",
+            "document_id": "d37c88028e2711f0bdfa620ff33f7526",
+            "document_keyword": "036_已解密.pdf",
+            "highlight": "表3从事受海事监管业务范围<em>代码</em>代码名称事监管业称 01外内贸包件货申报06外内贸过驳申报02名07 <em>集装箱</em> <em>装箱</em> 03外内贸包件货 08...04外内贸液货货 09 <em>集装箱</em> 05外内贸包件10充罐",
+            "id": "06affbbacbf45257",
+            "image_id": "7ebd0a808e2711f0a685620ff33f7526-06affbbacbf45257",
+            "important_keywords": [],
+            "positions": [
+              [
+                121,
+                65,
+                528,
+                115,
+                236
+              ]
+            ],
+            "similarity": 0.7318999990152122,
+            "term_similarity": 0.8353759393409699,
+            "vector_similarity": 0.4904561382551108
+          },
+          {
+            "content": "<table><caption>表3从事受海事监管业务范围代码</caption>\n<tr><td  >代</td><td  >码</td><td  >名</td><td  >称</td><td  >事监</td><td  >管业</td><td  >称</td></tr>\n<tr><td  >01</td><td></td><td  >外/内贸包件货申报</td><td></td><td  >06</td><td  >外/内贸过驳申报</td><td></td></tr>\n<tr><td  >02</td><td></td><td  >名</td><td></td><td  >07</td><td  >集装箱装箱</td><td></td></tr>\n<tr><td  >03</td><td></td><td  > 外/内贸包件货</td><td></td><td  >08</td><td  > </td><td></td></tr>\n<tr><td  >04</td><td></td><td  > 外/内贸液货货</td><td></td><td  >09</td><td  > 集装箱</td><td></td></tr>\n<tr><td  >05</td><td></td><td  > 外/内贸包件</td><td></td><td  >10</td><td  > 充罐</td><td></td></tr>\n</table>",
+            "content_ltks": "表 3 从事 受 海事 监管 业务范围 代码 代 码 名 称 事 监 管业 称 01 外 内贸 包 件 货 申报 06 外 内贸 过驳 申报 02 名 07 集装箱 装箱 03 外 内贸 包 件 货 08 04 外 内贸 液 货 货 09 集装箱 05 外 内贸 包 件 10 充 罐",
+            "dataset_id": "54887ce6975411f0851bb6a7ca88af7c",
+            "doc_type_kwd": "image",
+            "document_id": "96c538c4975411f0b3aeb6a7ca88af7c",
+            "document_keyword": "024_已解密.pdf",
+            "highlight": "表3从事受海事监管业务范围<em>代码</em>代码名称事监管业称 01外内贸包件货申报06外内贸过驳申报02名07 <em>集装箱</em> <em>装箱</em> 03外内贸包件货 08...04外内贸液货货 09 <em>集装箱</em> 05外内贸包件10充罐",
+            "id": "c8b7bfa2288acb8c",
+            "image_id": "54887ce6975411f0851bb6a7ca88af7c-c8b7bfa2288acb8c",
+            "important_keywords": [],
+            "positions": [
+              [
+                121,
+                65,
+                528,
+                115,
+                236
+              ]
+            ],
+            "similarity": 0.7317692699449477,
+            "term_similarity": 0.8353759393409699,
+            "vector_similarity": 0.4900203746875627
+          },
+          {
+            "content": "<table><caption>表 3 报文内容 (续)</caption>\n<tr><th></th><th  >报文</th><th></th><th></th><th  >约束/</th><th  >出现</th><th  >数据类型</th><th></th><th  >引用</th></tr>\n<tr><th  >索引</th><th  >层</th><th  >中文名称</th><th  >XML 标记名</th><th  >条件</th><th  >次数</th><th  >和格式</th><th  >说明</th><th  >文件</th></tr>\n<tr><td  >16</td><td></td><td  >船舶的有关信息</td><td  >VslInformation</td><td  >M</td><td  >1..1</td><td></td><td></td><td></td></tr>\n<tr><td  >17</td><td  >2</td><td  >船舶基本信息</td><td  >Vsl.&. Voy. Information</td><td  >M</td><td  >1..1</td><td></td><td></td><td></td></tr>\n<tr><td  >1</td><td></td><td  >记录类型标识</td><td  >RecordId</td><td  >M</td><td  >1..9</td><td  >n..2</td><td  >记录类型标识为 10</td><td></td></tr>\n<tr><td  >19</td><td></td><td  >船名代码</td><td  >VesselCode</td><td  >0</td><td  >0..1</td><td  >an..25</td><td></td><td></td></tr>\n<tr><td  >20</td><td></td><td  >英文船名</td><td  >VesselNameInEnglish</td><td  >0</td><td  >0..1</td><td  >an..35</td><td></td><td></td></tr>\n<tr><td  >21</td><td></td><td  >中文船名</td><td  >VesselnameInChinese</td><td  >0</td><td  >0..1</td><td  >an.. 36</td><td></td><td></td></tr>\n<tr><td  >22</td><td></td><td  >航次航班编号</td><td  >VoyageNo.</td><td  >M</td><td  >1..1</td><td  >an..17</td><td></td><td></td></tr>\n<tr><td  >23</td><td></td><td  >船公司（承运人） 代码</td><td  >ShippingLineCode</td><td  >0</td><td  >0..1</td><td  >an..13</td><td></td><td></td></tr>\n<tr><td  >24</td><td  >3</td><td  >船公司（承运人） 名称</td><td  >ShippingLineName</td><td  >0</td><td  >0..1</td><td  >an..35</td><td></td><td></td></tr>\n<tr><td  >25</td><td  >3</td><td  >班轮标识</td><td  >LinerId</td><td  >0</td><td  >0..1</td><td  >an..1</td><td  >-班轮； -非班轮； 一核心班轮 H</td><td></td></tr>\n<tr><td  >26</td><td></td><td  >船舶国籍代码</td><td  >NationalityCode</td><td  >0</td><td  >0..1</td><td  >an..2</td><td></td><td  >GB/T 2659</td></tr>\n<tr><td  >27</td><td  >1</td><td  >集装箱和货物信息</td><td  >Ctn&.CargoInformation</td><td  >M</td><td  >1..999</td><td></td><td></td><td></td></tr>\n<tr><td  >28</td><td  >2</td><td  >集装箱信息</td><td  >Ctn. Information</td><td  >M</td><td  >1..999</td><td></td><td></td><td></td></tr>\n<tr><td  >29</td><td  >3</td><td  >记录类型标识</td><td  >RecordId</td><td  >M</td><td  >1..9</td><td  >n..2</td><td  >记录类型标识为 50</td><td></td></tr>\n<tr><td  >30</td><td  >3</td><td  >集装箱箱号</td><td  >Ctn.No.</td><td  >M</td><td  >1..9</td><td  >an..11</td><td></td><td  >GB/T 1836</td></tr>\n<tr><td  >31</td><td></td><td  >集装箱尺寸</td><td  >Ctn.Size</td><td  >M</td><td  >1..1</td><td  >an..2</td><td></td><td  >GB/T 1836</td></tr>\n<tr><td  >32</td><td  >3</td><td  >集装箱类型</td><td  >Ctn.Type</td><td  >M</td><td  >1..1</td><td  >an..2</td><td></td><td  >GB/T 1836</td></tr>\n<tr><td  >33</td><td  >3</td><td  >集装箱状态</td><td  >Ctn.Status</td><td  >M</td><td  >1..1</td><td  >an..2</td><td  >EM- 出口空箱； IM- 进口空箱； EF- 出口重箱； IF 进口重箱</td><td></td></tr>\n<tr><td  >34</td><td  >3</td><td  >装箱时间</td><td  >StuffingTime</td><td  >M</td><td  >1..1</td><td  >Datetime YYYY MMDD Thhmmss</td><td></td><td  >GB/T 7408</td></tr>\n<tr><td  >35</td><td  >3</td><td  >铅封号</td><td  >SealNo.</td><td  >M</td><td  >1..1</td><td  >an..20</td><td></td><td></td></tr>\n<tr><td  >36</td><td  >3</td><td  >箱经营人代码</td><td  >Ctn.OperatorCode</td><td  >0</td><td  >0..1</td><td  >an..13</td><td></td><td></td></tr>\n<tr><td  >37</td><td></td><td  >箱经营人名称</td><td  >Ctn.OperatorName</td><td  >0</td><td  >0..1</td><td  >an..35</td><td></td><td></td></tr>\n</table>",
+            "content_ltks": "表 3 报文 内容 续 报文 约束 出现 数据类型 引用 索引 层 中文名称 xml 标记 名 条件 次数 和 格式 说明 文件 16 船舶 的 有关 信息 vslinform m1 117 2 船舶 基本 信息 vsl voy inform m1 11 记录 类型 标识 recordid m1 9 n 2 记录 类型 标识 为 10 19 船名 代码 vesselcod 001 an 25 20 英文 船名 vesselnameinenglish 001 an 35 21 中文 船名 vesselnameinchines 001 an 36 22 航次 航班 编号 voyageno m1 1 an 17 23 船 公司 承运人 代码 shippinglinecod 001 an 13 24 3 船 公司 承运人 名称 shippinglinenam 001 an 35 25 3 班轮 标识 linerid 001 an 1 班轮 非 班轮 一 核心 班轮 h 26 船舶 国籍 代码 nationalitycod 001 an 2 gbt 2659 27 1 集装箱 和 货物 信息 ctn cargoinform m1 999 28 2 集装箱 信息 ctn inform m1 999 29 3 记录 类型 标识 recordid m1 9 n 2 记录 类型 标识 为 50 30 3 集装箱 箱 号 ctn nom 19 an 11 gbt 1836 31 集装箱 尺寸 ctn size m1 1 an 2 gbt 1836 32 3 集装箱 类型 ctn type m1 1 an 2 gbt 1836 33 3 集装箱 状态 ctn statu m1 1 an 2 em 出口 空箱 im 进口 空箱 ef 出口 重 箱 if 进口 重 箱 34 3 装箱 时间 stuffingtim m1 1 datetim yyyi mmdd thhmmss gbt 7408 35 3 铅 封号 sealno m1 1 an 20 363 箱 经营 人 代码 ctn operatorcod 001 an 13 37 箱 经营 人 名称 ctn operatornam 001 an 35",
+            "dataset_id": "7ebd0a808e2711f0a685620ff33f7526",
+            "doc_type_kwd": "image",
+            "document_id": "37da527699da11f09a8172d72fdd2e6b",
+            "document_keyword": "186_已解密_扫描版.pdf",
+            "highlight": "信息vslinform m1 117 2船舶基本信息vsl voy inform m1 11记录类型标识recordid m1 9 n 2记录类型标识为 10 19船名<em>代码</em>...nationalitycod 001 an 2 gbt 2659 27 1 <em>集装箱</em>和货物信息ctn cargoinform m1 999 28 2 <em>集装箱</em>信息ctn inform m1 999...29 3记录类型标识recordid m1 9 n 2记录类型标识为 50 30 3 <em>集装箱</em>箱号 ctn nom 19 an 11 gbt 1836 31 <em>集装箱</em>尺寸ctn size...m1 1 an 2 gbt 1836 32 3 <em>集装箱</em>类型ctn type m1 1 an 2 gbt 1836 33 3 <em>集装箱</em>状态ctn statu m1 1 an 2 em出口空箱...im进口空箱ef出口重箱if进口重箱34 3 <em>装箱</em>时间stuffingtim m1 1 datetim yyyi mmdd thhmmss gbt 7408 35 3铅封号",
+            "id": "706dfd241b77ac12",
+            "image_id": "7ebd0a808e2711f0a685620ff33f7526-706dfd241b77ac12",
+            "important_keywords": [],
+            "positions": [
+              [
+                16,
+                68,
+                532,
+                123,
+                780
+              ]
+            ],
+            "similarity": 0.7313556552326582,
+            "term_similarity": 0.8353759393409699,
+            "vector_similarity": 0.48864165897993095
+          },
+          {
+            "content": "<table><caption>表 8 集装箱信息 (续)</caption>\n<tr><th  >记录 50</th><th colspan=3 rowspan=2 >集装箱信息 CTN. INFORMATION</th><th  rowspan=3 >M 约束/条件</th></tr>\n<tr><th  >序号</th><th  >字段名</th><th  >格式</th><th  >说明</th></tr>\n<tr><td  >5</td><td  >集装箱状态 CTN. STATUS</td><td  >an..2</td><td  >EM—出口空箱； IM— 一进口空箱； EF- -出口重箱； IF- 进口重箱</td><td  >M</td></tr>\n<tr><td></td><td  >装箱时间 STUFFING TIME</td><td  >YYYYMMD DThhmmss</td><td  >符合 GB/T 7408 的规定</td><td  >M</td></tr>\n<tr><td></td><td  >铅封号 SEAL NO.</td><td  >an..20</td><td></td><td  >M</td></tr>\n<tr><td></td><td  >箱经营人代码 CTN. OPERATOR CODE</td><td  >an..13</td><td></td><td  >0</td></tr>\n<tr><td></td><td  >箱经营人名称 CTN. OPERATOR NAME</td><td  >an..35</td><td></td><td  >0</td></tr>\n<tr><td  >10</td><td  >箱自重 TARE WEIGHT</td><td  >n..5</td><td  >单位为千克(kg)</td><td  >M</td></tr>\n<tr><td  >11</td><td  >箱总重 GROSS WEIGHT</td><td  >n..10</td><td  >单位为千克(kg)</td><td  >M</td></tr>\n<tr><td  >12</td><td  >前超 OVER LENGTH FRONT</td><td  >n..4</td><td  >单位为厘米(cm)</td><td  >0</td></tr>\n<tr><td  >13</td><td  >后超 OVER LENGTH BACK</td><td  >n..4</td><td  >单位为厘米(cm)</td><td  >0</td></tr>\n<tr><td  >14</td><td  >右超 OVER WIDTH RIGHT</td><td  >n..4</td><td  >单位为厘米(cm)</td><td  >0</td></tr>\n<tr><td  >15</td><td  >左超 OVER WIDTH LEFT</td><td  >n..4</td><td  >单位为厘米(cm)</td><td  >0</td></tr>\n<tr><td  >16</td><td  >超高 OVER HEIGHT</td><td  >n..4</td><td  >单位为厘米(cm)</td><td  >0</td></tr>\n<tr><td  >17</td><td  >装箱单位 LOADER NAME</td><td  >an..40</td><td></td><td></td></tr>\n<tr><td  >18</td><td  >装箱单位地址 ADDRESS OF LOADER</td><td  >an..50</td><td></td><td  >0</td></tr>\n<tr><td  >19</td><td  >装箱联系人及联系电话 CONTACT NAME AND CONTACT TELEPHONE</td><td  >an..50</td><td></td><td  >0</td></tr>\n</table>",
+            "content_ltks": "表 8 集装箱 信息 续 记录 50 th colspan 3 rowspan 2 集装箱 信息 ctn inform m 约束 条件 序号 字段名 格式 说明 5 集装箱 状态 ctn statu an 2 em 出口 空箱 im 一 进口 空箱 ef 出口 重 箱 if 进口 重 箱 m 装箱 时间 stuf time yyyymmd dthhmmss 符合 gbt 7408 的 规定 m 铅 封号 seal no an 20 m 箱 经营 人 代码 ctn oper code an 13 0 箱 经营 人 名称 ctn oper name an 35 0 10 箱 自重 tare weight n 5 单位 为 千克 kgm 11 箱 总重 gross weight n 10 单位 为 千克 kgm 12 前 超 over length front n 4 单位 为 厘米 cm 0 13 后 超 over length back n 4 单位 为 厘米 cm 0 14 右 超 over width right n 4 单位 为 厘米 cm 0 15 左 超 over width left n 4 单位 为 厘米 cm 0 16 超高 over height n 4 单位 为 厘米 cm 0 17 装箱 单位 loader name an 40 18 装箱 单位地址 addressof loader an 500 19 装箱 联系人 及 联系电话 contact name and contact telephon an 500",
+            "dataset_id": "7ebd0a808e2711f0a685620ff33f7526",
+            "doc_type_kwd": "image",
+            "document_id": "37da527699da11f09a8172d72fdd2e6b",
+            "document_keyword": "186_已解密_扫描版.pdf",
+            "highlight": "表8 <em>集装箱</em>信息续记录50 th colspan 3 rowspan 2 <em>集装箱</em>信息ctn inform m约束条件序号字段名格式说明5 <em>集装箱</em>状态ctn statu an...2 em出口空箱im一进口空箱ef出口重箱if进口重箱m <em>装箱</em>时间stuf time yyyymmd dthhmmss符合gbt 7408的规定m铅封号...seal no an 20 m箱经营人 <em>代码</em> ctn oper code an 13 0箱经营人名称ctn oper name an 35 0 10箱自重tare weight...right n 4单位为厘米cm 0 15左超 over width left n 4单位为厘米cm 0 16超高over height n 4单位为厘米cm 0 17 <em>装箱</em>...单位loader name an 40 18 <em>装箱</em>单位地址addressof loader an 500 19 <em>装箱</em>联系人及联系电话contact name and contact telephon",
+            "id": "8ae949123698d949",
+            "image_id": "7ebd0a808e2711f0a685620ff33f7526-8ae949123698d949",
+            "important_keywords": [],
+            "positions": [
+              [
+                24,
+                67,
+                532,
+                126,
+                757
+              ]
+            ],
+            "similarity": 0.7311038795791376,
+            "term_similarity": 0.8353759393409699,
+            "vector_similarity": 0.48780240680152914
+          },
+          {
+            "content": "<table><caption>表 15订舱预配箱 (续)</caption>\n<tr><th  >记录 40</th><th colspan=3 >订舱预配箱 CONTAINER OF BOOKING</th><th></th></tr>\n<tr><th  >序号</th><th  >字段名</th><th  >格式</th><th  >说明</th><th  >约束/条件</th></tr>\n<tr><td></td><td  >集装箱类型 CTN. TYPE</td><td  >an..2</td><td  >符合 GB/T 1836 的规定</td><td  >M</td></tr>\n<tr><td></td><td  >集装箱箱数 CTN. COUNT</td><td  >n..6</td><td></td><td  >M</td></tr>\n<tr><td></td><td  >集装箱状态 CTN. STATUS</td><td  >an..2</td><td  >EM- 一出口空箱； IM- -进口空箱； EF- -出口重箱； IF- -进口重箱</td><td  >M</td></tr>\n<tr><td  >7</td><td  >拼箱号Sc CTN. NO.</td><td  >an..11</td><td></td><td  >0</td></tr>\n<tr><td></td><td  >装箱地点代码 VANNING DEPOT</td><td  >an.5</td><td></td><td  >0</td></tr>\n<tr><td  >9</td><td  >货主箱标志 CONTAINER SOC.</td><td  >an..1</td><td></td><td  >M</td></tr>\n<tr><td  >10</td><td  >拼箱人代码 CONSOLIDATOR CODE</td><td  >an..13</td><td></td><td  >0</td></tr>\n</table>",
+            "content_ltks": "表 15 订 舱 预 配 箱 续 记录 40 订 舱 预 配 箱 contain of book 序号 字段名 格式 说明 约束 条件 集装箱 类型 ctn type an 2 符合 gbt 1836 的 规定 m 集装箱 箱 数 ctn count n 6 m 集装箱 状态 ctn statu an 2 em 一 出口 空箱 im 进口 空箱 ef 出口 重 箱 if 进口 重 箱 m7 拼 箱 号 sc ctn no an 110 装箱 地点 代码 van depot an 50 9 货主 箱 标志 contain socan 1 m 10 拼 箱 人 代码 consolid code an 13 0",
+            "dataset_id": "7ebd0a808e2711f0a685620ff33f7526",
+            "doc_type_kwd": "image",
+            "document_id": "5758866899da11f094a672d72fdd2e6b",
+            "document_keyword": "189_已解密_扫描版.pdf",
+            "highlight": "表15订舱预配箱续记录40订舱预配箱contain of book序号字段名格式说明约束条件<em>集装箱</em>类型ctn type an 2符合gbt 1836...的规定m <em>集装箱</em>箱数 ctn count n 6 m <em>集装箱</em>状态ctn statu an 2 em一出口空箱im进口空箱ef出口重箱if进口重箱m7拼箱号...sc ctn no an 110 <em>装箱</em>地点<em>代码</em> van depot an 50 9货主箱标志contain socan 1 m 10拼箱人<em>代码</em> consolid code an 13",
+            "id": "cb2025ab1a73db3c",
+            "image_id": "7ebd0a808e2711f0a685620ff33f7526-cb2025ab1a73db3c",
+            "important_keywords": [],
+            "positions": [
+              [
+                41,
+                61,
+                526,
+                130,
+                459
+              ]
+            ],
+            "similarity": 0.7310635004298018,
+            "term_similarity": 0.8353759393409699,
+            "vector_similarity": 0.4876678096370766
+          },
+          {
+            "content": "<table>\n<tr><td  >订舱预配箱结构见图9。</td><td></td><td></td><td></td></tr>\n<tr><td  >N</td><td  >X</td><td  >X</td><td  >X</td></tr>\n<tr><td></td><td  >货物及集装箱信息</td><td  >订舱预配箱</td><td  >记录类型标识</td></tr>\n<tr><td></td><td  >1..99</td><td  >1..99</td><td  >1..99</td></tr>\n<tr><td></td><td></td><td></td><td  >集装箱项号</td></tr>\n<tr><td></td><td></td><td></td><td  >1..9</td></tr>\n<tr><td></td><td></td><td></td><td  >集装箱尺寸</td></tr>\n<tr><td></td><td></td><td></td><td  >1..9</td></tr>\n<tr><td></td><td></td><td></td><td  >集装箱类型</td></tr>\n<tr><td></td><td></td><td></td><td  >1..9</td></tr>\n<tr><td></td><td></td><td></td><td  >集装箱箱数</td></tr>\n<tr><td></td><td></td><td></td><td  >1.. 1</td></tr>\n<tr><td></td><td></td><td></td><td  >集装箱状态</td></tr>\n<tr><td></td><td></td><td></td><td  >1..9</td></tr>\n<tr><td></td><td></td><td></td><td  >拼箱号</td></tr>\n<tr><td></td><td></td><td></td><td  >0..1</td></tr>\n<tr><td></td><td></td><td></td><td  >装箱地点代码</td></tr>\n<tr><td></td><td></td><td></td><td  >0..1</td></tr>\n<tr><td></td><td></td><td></td><td  >货主箱标志</td></tr>\n<tr><td></td><td></td><td></td><td  >1..1</td></tr>\n<tr><td></td><td></td><td></td><td  >拼箱人代码</td></tr>\n<tr><td></td><td></td><td></td><td  >0..1</td></tr>\n</table>",
+            "content_ltks": "订 舱 预 配 箱 结构 见 图 9 nxx x 货物 及 集装箱 信息 订 舱 预 配 箱 记录 类型 标识 1 99 1 99 1 99 集装箱 项 号 19 集装箱 尺寸 19 集装箱 类型 19 集装箱 箱 数 11 集装箱 状态 19 拼 箱 号 01 装箱 地点 代码 01 货主 箱 标志 11 拼 箱 人 代码 01",
+            "dataset_id": "7ebd0a808e2711f0a685620ff33f7526",
+            "doc_type_kwd": "image",
+            "document_id": "5758866899da11f094a672d72fdd2e6b",
+            "document_keyword": "189_已解密_扫描版.pdf",
+            "highlight": "订舱预配箱结构见图9 nxx x货物及 <em>集装箱</em>信息订舱预配箱记录类型标识1 99 1 99 1 99 <em>集装箱</em>项号 19 <em>集装箱</em>尺寸19 <em>集装箱</em>类型19...<em>集装箱</em>箱数 11 <em>集装箱</em>状态19拼箱号01 <em>装箱</em>地点<em>代码</em> 01货主箱标志11拼箱人<em>代码</em> 01",
+            "id": "cd60366b07535164",
+            "image_id": "7ebd0a808e2711f0a685620ff33f7526-cd60366b07535164",
+            "important_keywords": [],
+            "positions": [
+              [
+                13,
+                86,
+                500,
+                160,
+                734
+              ]
+            ],
+            "similarity": 0.7304341202780312,
+            "term_similarity": 0.8353759393409699,
+            "vector_similarity": 0.485569875797841
+          },
+          {
+            "content": "<table><caption>表3报文内容 (续)</caption>\n<tr><th  >索引</th><th  >报文 层</th><th  >中文名称</th><th  >XML 标记名</th><th  >约束/ 条件</th><th  >出现 次数</th><th  >数据类型 和格式</th><th></th><th  >说明</th><th  >引用 文件</th></tr>\n<tr><td  >38</td><td  >3</td><td  >箱自重</td><td  >TareWeight</td><td  >M</td><td  >1..9</td><td  >n..5</td><td  >单位为千克(kg)</td><td></td><td></td></tr>\n<tr><td  >39</td><td  >3</td><td  >箱总重</td><td  >Gross Weight</td><td  >M</td><td  >1..1</td><td  >n..10</td><td  >单位为千克(kg)</td><td></td><td></td></tr>\n<tr><td  >40</td><td></td><td  >前超</td><td  >OverLengthFront</td><td></td><td  >0..1</td><td  >n..4</td><td  >单位为厘米(cm)</td><td></td><td></td></tr>\n<tr><td  >41</td><td></td><td  >后超</td><td  >OverLengthBack</td><td></td><td  >0..1</td><td  >n..4</td><td  >单位为厘米(cm)</td><td></td><td></td></tr>\n<tr><td  >42</td><td></td><td  >右超</td><td  >Over WidthRight</td><td  >0</td><td  >0..1</td><td  >n..4</td><td  >单位为厘米(cm)</td><td></td><td></td></tr>\n<tr><td  >43</td><td></td><td  >左超</td><td  >Over WidthLeft</td><td  >0</td><td  >0..1</td><td  >n..4</td><td  >单位为厘米(cm)</td><td></td><td></td></tr>\n<tr><td  >14</td><td></td><td  >超高</td><td  >OverHeight</td><td  >0</td><td  >0..1</td><td  >n..4</td><td  >单位为厘米(cm)</td><td></td><td></td></tr>\n<tr><td  >4</td><td></td><td  >装箱单位</td><td  >LoaderName</td><td  >0</td><td  >0..1</td><td  >an..40</td><td></td><td></td><td></td></tr>\n<tr><td  >46</td><td></td><td  >装箱单位地址</td><td  >AddressOfLoader</td><td  >0</td><td  >0..1</td><td  >an..50</td><td></td><td></td><td></td></tr>\n<tr><td  >4</td><td  >3</td><td  >装箱联系人及联系 电话</td><td  >Contact NameAnd- Contact Telephone</td><td  >0</td><td  >0..1</td><td  >an..50</td><td></td><td></td><td></td></tr>\n<tr><td  >48</td><td  >3</td><td  >特殊装载要求</td><td  >SpecialStow</td><td  >0</td><td  >0..1</td><td  >an..20</td><td></td><td></td><td></td></tr>\n<tr><td  >19</td><td  >3</td><td  >卸货港代码</td><td  >DischargePortCode</td><td  >0</td><td  >0..1</td><td  >an..5</td><td></td><td></td><td  >GB/T 7407</td></tr>\n<tr><td  >50</td><td  >3</td><td  >卸货港名称</td><td  >DischargePort</td><td  >0</td><td  >0..1</td><td  >an..35</td><td></td><td></td><td  >GB/T 7407</td></tr>\n<tr><td  >51</td><td  >3</td><td  >装货港代码</td><td  >LoadPortCode</td><td  >0</td><td  >0..1</td><td  >an..5</td><td></td><td></td><td  >GB/T 7407</td></tr>\n<tr><td  >52</td><td  >3</td><td  >装货港名称</td><td  >LoadPort</td><td  >0</td><td  >0..1</td><td  >an..35</td><td></td><td></td><td  >GB/T 7407</td></tr>\n<tr><td  >53</td><td  >3</td><td  >中转港代码</td><td  >TransferPortCode</td><td  >0</td><td  >0..1</td><td  >an..5</td><td></td><td></td><td  >GB/T 7407</td></tr>\n<tr><td  >54</td><td  >3</td><td  >中转港名称</td><td  >TransferPort</td><td  >0</td><td  >0..1</td><td  >an..35</td><td></td><td></td><td  >GB/T 7407</td></tr>\n<tr><td  >55</td><td  >3</td><td  >目的港代码</td><td  >ArrivalLocationCode</td><td  >0</td><td  >0..1</td><td  >an..5</td><td></td><td></td><td  >GB/T 7407</td></tr>\n<tr><td  >56</td><td  >3</td><td  >目的港名称</td><td  >ArrivalLocation</td><td  >0</td><td  >0..1</td><td  >an..35</td><td></td><td></td><td  >GB/T 7407</td></tr>\n<tr><td  >57</td><td  >3</td><td  >货物内外贸标识</td><td  >SignTrade</td><td  >M</td><td  >1..1</td><td  >an..1</td><td  >N W.</td><td  >-内贸； 外贸</td><td></td></tr>\n<tr><td  >58</td><td  >3</td><td  >商品箱标识</td><td  >SignCommodity</td><td  >M</td><td  >1..1</td><td  >an..1</td><td  >V 品出口； N 输装备</td><td  >集装箱作为商 集装箱作为运</td><td></td></tr>\n<tr><td  >59</td><td  >3</td><td  >海关铅封号</td><td  >CustomsSealNo.</td><td  >0</td><td  >0..1</td><td  >an..20</td><td></td><td></td><td></td></tr>\n<tr><td  >60</td><td  >3</td><td  >海关铅封类型</td><td  >TypeOfCustomsSeal</td><td  >0</td><td  >0..1</td><td  >an..1</td><td  >M- E</td><td  >机械铅封; 电子铅封</td><td></td></tr>\n<tr><td  >61</td><td  >3</td><td  >海关施加封志单位</td><td  >CustomAgency Who- SignSeal</td><td></td><td  >0..1</td><td  >an..50</td><td></td><td></td><td></td></tr>\n</table>",
+            "content_ltks": "表 3 报文 内容 续 索引 报文 层 中文名称 xml 标记 名 约束 条件 出现 次数 数据类型 和 格式 说明 引用 文件 38 3 箱 自重 tareweight m1 9 n 5 单位 为 千克 kg 393 箱 总重 gross weight m1 1 n 10 单位 为 千克 kg 40 前 超 overlengthfront 01 n 4 单位 为 厘米 cm 41 后 超 overlengthback 01 n 4 单位 为 厘米 cm 42 右 超 over widthright 001 n 4 单位 为 厘米 cm 43 左 超 over widthleft 001 n 4 单位 为 厘米 cm 14 超高 overheight 001 n 4 单位 为 厘米 cm 4 装箱 单位 loadernam 001 an 40 46 装箱 单位地址 addressofload 001 an 50 43 装箱 联系人 及 联系 电话 contact nameand contact telephon 001 an 50 48 3 特殊 装载 要求 specialstow 001 an 2019 3 卸货 港 代码 dischargeportcod 001 an 5 gbt 7407 50 3 卸货 港 名称 dischargeport 001 an 35 gbt 7407 513 装货 港 代码 loadportcod 001 an 5 gbt 7407 52 3 装货 港 名称 loadport 001 an 35 gbt 7407 53 3 中转港 代码 transferportcod 001 an 5 gbt 7407 54 3 中转港 名称 transferport 001 an 35 gbt 7407 55 3 目的港 代码 arrivallocationcod 001 an 5 gbt 7407 56 3 目的港 名称 arrivalloc 001 an 35 gbt 7407 57 3 货物 内外贸 标识 signtrad m1 1 an 1 nw 内贸 外贸 58 3 商品 箱 标识 signcommod m1 1 an 1 v 品 出口 n 输 装备 集装箱 作为 商 集装箱 作为 运 59 3 海关 铅 封号 customssealno 001 an 20 60 3 海关 铅封 类型 typeofcustomss 001 an 1 me 机械 铅封 电子 铅封 61 3 海关 施加 封 志 单位 customag who signseal 01 an 50",
+            "dataset_id": "7ebd0a808e2711f0a685620ff33f7526",
+            "doc_type_kwd": "image",
+            "document_id": "37da527699da11f09a8172d72fdd2e6b",
+            "document_keyword": "186_已解密_扫描版.pdf",
+            "highlight": "widthright 001 n 4单位为厘米cm 43左超 over widthleft 001 n 4单位为厘米cm 14超高overheight 001 n 4单位为厘米cm 4 <em>装箱</em>...单位loadernam 001 an 40 46 <em>装箱</em>单位地址addressofload 001 an 50 43 <em>装箱</em>联系人及联系电话contact nameand contact...telephon 001 an 50 48 3特殊装载要求specialstow 001 an 2019 3卸货港 <em>代码</em> dischargeportcod 001 an 5 gbt 7407...7407 57 3货物内外贸标识signtrad m1 1 an 1 nw内贸外贸58 3商品箱标识signcommod m1 1 an 1 v品出口n输装备<em>集装箱</em>...作为商 <em>集装箱</em>作为运 59 3海关铅封号customssealno 001 an 20 60 3海关铅封类型typeofcustomss 001 an 1 me机械铅封电子",
+            "id": "b8407e9696eadb5f",
+            "image_id": "7ebd0a808e2711f0a685620ff33f7526-b8407e9696eadb5f",
+            "important_keywords": [],
+            "positions": [
+              [
+                17,
+                61,
+                525,
+                127,
+                777
+              ]
+            ],
+            "similarity": 0.7289873101666019,
+            "term_similarity": 0.8353759393409699,
+            "vector_similarity": 0.48074717542641
+          },
+          {
+            "content": "<table><caption>表3 报文内容 (续)</caption>\n<tr><th  >索引</th><th  >报文 层</th><th  >中文名称</th><th  >XML 标记名</th><th  >约束/ 条件</th><th  >出现 次数</th><th  >数据类型 和格式</th><th  >说明</th><th  >引用 文件</th></tr>\n<tr><td  >101</td><td  >3</td><td  >备注</td><td  >Remark</td><td  >0</td><td  >0..9</td><td  >an..35</td><td></td><td></td></tr>\n<tr><td  >102</td><td  >2</td><td  >第一通知人信息</td><td  >Notify- 1PartyInformation</td><td  >0</td><td  >0..9</td><td></td><td></td><td></td></tr>\n<tr><td  >103</td><td  >3</td><td  >记录类型标识</td><td  >RecordId</td><td  >M</td><td  >1..99</td><td  >n..2</td><td  >记录类型标识为 22</td><td></td></tr>\n<tr><td  >104</td><td  >3</td><td  >第- 一通知人代码</td><td  >Notify-1Code</td><td  >0</td><td  >0..1</td><td  >an..13</td><td></td><td></td></tr>\n<tr><td  >105</td><td  >3</td><td  >第一通知人名称</td><td  >Notify-1Name</td><td  >0</td><td  >0..1</td><td  >an..30</td><td></td><td></td></tr>\n<tr><td  >106</td><td  >3</td><td  >街道名称</td><td  >StreetName</td><td  >0</td><td  >0..9</td><td  >an..35</td><td></td><td></td></tr>\n<tr><td  >107</td><td  >3</td><td  >城市名</td><td  >CityName</td><td  >0</td><td  >0..9</td><td  >an..35</td><td></td><td></td></tr>\n<tr><td  >108</td><td  >3</td><td  >省份代码</td><td  >Provincecode</td><td  >0</td><td  >0..9</td><td  >an..5</td><td></td><td></td></tr>\n<tr><td  >109</td><td  >3</td><td  >省份名称</td><td  >Countryname</td><td  >0</td><td  >0..9</td><td  >an..35</td><td></td><td></td></tr>\n<tr><td  >110</td><td  >3</td><td  >邮编</td><td  >PostCode</td><td  >0</td><td  >0..9</td><td  >an..15</td><td></td><td></td></tr>\n<tr><td  >111</td><td  >3</td><td  >国家代码</td><td  >CountryCode</td><td  >0</td><td  >0..9</td><td  >an..3</td><td></td><td  >GB/T 2659</td></tr>\n<tr><td  >112</td><td  >3</td><td  >联系人</td><td  >ContactName</td><td  >0</td><td  >0..9</td><td  >an..35</td><td></td><td></td></tr>\n<tr><td  >113</td><td  >3</td><td  >联系人通讯号码</td><td  >ContactCommunica- tionNo.</td><td></td><td  >0..9</td><td  >an..35</td><td></td><td></td></tr>\n<tr><td  >114</td><td  >3</td><td  >备注</td><td  >Remark</td><td  >0</td><td  >0..9</td><td  >an..35</td><td></td><td></td></tr>\n<tr><td  >115</td><td></td><td  >货物及集装箱信息</td><td  >CargoCtn. Information</td><td  >M</td><td  >1..99</td><td></td><td></td><td></td></tr>\n<tr><td  >116</td><td  >2</td><td  >订舱预配箱</td><td  >ContainerOfBooking</td><td  >M</td><td  >1..99</td><td></td><td></td><td></td></tr>\n<tr><td  >117</td><td  >3</td><td  >记录类型标识</td><td  >RecordId</td><td  >M</td><td  >1..99</td><td  >n..2</td><td  >记录类型标识为 40</td><td></td></tr>\n<tr><td  >118</td><td  >3</td><td  >集装箱尺寸</td><td  >Ctn.Size</td><td  >M</td><td  >1..9</td><td  >an..2</td><td></td><td  >GB/T 1836</td></tr>\n<tr><td  >119</td><td  >3</td><td  >集装箱类型</td><td  >Ctn. Type</td><td  >M</td><td  >1..9</td><td  >an..2</td><td></td><td  >GB/T 1836</td></tr>\n<tr><td  >120</td><td  >3</td><td  >集装箱箱数</td><td  >Ctn.Count</td><td  >M</td><td  >1..1</td><td  >n..6</td><td></td><td></td></tr>\n<tr><td  >121</td><td  >3</td><td  >集装箱状态</td><td  >Ctn.Status</td><td  >M</td><td  >1..9</td><td  >an..2</td><td  >EM- 出口空箱； IM- 进口空箱； EF- 出口重箱； IF- 进口重箱</td><td></td></tr>\n<tr><td  >122</td><td></td><td  >拼箱号</td><td  >Ctn.No.</td><td  >0</td><td  >0..1</td><td  >an..20</td><td></td><td></td></tr>\n<tr><td  >123</td><td  >3</td><td  >装箱地点代码</td><td  >VanningDepot</td><td  >0</td><td  >0..1</td><td  >an..5</td><td></td><td></td></tr>\n<tr><td  >124</td><td></td><td  >货主箱标志</td><td  >ContainerSoc.</td><td  >M</td><td  >1..1</td><td  >an..1</td><td></td><td></td></tr>\n<tr><td></td><td></td><td  >拼箱人代码</td><td  >ConsolidatorCode</td><td></td><td  >0..1</td><td  >an..13</td><td></td><td></td></tr>\n</table>",
+            "content_ltks": "表 3 报文 内容 续 索引 报文 层 中文名称 xml 标记 名 约束 条件 出现 次数 数据类型 和 格式 说明 引用 文件 101 3 备注 remark 009 an 35 102 2 第一通 知人 信息 notifi 1partyinform 009 103 3 记录 类型 标识 recordid m1 99 n 2 记录 类型 标识 为 22 104 3 第 一通 知人 代码 notifi 1code 001 an 13 105 3 第一通 知人 名称 notifi 1name 001 an 30 106 3 街道 名称 streetnam 009 an 35 107 3 城市 名 citynam 009 an 35 108 3 省份 代码 provincecod 009 an 5 109 3 省份 名称 countrynam 009 an 35 110 3 邮编 postcod 009 an 15 111 3 国家 代码 countrycod 009 an 3 gbt 2659 112 3 联系人 contactnam 009 an 35 113 3 联系人 通讯 号码 contactcommunica tionno 0 9 an 35 114 3 备注 remark 009 an 35 115 货物 及 集装箱 信息 cargoctn inform m1 99 116 2 订 舱 预 配 箱 containerofbook m1 99 117 3 记录 类型 标识 recordid m1 99 n 2 记录 类型 标识 为 40 118 3 集装箱 尺寸 ctn size m1 9 an 2 gbt 1836 119 3 集装箱 类型 ctn type m1 9 an 2 gbt 1836 120 3 集装箱 箱 数 ctn count m1 1 n 6 121 3 集装箱 状态 ctn statu m1 9 an 2 em 出口 空箱 im 进口 空箱 ef 出口 重 箱 if 进口 重 箱 122 拼 箱 号 ctn no 001 an 20 123 3 装箱 地点 代码 vanningdepot 001 an 5 124 货主 箱 标志 containersoc m1 1 an 1 拼 箱 人 代码 consolidatorcod 01 an 13",
+            "dataset_id": "7ebd0a808e2711f0a685620ff33f7526",
+            "doc_type_kwd": "image",
+            "document_id": "5758866899da11f094a672d72fdd2e6b",
+            "document_keyword": "189_已解密_扫描版.pdf",
+            "highlight": "102 2第一通知人信息notifi 1partyinform 009 103 3记录类型标识recordid m1 99 n 2记录类型标识为 22 104 3第一通知人<em>代码</em>...知人名称notifi 1name 001 an 30 106 3街道名称streetnam 009 an 35 107 3城市名 citynam 009 an 35 108 3省份<em>代码</em>...provincecod 009 an 5 109 3省份名称countrynam 009 an 35 110 3邮编postcod 009 an 15 111 3国家<em>代码</em> countrycod...尺寸ctn size m1 9 an 2 gbt 1836 119 3 <em>集装箱</em>类型ctn type m1 9 an 2 gbt 1836 120 3 <em>集装箱</em>箱数 ctn count m1 1...123 3 <em>装箱</em>地点<em>代码</em> vanningdepot 001 an 5 124货主箱标志containersoc m1 1 an 1拼箱人<em>代码</em> consolidatorcod 01",
+            "id": "00059eea5a9e201b",
+            "image_id": "7ebd0a808e2711f0a685620ff33f7526-00059eea5a9e201b",
+            "important_keywords": [],
+            "positions": [
+              [
+                25,
+                61,
+                525,
+                127,
+                760
+              ]
+            ],
+            "similarity": 0.7282059418693869,
+            "term_similarity": 0.8353759393409699,
+            "vector_similarity": 0.4781426144356933
+          }
+        ],
+        "doc_aggs": [
+          {
+            "count": 4,
+            "doc_id": "37da527699da11f09a8172d72fdd2e6b",
+            "doc_name": "186_已解密_扫描版.pdf"
+          },
+          {
+            "count": 4,
+            "doc_id": "dda865a6944611f09be3260dfe58132f",
+            "doc_name": "024_已解密.pdf"
+          },
+          {
+            "count": 3,
+            "doc_id": "d2da11628e2711f0bdfa620ff33f7526",
+            "doc_name": "005_已解密.pdf"
+          },
+          {
+            "count": 3,
+            "doc_id": "5758866899da11f094a672d72fdd2e6b",
+            "doc_name": "189_已解密_扫描版.pdf"
+          },
+          {
+            "count": 2,
+            "doc_id": "d32747988e2711f0bdfa620ff33f7526",
+            "doc_name": "028_已解密.pdf"
+          },
+          {
+            "count": 2,
+            "doc_id": "96a35e70975411f0b3aeb6a7ca88af7c",
+            "doc_name": "015_已解密.pdf"
+          },
+          {
+            "count": 2,
+            "doc_id": "94e10c54975411f0b3aeb6a7ca88af7c",
+            "doc_name": "106_已解密.pdf"
+          },
+          {
+            "count": 2,
+            "doc_id": "d0a7e6bc8e2711f0bdfa620ff33f7526",
+            "doc_name": "184_已解密.pdf"
+          },
+          {
+            "count": 2,
+            "doc_id": "d37c88028e2711f0bdfa620ff33f7526",
+            "doc_name": "036_已解密.pdf"
+          },
+          {
+            "count": 1,
+            "doc_id": "ddcca998944611f09be3260dfe58132f",
+            "doc_name": "033_已解密.pdf"
+          },
+          {
+            "count": 1,
+            "doc_id": "d1d37a928e2711f0bdfa620ff33f7526",
+            "doc_name": "171_已解密.pdf"
+          },
+          {
+            "count": 1,
+            "doc_id": "d0f98a948e2711f0bdfa620ff33f7526",
+            "doc_name": "141_已解密.pdf"
+          },
+          {
+            "count": 1,
+            "doc_id": "d1dc77148e2711f0bdfa620ff33f7526",
+            "doc_name": "174_已解密.pdf"
+          },
+          {
+            "count": 1,
+            "doc_id": "d0893fbe8e2711f0bdfa620ff33f7526",
+            "doc_name": "163_已解密.pdf"
+          },
+          {
+            "count": 1,
+            "doc_id": "d1df57368e2711f0bdfa620ff33f7526",
+            "doc_name": "175_已解密.pdf"
+          }
+        ],
+        "total": 60
+      },
+      "query_question": "集装箱 代码 识别",
+      "query_index": 3,
+      "original_question": "集装箱 代码 识别"
+    }    
   ],
   "summary": {
     "total_queries": 37,
