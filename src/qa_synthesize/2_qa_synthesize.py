@@ -169,40 +169,69 @@ def extract_chunks_from_json(json_data, answer_type, distribution, different_fil
                     extracted_overlapped.append(overlapped_items)
         else:
             # 不需要来自同一document_id，直接提取
-            # 按document_id分组，避免混合同一document的多个chunks
-            from collections import defaultdict
-            doc_groups = defaultdict(list)
-            for chunk in filtered_chunks:
-                doc_groups[chunk["document_id"]].append(chunk)
-            
-            # 从document组中提取chunks
-            for doc_id, doc_chunks in doc_groups.items():
-                if len(extracted_chunks) >= distribution:
-                    break
+            if answer_type == "image_plus_text_as_answer":
+                # 对于image_plus_text_as_answer，需要跨document组合text和image chunks
+                text_chunks = []
+                image_chunks = []
+                for chunk in filtered_chunks:
+                    if is_text_chunk(chunk):
+                        text_chunks.append(chunk)
+                    elif is_image_chunk(chunk):
+                        image_chunks.append(chunk)
                 
-                # 检查chunks数量是否在范围内
-                if min_chunks <= len(doc_chunks) <= max_chunks:
-                    # 对于image_plus_text_as_answer，需要同时包含text和image
-                    if answer_type == "image_plus_text_as_answer":
-                        chunk_types = set()
-                        for chunk in doc_chunks:
-                            if is_text_chunk(chunk):
-                                chunk_types.add("text")
-                            elif is_image_chunk(chunk):
-                                chunk_types.add("image")
-                        if "text" not in chunk_types or "image" not in chunk_types:
-                            continue
+                # 如果没有足够的text或image chunks，无法组合
+                if not text_chunks or not image_chunks:
+                    continue
+                
+                # 组合text和image chunks
+                # 策略：从text_chunks和image_chunks中各取一个或多个chunks组合
+                # 确保组合后的chunks数量在1-5范围内
+                
+                # 简单策略：每个组合包含1个text chunk和1个image chunk
+                # 可以根据需要扩展为更复杂的组合策略
+                for i in range(min(len(text_chunks), len(image_chunks), distribution - len(extracted_chunks))):
+                    if len(extracted_chunks) >= distribution:
+                        break
                     
-                    # 提取chunks内容
-                    chunk_contents = [chunk["content"] for chunk in doc_chunks]
-                    # 生成metadata
-                    chunk_metadata = [{"source": chunk["document_id"]} for chunk in doc_chunks]
-                    # 生成overlapped_items（默认为空列表）
-                    overlapped_items = [[]]
+                    # 组合1个text chunk和1个image chunk
+                    combined_chunks = [text_chunks[i], image_chunks[i]]
                     
-                    extracted_chunks.append(chunk_contents)
-                    extracted_metadata.append(chunk_metadata)
-                    extracted_overlapped.append(overlapped_items)
+                    # 检查组合后的chunks数量是否在范围内
+                    if min_chunks <= len(combined_chunks) <= max_chunks:
+                        # 提取chunks内容
+                        chunk_contents = [chunk["content"] for chunk in combined_chunks]
+                        # 生成metadata
+                        chunk_metadata = [{"source": chunk["document_id"]} for chunk in combined_chunks]
+                        # 生成overlapped_items（默认为空列表）
+                        overlapped_items = [[]]
+                        
+                        extracted_chunks.append(chunk_contents)
+                        extracted_metadata.append(chunk_metadata)
+                        extracted_overlapped.append(overlapped_items)
+            else:
+                # 对于其他answer_type，按document_id分组
+                from collections import defaultdict
+                doc_groups = defaultdict(list)
+                for chunk in filtered_chunks:
+                    doc_groups[chunk["document_id"]].append(chunk)
+                
+                # 从document组中提取chunks
+                for doc_id, doc_chunks in doc_groups.items():
+                    if len(extracted_chunks) >= distribution:
+                        break
+                    
+                    # 检查chunks数量是否在范围内
+                    if min_chunks <= len(doc_chunks) <= max_chunks:
+                        # 提取chunks内容
+                        chunk_contents = [chunk["content"] for chunk in doc_chunks]
+                        # 生成metadata
+                        chunk_metadata = [{"source": chunk["document_id"]} for chunk in doc_chunks]
+                        # 生成overlapped_items（默认为空列表）
+                        overlapped_items = [[]]
+                        
+                        extracted_chunks.append(chunk_contents)
+                        extracted_metadata.append(chunk_metadata)
+                        extracted_overlapped.append(overlapped_items)
     
     return extracted_chunks[:distribution], extracted_metadata[:distribution], extracted_overlapped[:distribution]
 
