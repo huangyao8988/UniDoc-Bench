@@ -64,24 +64,26 @@ client = OpenAI(
 
 def load_chunks_from_json(json_path):
     """
-    Load chunks from JSON file and classify them by type.
+    Load chunks from JSON file and classify them by type for each batch result.
     
     Args:
         json_path: Path to the JSON file containing chunks
         
     Returns:
-        dict: Dictionary with keys 'text', 'image', 'table', each containing list of chunks
+        list: List of dictionaries, each containing chunks_by_type for a batch result
     """
     with open(json_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
     
-    text_chunks = []
-    image_chunks = []
-    table_chunks = []
+    batch_chunks_list = []
     
     for batch_result in data.get('batch_results', []):
         chunks = batch_result.get('data', {}).get('chunks', [])
         query_question = batch_result.get('query_question', '')
+        
+        text_chunks = []
+        image_chunks = []
+        table_chunks = []
         
         for chunk in chunks:
             doc_type_kwd = chunk.get('doc_type_kwd', '')
@@ -102,20 +104,24 @@ def load_chunks_from_json(json_path):
                     table_chunks.append(chunk_info)
                 else:
                     image_chunks.append(chunk_info)
+        
+        chunks_by_type = {
+            'text': text_chunks,
+            'image': image_chunks,
+            'table': table_chunks
+        }
+        
+        batch_chunks_list.append(chunks_by_type)
     
-    return {
-        'text': text_chunks,
-        'image': image_chunks,
-        'table': table_chunks
-    }
+    return batch_chunks_list
 
 
-def combine_chunks_by_answer_type(chunks_by_type, distribution, different_file_config):
+def combine_chunks_by_answer_type(batch_chunks_list, distribution, different_file_config):
     """
-    Combine chunks by answer type according to specific rules.
+    Combine chunks by answer type for each batch result.
     
     Args:
-        chunks_by_type: Dictionary with keys 'text', 'image', 'table'
+        batch_chunks_list: List of dictionaries, each containing chunks_by_type for a batch result
         distribution: Dictionary with answer_type as key and count as value
         different_file_config: Dictionary with answer_type as key and file source rule
         
@@ -124,35 +130,40 @@ def combine_chunks_by_answer_type(chunks_by_type, distribution, different_file_c
     """
     import random
     
-    result = {}
+    result = {
+        'image_as_answer': [],
+        'table_as_answer': [],
+        'text_as_answer': [],
+        'image_plus_text_as_answer': []
+    }
     
-    for answer_type in ['image_as_answer', 'table_as_answer', 'text_as_answer', 'image_plus_text_as_answer']:
-        if distribution.get(answer_type, 0) == 0:
-            result[answer_type] = []
-            continue
+    for chunks_by_type in batch_chunks_list:
+        for answer_type in ['image_as_answer', 'table_as_answer', 'text_as_answer', 'image_plus_text_as_answer']:
+            if distribution.get(answer_type, 0) == 0:
+                continue
+                
+            if len(result[answer_type]) >= distribution[answer_type]:
+                continue
             
-        chunk_groups = []
-        target_count = distribution[answer_type]
-        file_rule = different_file_config.get(answer_type, None)
-        
-        if answer_type == 'image_as_answer':
-            chunks = chunks_by_type['image']
-            min_count, max_count = 1, 4
+            file_rule = different_file_config.get(answer_type, None)
             
-        elif answer_type == 'table_as_answer':
-            chunks = chunks_by_type['table']
-            min_count, max_count = 1, 2
-            
-        elif answer_type == 'text_as_answer':
-            chunks = chunks_by_type['text']
-            min_count, max_count = 1, 4
-            
-        elif answer_type == 'image_plus_text_as_answer':
-            text_chunks = chunks_by_type['text']
-            image_chunks = chunks_by_type['image']
-            min_count, max_count = 2, 5
-            
-            for _ in range(target_count):
+            if answer_type == 'image_as_answer':
+                chunks = chunks_by_type['image']
+                min_count, max_count = 1, 4
+                
+            elif answer_type == 'table_as_answer':
+                chunks = chunks_by_type['table']
+                min_count, max_count = 1, 2
+                
+            elif answer_type == 'text_as_answer':
+                chunks = chunks_by_type['text']
+                min_count, max_count = 1, 4
+                
+            elif answer_type == 'image_plus_text_as_answer':
+                text_chunks = chunks_by_type['text']
+                image_chunks = chunks_by_type['image']
+                min_count, max_count = 2, 5
+                
                 num_chunks = random.randint(min_count, max_count)
                 num_images = random.randint(1, num_chunks - 1)
                 num_texts = num_chunks - num_images
@@ -183,12 +194,9 @@ def combine_chunks_by_answer_type(chunks_by_type, distribution, different_file_c
                 if len(selected_images) >= 1 and len(selected_texts) >= 1:
                     combined = selected_images[:num_images] + selected_texts[:num_texts]
                     random.shuffle(combined)
-                    chunk_groups.append(combined)
+                    result[answer_type].append(combined)
+                continue
             
-            result[answer_type] = chunk_groups[:target_count]
-            continue
-        
-        for _ in range(target_count):
             num_chunks = random.randint(min_count, max_count)
             
             if file_rule == 'different_files_visited':
@@ -203,37 +211,47 @@ def combine_chunks_by_answer_type(chunks_by_type, distribution, different_file_c
             elif file_rule == 'different_files_visited_random':
                 selected = random.sample(chunks, min(num_chunks, len(chunks)))
             else:
-                doc_id = chunks[0]['document_id']
-                same_doc_chunks = [c for c in chunks if c['document_id'] == doc_id]
-                if len(same_doc_chunks) >= num_chunks:
-                    selected = random.sample(same_doc_chunks, num_chunks)
+                if len(chunks) > 0:
+                    doc_id = chunks[0]['document_id']
+                    same_doc_chunks = [c for c in chunks if c['document_id'] == doc_id]
+                    if len(same_doc_chunks) >= num_chunks:
+                        selected = random.sample(same_doc_chunks, num_chunks)
+                    else:
+                        selected = same_doc_chunks
                 else:
-                    selected = same_doc_chunks
+                    selected = []
             
             if len(selected) >= min_count:
-                chunk_groups.append(selected)
-        
-        result[answer_type] = chunk_groups[:target_count]
+                result[answer_type].append(selected)
     
     return result
 
 
-def test_mode01(chunks_by_type, chunk_groups_by_answer_type):
+def test_mode01(batch_chunks_list, chunk_groups_by_answer_type):
     """
     Test mode 01: Display chunk combination statistics and output test files.
     
     Args:
-        chunks_by_type: Dictionary with keys 'text', 'image', 'table'
+        batch_chunks_list: List of dictionaries, each containing chunks_by_type for a batch result
         chunk_groups_by_answer_type: Dictionary with answer_type as key and list of chunk groups
     """
     print("=" * 80)
     print("TEST MODE 01: Chunk Combination Statistics")
     print("=" * 80)
     
+    text_chunks = []
+    image_chunks = []
+    table_chunks = []
+    
+    for chunks_by_type in batch_chunks_list:
+        text_chunks.extend(chunks_by_type['text'])
+        image_chunks.extend(chunks_by_type['image'])
+        table_chunks.extend(chunks_by_type['table'])
+    
     print("\nAvailable chunks by type:")
-    print(f"  Text chunks: {len(chunks_by_type['text'])}")
-    print(f"  Image chunks: {len(chunks_by_type['image'])}")
-    print(f"  Table chunks: {len(chunks_by_type['table'])}")
+    print(f"  Text chunks: {len(text_chunks)}")
+    print(f"  Image chunks: {len(image_chunks)}")
+    print(f"  Table chunks: {len(table_chunks)}")
     
     print("\nChunk groups by answer_type:")
     for answer_type, chunk_groups in chunk_groups_by_answer_type.items():
@@ -243,15 +261,6 @@ def test_mode01(chunks_by_type, chunk_groups_by_answer_type):
             print(f"    Group {i}: {len(group)} chunks")
             doc_ids = set([chunk['document_id'] for chunk in group])
             print(f"      Document IDs: {doc_ids}")
-            chunk_types = []
-            for chunk in group:
-                if chunk in chunks_by_type['text']:
-                    chunk_types.append('text')
-                elif chunk in chunks_by_type['image']:
-                    chunk_types.append('image')
-                elif chunk in chunks_by_type['table']:
-                    chunk_types.append('table')
-            print(f"      Chunk types: {chunk_types}")
     
     print("\n" + "=" * 80)
     print("Outputting test files...")
@@ -318,8 +327,8 @@ def load_chunks(
 ):
     chunks_all, chunks_metadata_all, chunks_overlapped_items = dict(), dict(), dict()
 
-    chunks_by_type = load_chunks_from_json(chunks_json_path)
-    chunk_groups_by_answer_type = combine_chunks_by_answer_type(chunks_by_type, distribution, different_file_config)
+    batch_chunks_list = load_chunks_from_json(chunks_json_path)
+    chunk_groups_by_answer_type = combine_chunks_by_answer_type(batch_chunks_list, distribution, different_file_config)
 
     for answer_type in ['image_as_answer', 'table_as_answer', 'text_as_answer', 'image_plus_text_as_answer']:
         chunk_groups = chunk_groups_by_answer_type.get(answer_type, [])
@@ -340,7 +349,7 @@ def load_chunks(
         chunks_metadata_all[answer_type] = chunks_metadata_list
         chunks_overlapped_items[answer_type] = chunks_overlapped_list
 
-    return chunks_all, chunks_metadata_all, chunks_overlapped_items, chunks_by_type, chunk_groups_by_answer_type
+    return chunks_all, chunks_metadata_all, chunks_overlapped_items, batch_chunks_list, chunk_groups_by_answer_type
 
 
 def encode_image(image_path):
@@ -522,14 +531,14 @@ if __name__ == "__main__":
         'image_plus_text_as_answer': getattr(args, 'different_file_image_plus_text_as_answer', None)
     }
     
-    chunks_all, chunks_metadata_all, chunks_overlapped_items, chunks_by_type, chunk_groups_by_answer_type = load_chunks(
+    chunks_all, chunks_metadata_all, chunks_overlapped_items, batch_chunks_list, chunk_groups_by_answer_type = load_chunks(
         args.chunks_json_path,
         answer_type_distribution,
         different_file_config
     )
 
     if args.test == "mode01":
-        test_mode01(chunks_by_type, chunk_groups_by_answer_type)
+        test_mode01(batch_chunks_list, chunk_groups_by_answer_type)
         output_file.close()
         sys.exit(0)
 
