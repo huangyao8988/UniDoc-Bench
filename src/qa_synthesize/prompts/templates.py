@@ -1,15 +1,18 @@
+import json
+import base64
+
 TEMPLATES_REPORT = """
 **Factual Retrieval:**
-    1. What was the [Metric] of [Entity] in [Time Period]/[Report or Doc]?
-        - Example: What was the total revenue of Company A in the most recent fiscal year?
+    1. What was [Metric] of [Entity] in [Time Period]/[Report or Doc]?
+        - Example: What was total revenue of Company A in the most recent fiscal year?
     2. Which [Entity Features] changed at [Entity] in [Time Period]/[Report or Doc]?
         - Example: Which leadership positions changed at Westwater Resources, Inc. in the reporting period?
     3. What was the largest/smallest/highest/lowest [Spending/Value] of [Entity] on [Category]?
         - Example: What was the largest single spending of MGM Resorts International on executive compensation in USD?
     4. How much did [Entity] spend/earn on [Category] (in [Currency]) during [Time Period]?
         - Example: How much did Pfizer spend on marketing in USD during 2022?
-    5. What trend is reported in [Metric] for [Entity] over the past [N] years?
-        - Example: What trend is reported in operating income for Zoom over the past 3 years?
+    5. What trend is reported in [Metric] for [Entity] over past [N] years?
+        - Example: What trend is reported in operating income for Zoom over past 3 years?
     6. What is the projected [Metric] for [Entity] in [Future Time Period]?
         - Example: What is the projected revenue for NVIDIA in 2025?
     7. When/Where did [Entity/Event/Policy] happen or become active?
@@ -21,7 +24,7 @@ TEMPLATES_REPORT = """
     10. How do you [Action/Process] in [Context/Field]?
         - Example: How do you calculate the ROI for a marketing campaign?
     11. What steps/process are involved in [Action/Process]?
-        - Example: What is the Approval Process for replace the existing vinyl-framed windows of the Historic center located at 2146-2148 SE 12th Avenue?
+        - Example: What is the Approval Process for replace existing vinyl-framed windows of the Historic center located at 2146-2148 SE 12th Avenue?
 
 **Comparison:**
     1. Which [Entity Type/Company] had a higher/lower [Metric]: [Entity1], [Entity2] or [Entity3], in [Time Period]?
@@ -43,11 +46,11 @@ TEMPLATES_REPORT = """
     1. What are the key points/findings/statements from the [Document on Topic] (regarding [Issue/entity])?
         - Example: What are the key findings from the 2023 quarterly earnings reports on the U.S. retail sector?
     2. Summarize the trends/key points/findings in [Document on Topic] about [Metric] over [Time Period]?
-        - Example: Can you summarize the trend about smartphone adoption rates over the past decade?
+        - Example: Can you summarize the trend about smartphone adoption rates over past decade?
     3. How would you summarize the overall impact of [Factor] on [Entity]'s [Metric] over [Time Period]?
-        - Example: How would you summarize the overall impact of the economic downturn on General Motors’ sales in 2022?
-    4. List the top [N] [Products/Services] contributing to [Entity]’s [Metric] in [Time Period].
-        - Example: List the top 3 products contributing to Apple’s revenue in 2023.
+        - Example: How would you summarize the overall impact of the economic downturn on General Motors' sales in 2022?
+    4. List the top [N] [Products/Services] contributing to [Entity]'s [Metric] in [Time Period].
+        - Example: List the top 3 products contributing to Apple's revenue in 2023.
     5. What are the top [N] [Factors/Events] identified for [Entity] in [Report/Document]?
         - Example: What are the top 5 risk factors identified for Meta in its latest financial filing?
     6. What risks or challenges or opportunities were identified for [Entity] in [Document]?
@@ -57,10 +60,10 @@ TEMPLATES_REPORT = """
 
 **Causal / Reasoning/ Why Questions:**
     1. Why did [Entity/Event] result in [Outcome]?
-        - Example: Why did Apple’s Q2 profits decline in 2023?
+        - Example: Why did Apple's Q2 profits decline in 2023?
     2. How did [Factor A] contribute to [Outcome B]?
         - Example: How did rising inflation contribute to reduced consumer spending?
-    3. What was the goal behind [Entity]’s decision to [Action]?
+    3. What was the goal behind [Entity]'s decision to [Action]?
         - Example: What was the goal behind Google acquiring DeepMind?
     4. Why did [Entity] implement [Policy/Strategy]?
         - Example: Why did Meta implement its remote work policy?
@@ -72,7 +75,7 @@ TEMPLATES_REPORT = """
 
 TEMPLATES_LEGAL = """
 **Factual Retrieval:**
-    1. What are the key provisions or obligations in the [Contract/Agreement/Policy] between [Parties]?
+    1. What are the key provisions or obligations in [Contract/Agreement/Policy] between [Parties]?
         - Example: What are the confidentiality obligations in the employment contract between John Doe and XYZ Ltd.?
     2. Which laws or regulations apply to [Activity/Transaction] under [Jurisdiction]?
         - Example: Which data protection laws apply to cross-border data transfers under EU law?
@@ -89,7 +92,7 @@ TEMPLATES_LEGAL = """
     8. Who is responsible for compliance with [Law/Regulation] at [Organization]?
         - Example: Who is the Data Protection Officer at Acme Inc. as of 2024?
     9. How is [Legal Term/Concept] defined under [Jurisdiction] or in [Contract]?
-        - Example: How is “force majeure” defined under the 2019 International Chamber of Commerce contract?
+        - Example: How is "force majeure" defined under 2019 International Chamber of Commerce contract?
     10. How do you initiate [Legal Procedure] in [Jurisdiction]?
         - Example: How do you initiate arbitration proceedings under ICC rules?
     11. What steps must be followed to comply with [Regulation/Requirement]?
@@ -99,11 +102,11 @@ TEMPLATES_LEGAL = """
     1. Which jurisdiction has stricter [Law/Regulation] regarding [Topic]: [Jurisdiction A], [Jurisdiction B], or [Jurisdiction C]?
         - Example: Which jurisdiction has stricter data privacy laws: California, GDPR (EU), or Brazil?
     2. How do the dispute resolution clauses in [Contract A] and [Contract B] differ?
-        - Example: How do the arbitration clauses in Amazon’s vendor agreement differ from those in eBay’s?
+        - Example: How do the arbitration clauses in Amazon's vendor agreement differ from those in eBay's?
     3. What are the differences between [Law/Regulation A] and [Law/Regulation B] concerning [Topic]?
-        - Example: What are the differences between the CCPA and GDPR in terms of consumer rights?
+        - Example: What are the differences between CCPA and GDPR in terms of consumer rights?
     4. How has the interpretation of [Legal Concept] evolved between [Case A] and [Case B]?
-        - Example: How has the interpretation of “reasonable care” evolved between Smith v. Jones and Brown v. Davis?
+        - Example: How has the interpretation of "reasonable care" evolved between Smith v. Jones and Brown v. Davis?
     5. Which [Contract/Policy] provides greater protection for [Party] in [Context]?
         - Example: Which employment contract provides greater protection for the employee regarding severance?
     6. How do compliance requirements for [Industry A] compare to [Industry B]?
@@ -112,10 +115,10 @@ TEMPLATES_LEGAL = """
         - Example: Which defense strategy was more effective in the two patent infringement cases?
 
 **Summarization:**
-    1. What are the main points or obligations outlined in the [Contract/Policy/Regulation]?
+    1. What are the main points or obligations outlined in [Contract/Policy/Regulation]?
         - Example: What are the main obligations outlined in the GDPR for data controllers?
     2. Summarize the findings or rulings in [Legal Case/Decision] related to [Issue].
-        - Example: Summarize the key rulings in the Supreme Court’s 2023 intellectual property case.
+        - Example: Summarize the key rulings in the Supreme Court's 2023 intellectual property case.
     3. How has [Law/Regulation] impacted [Industry/Entity] since its implementation?
         - Example: How has GDPR impacted tech companies since 2018?
     4. List the common legal risks identified in [Industry/Contract Type].
@@ -125,7 +128,7 @@ TEMPLATES_LEGAL = """
     6. What opportunities or benefits does [Law/Policy] offer to [Entity/Industry]?
         - Example: What opportunities does the new data localization law offer to cloud service providers?
     7. What is the current status or outcome of [Legal Proceeding/Investigation]?
-        - Example: What is the current status of the antitrust investigation into Google’s advertising practices?
+        - Example: What is the current status of the antitrust investigation into Google's advertising practices?
 
 **Causal / Reasoning / Why Questions:**
     1. Why was [Law/Regulation/Policy] enacted or amended?
@@ -157,51 +160,51 @@ TEMPLATES_COMMERCE_MANUFACTURING = """
     6. What is the lead time for [Component/Product] from supplier to manufacturing site?
         - Example: What is the average lead time for semiconductor wafers from TSMC to Intel fabs?
     7. When was the [New Machine/Automation System] installed or upgraded at [Facility]?
-        - Example: When was the new robotic arm system installed at Ford’s Michigan plant?
+        - Example: When was the new robotic arm system installed at Ford's Michigan plant?
     8. Who manages the [Supply Chain/Quality Control/Logistics] at [Company]?
         - Example: Who is the head of supply chain management at DHL as of 2024?
     9. How is [Process/Technology] implemented in [Manufacturing/Logistics]?
         - Example: How is lean manufacturing applied in automotive assembly lines?
     10. How do you perform [Quality Check/Inventory Audit/Shipment Scheduling] in [Industry/Operation]?
         - Example: How do you perform a quality control audit in semiconductor manufacturing?
-    11. What are the steps involved in [Order Fulfillment/Inventory Restocking/Product Recall]?
+    11. What steps are involved in [Order Fulfillment/Inventory Restocking/Product Recall]?
         - Example: What are the steps involved in recalling defective smartphones in retail?
 
 **Comparison:**
     1. Which [Supplier/Factory/Product] has better [Quality/Yield/Delivery Time]: [Entity1], [Entity2], or [Entity3]?
         - Example: Which supplier delivers components with the lowest defect rate: Foxconn, Pegatron, or Flex?
     2. How does the production efficiency of [Plant A] compare to [Plant B]?
-        - Example: How does the output per hour at Tesla’s Fremont plant compare to the Shanghai Gigafactory?
+        - Example: How does the output per hour at Tesla's Fremont plant compare to the Shanghai Gigafactory?
     3. What are the differences in logistics strategies between [Company A] and [Company B]?
         - Example: What are the differences in last-mile delivery strategies between Amazon and FedEx?
     4. How did the defect rate change for [Product] before and after [Process Change/Equipment Upgrade]?
         - Example: How did the smartphone defect rate change after Samsung implemented automated inspection?
     5. Which product model has the shortest assembly time: [Model A], [Model B], or [Model C]?
         - Example: Which Dell laptop model requires the least assembly time?
-    6. How do the supply chain risks for [Product A] compare to [Product B]?
+    6. How do supply chain risks for [Product A] compare to [Product B]?
         - Example: How do supply chain risks for electric vehicles compare to traditional cars?
     7. Which logistics provider has better on-time delivery performance for [Region/Industry]?
         - Example: Which logistics provider had better on-time delivery rates in Europe in 2023?
 
 **Summarization:**
     1. What are the key findings from the [Quality Report/Inspection] of [Facility/Product]?
-        - Example: What are the key findings from the quality inspection report for Intel’s latest chip fabrication plant?
+        - Example: What are the key findings from the quality inspection report for Intel's latest chip fabrication plant?
     2. Summarize the main challenges faced in [Supply Chain/Manufacturing] during [Event/Period].
         - Example: Summarize the main supply chain disruptions faced by automotive manufacturers during the 2023 chip shortage.
     3. How has the implementation of [Technology/Process] impacted [Production/Logistics]?
-        - Example: How has the adoption of AI-driven demand forecasting impacted Amazon’s warehouse operations?
+        - Example: How has the adoption of AI-driven demand forecasting impacted Amazon's warehouse operations?
     4. List the top [N] causes of delays in [Manufacturing/Supply Chain/Delivery].
         - Example: List the top 3 causes of delays in the supply chain for consumer electronics in 2023.
     5. What risks or bottlenecks were identified in [Manufacturing Process/Distribution Network]?
-        - Example: What bottlenecks were identified in Tesla’s battery production line?
+        - Example: What bottlenecks were identified in Tesla's battery production line?
     6. What are the main opportunities for efficiency improvement in [Operation/Process]?
         - Example: What opportunities exist to improve inventory turnover in e-commerce warehouses?
     7. What is the overall status/performance of [Facility/Product Line] after [Change/Event]?
-        - Example: What is the overall production performance of Samsung’s semiconductor plant after automation upgrades?
+        - Example: What is the overall production performance of Samsung's semiconductor plant after automation upgrades?
 
 **Causal / Reasoning/ Why Questions:**
     1. Why did [Production Delay/Quality Issue] occur in [Facility/Product Line]?
-        - Example: Why did the production delay happen at Intel’s Arizona fab in 2023?
+        - Example: Why did the production delay happen at Intel's Arizona fab in 2023?
     2. How did [New Technology/Process] contribute to improved [Yield/Throughput]?
         - Example: How did the implementation of 5G connectivity improve factory automation efficiency?
     3. What was the reason behind [Company] choosing [Supplier/Technology]?
@@ -243,7 +246,7 @@ TEMPLATES_EDUCATION = """
     1. Which [Teaching Method/Assessment Type] is more effective for improving [Skill/Outcome]: [Method A], [Method B], or [Method C]?
         - Example: Which teaching method is more effective for improving reading comprehension: phonics, whole language, or balanced literacy?
     2. How do [Curriculum A] and [Curriculum B] differ in their approach to [Subject/Skill]?
-        - Example: How do the Next Generation Science Standards differ from the previous state standards in teaching scientific inquiry?
+        - Example: How do Next Generation Science Standards differ from the previous state standards in teaching scientific inquiry?
     3. What are the differences in student engagement between [Instructional Strategy A] and [Instructional Strategy B]?
         - Example: What are the differences in student engagement between flipped classrooms and traditional lectures?
     4. How did student performance change after adopting [Teaching Method/Curriculum]?
@@ -295,7 +298,7 @@ TEMPLATES_ENERGY = """
     3. What is the operating capacity or technical rating of [Component/Unit] at [Location]?
         - Example: What is the rated capacity of the transmission line from Hoover Dam to Las Vegas?
     4. What materials, fuels, or technologies are used in [Energy Process/System]?
-        - Example: What cooling method is used in Duke Energy’s nuclear reactors?
+        - Example: What cooling method is used in Duke Energy's nuclear reactors?
     5. What are the design constraints or limitations noted in [Blueprint/Design Document]?
         - Example: What design constraints are listed for the floating wind turbine prototype off the Maine coast?
     6. What is the timeline or sequence of events described in [Log/File/Project Plan]?
@@ -303,11 +306,11 @@ TEMPLATES_ENERGY = """
     7. When was [Component/Infrastructure] installed, upgraded, or decommissioned?
         - Example: When was the substation near Bakersfield upgraded to handle higher load capacity?
     8. Who is responsible for [Inspection/Approval/Repair] in the context of [Facility or Regulatory Area]?
-        - Example: Who is the designated site inspector for Chevron’s deepwater platform in the Gulf?
+        - Example: Who is the designated site inspector for Chevron's deepwater platform in the Gulf?
     9. How is [Process/System] carried out according to [Guide/Protocol]?
         - Example: How is high-voltage testing performed during substation commissioning?
     10. How do you initiate [Procedure/Compliance Action] under [Jurisdiction or Program]?
-        - Example: How do you initiate an interconnection request under California’s Rule 21?
+        - Example: How do you initiate an interconnection request under California's Rule 21?
     11. What steps are required to verify [Status/Compliance/Performance] of [System or Project]?
         - Example: What steps are required to verify performance of grid-scale battery installations?
 
@@ -377,7 +380,7 @@ TEMPLATES_CONSTRUCTION = """
     8. Who is assigned responsibility for [Task/Approval/Area] in the project plan or field notes?
         - Example: Who is the assigned contractor for structural framing on the west wing?
     9. How is [Term/Practice/Process] defined or implemented in the construction context?
-        - Example: How is “cold joint” defined and addressed in concrete pouring documentation?
+        - Example: How is "cold joint" defined and addressed in concrete pouring documentation?
     10. How do you execute [Field Task/Verification/Survey Procedure] according to the field manual?
         - Example: How do you execute cross-sectioning for terrain slope measurement using total station?
     11. What steps are required to obtain approval for [Permit/Design/Variation]?
@@ -390,7 +393,7 @@ TEMPLATES_CONSTRUCTION = """
         - Example: How does the framing layout differ between the initial and revised floor plan of Building 5?
     3. What are the differences in workflow or resourcing between [Project A] and [Project B]?
         - Example: What are the differences in project timelines and subcontractor scheduling between Phase I and Phase II?
-    4. How did the site measurements change before and after [Excavation/Backfill/Survey Update]?
+    4. How did site measurements change before and after [Excavation/Backfill/Survey Update]?
         - Example: How did the site contour data change after the first round of grading in March?
     5. Which construction method leads to fewer delays or defects for [Structure Type]?
         - Example: Which method leads to fewer defects in retaining walls: cast-in-place or precast block systems?
@@ -405,7 +408,7 @@ TEMPLATES_CONSTRUCTION = """
     2. Summarize the status or findings from [Site Visit/Inspection/Meeting Notes].
         - Example: Summarize the findings from the electrical system walkthrough on July 6.
     3. What problems, risks, or issues are noted in [Project Update/Field Report]?
-        - Example: What risks are identified in the July 2024 update for the underground utility trenching?
+        - Example: What risks are identified in the July 2024 update for underground utility trenching?
     4. List the critical tasks or dependencies for [Phase/Structure/Timeline] in the project plan.
         - Example: List the critical path dependencies for topping out the structural core of Tower A.
     5. What corrective actions or change orders are described in [Field Memo/RFI Response]?
@@ -415,7 +418,7 @@ TEMPLATES_CONSTRUCTION = """
     7. What is the overall progress or outcome described in [Construction Summary/Closeout Docs]?
         - Example: What is the overall outcome of the civil works closeout report for the parking structure?
 
-**Causal / Reasoning / Why Questions:**
+**Causal / Reasoning/ Why Questions:**
     1. Why did [Design Choice/Method] lead to [Outcome/Issue] in [Project/Area]?
         - Example: Why did the choice of light-gauge steel studs lead to delays during interior wall framing?
     2. How did [Weather/Site/Design Factor] contribute to [Delay/Change/Failure]?
@@ -433,7 +436,7 @@ TEMPLATES_CONSTRUCTION = """
 TEMPLATES_FINANCE = """
 **Factual Retrieval:**
     1. What indicators, policies, or tools are described in the discussion of [Economic Topic/Financial Strategy]?
-        - Example: What inflation indicators are cited in the ECB’s policy blog from June?
+        - Example: What inflation indicators are cited in the ECB's policy blog from June?
     2. Which markets, sectors, or instruments are emphasized in relation to [Trend/Event/Goal]?
         - Example: Which sectors are favored in the 2025 sustainable investing outlook?
     3. What key positions or exposures are taken by [Investor/Desk/Division] in response to [Condition/Event]?
@@ -475,7 +478,7 @@ TEMPLATES_FINANCE = """
     5. What are the key operational or structural features of [Product/Plan/Tool]?
         - Example: What are the structural features of the new drawdown facility described in the treasury toolkit?
 
-**Causal / Reasoning / Why Questions:**
+**Causal / Reasoning/ Why Questions:**
     1. Why did [Entity/Desk/Advisor] make [Move/Shift/Decision] in response to [Condition/Event]?
         - Example: Why did the balanced portfolio reduce international equity in Q2?
     2. How did [Macro Event/Regulatory Shift] influence [Positioning/Allocation/Operations]?
@@ -493,21 +496,21 @@ TEMPLATES_HEALTHCARE = """
     1. What symptoms, findings, or conditions were documented in [Patient Note/Clinical Record]?
         - Example: What symptoms were documented in the admission note for Patient ID 1384?
     2. Which medications or treatments were administered to [Patient/Group] during [Encounter/Trial Phase]?
-        - Example: Which antibiotics were prescribed during the patient’s second hospital stay?
+        - Example: Which antibiotics were prescribed during the patient's second hospital stay?
     3. What diagnostic tests were performed and what were the findings in [Case/Record]?
-        - Example: What imaging tests were done for the patient with chest pain, and what were the results?
+        - Example: What imaging tests were done for the patient with chest pain, and what were results?
     4. What adverse events were reported in [Trial/Procedure]?
         - Example: What adverse events occurred during Phase II of the mRNA vaccine trial?
     5. What is the function or mechanism of [Device/Drug/Procedure] described in [Document]?
         - Example: What is the mechanism of the insulin pump described in the technical manual?
     6. What inclusion/exclusion criteria are used in [Study/Protocol]?
-        - Example: What are the exclusion criteria in the Alzheimer’s disease clinical trial protocol?
+        - Example: What are the exclusion criteria in the Alzheimer's disease clinical trial protocol?
     7. When was [Drug/Device/Procedure] approved, deployed, or used in [Case/Setting]?
         - Example: When was the automated blood pressure monitor used during the outpatient visit?
     8. Who performed or supervised [Procedure/Diagnosis/Trial] in [Document/Record]?
         - Example: Who performed the spinal tap on the patient admitted on March 5th?
     9. How is [Medical Term/Procedure] defined or described in [Document/Context]?
-        - Example: How is “early-onset sepsis” defined in the neonatal care guideline?
+        - Example: How is "early-onset sepsis" defined in the neonatal care guideline?
     10. How do you perform [Procedure/Test] in [Setting]?
         - Example: How do you perform a 6-minute walk test in a pulmonary rehabilitation program?
     11. What steps or protocols are involved in [Clinical Pathway/Device Use]?
@@ -517,7 +520,7 @@ TEMPLATES_HEALTHCARE = """
     1. Which [Treatment/Test/Intervention] showed higher efficacy or fewer side effects: [Option A], [Option B], or [Option C]?
         - Example: Which antidepressant had fewer reported side effects: sertraline, fluoxetine, or bupropion?
     2. How do diagnostic criteria differ between [Condition A] and [Condition B]?
-        - Example: How do diagnostic criteria differ between Crohn’s disease and ulcerative colitis?
+        - Example: How do diagnostic criteria differ between Crohn's disease and ulcerative colitis?
     3. What are the key differences in trial design between [Study A] and [Study B]?
         - Example: What are the differences in dosage schedules between Study 001 and Study 002 for the COVID booster?
     4. How did patient outcomes differ before and after [Treatment/Intervention]?
@@ -543,17 +546,17 @@ TEMPLATES_HEALTHCARE = """
     6. What are the key eligibility, enrollment, and outcome stats reported in [Study Summary]?
         - Example: What are the key enrollment stats in the CRISPR gene therapy trial?
     7. What is the overall prognosis or assessment given in [Report/Encounter]?
-        - Example: What is the overall assessment in the neurologist’s consult note for the MS patient?
+        - Example: What is the overall assessment in the neurologist's consult note for the MS patient?
 
-**Causal / Reasoning / Why Questions:**
+**Causal / Reasoning/ Why Questions:**
     1. Why did [Patient/Group] develop [Condition/Event] after [Treatment/Exposure]?
         - Example: Why did the patient develop liver toxicity after the second dose of isoniazid?
     2. How did [Factor/Intervention] contribute to [Outcome/Improvement/Complication]?
         - Example: How did early mobilization contribute to faster recovery in post-surgical patients?
     3. What was the rationale behind choosing [Treatment/Device/Protocol] in [Case]?
-        - Example: What was the rationale for using biologics instead of steroids in this Crohn’s patient?
+        - Example: What was the rationale for using biologics instead of steroids in this Crohn's patient?
     4. Why was [Device/Trial Arm] discontinued or modified during [Study/Procedure]?
-        - Example: Why was the placebo arm discontinued during the Phase II trial?
+        - Example: Why was the placebo arm discontinued during Phase II trial?
     5. What occurred before/after [Clinical Event/Procedure/Change]?
         - Example: What happened after the patient's oxygen saturation dropped below 85%?
     6. In what sequence did the following clinical events occur: [Symptom A], [Intervention B], [Outcome C]?
@@ -617,7 +620,7 @@ TEMPLATES_ENG_SCI = """
     7. What are the key theoretical insights, assumptions, or simplifications used in [Study/Model]?
         - Example: What assumptions are made in the derivation of the Black-Scholes equation?
 
-**Causal / Reasoning / Why Questions:**
+**Causal / Reasoning/ Why Questions:**
     1. Why did [System/Test/Model] produce unexpected or suboptimal results?
         - Example: Why did the RF signal degrade rapidly during the satellite communication test?
     2. How did [Material/Design Parameter] influence [Performance/Outcome]?
@@ -677,7 +680,7 @@ TEMPLATES_CRM = """
     1. What are the main features or updates described in [Product Release/Integration Guide]?
         - Example: What are the main updates in the latest Salesforce Winter Release?
     2. Summarize the customer feedback themes from [Survey/Support Logs].
-        - Example: Summarize the main customer complaints from the last quarter’s support tickets.
+        - Example: Summarize the main customer complaints from the last quarter's support tickets.
     3. What trends are observed in [Sales Pipeline/Customer Behavior] over [Time Period]?
         - Example: What trends are observed in upsell opportunities in Q1 2024?
     4. List the top challenges faced during [Customer Onboarding/Support Process].
@@ -706,7 +709,7 @@ TEMPLATES_CRM = """
 
 
 CHOOSE_TEMPLATE_PROMPT_SYSTEM = """
-Given the following text contexts and images, choose the most suitable question templates from the provided list of templates. The templates will and the contexts and images will be used to synthesize the questions.
+Given the following text contexts and images, choose the most suitable question templates from the provided list of templates. The templates will and contexts and images will be used to synthesize the questions.
 
 **Requirements:**
 <requirements>
@@ -747,32 +750,66 @@ Text contexts:
 Images are as follows:
 """
 
-import json
-import base64
+
 def encode_image(image_path):
     with open(image_path, "rb") as image_file:
         return base64.b64encode(image_file.read()).decode("utf-8")
 
-Contexts = ["<<fig-80a961247206cffc00d575b5be36fb93>> FY 2013-14 Actuals FY 2014-15 Actuals FY 2015-16 Actuals FY 2016-17 FY 2017-18 Projections Requested Even though no two audits are the same, the number of audits produced is an industry (ALGA) accepted performance metric as well as a performance metric reported by the Auditor\u2019s Office. The ALGA Benchmarking and Best Practices report states that \u201c\u2026slightly more than three quarters of respondents indicated their audit department used performance measures\u2026(and) 85% agree that the performance measures have been successfully integrated into ongoing management of the audit shop\u201d. The data indicates the Auditor\u2019s Office is producing less than one third of an audit department with 11-16 staff and approximately two thirds of what an audit department with 6-10 staff produce. CBO recognizes that the number of audits issued is not a perfect measure due to variation in scope. However, CBO strongly encourages audit services to review its performance against its peers and use performance management to ensure it is providing the highest quality services at the lowest possible cost. Decision Package Analysis & Recommendations IPR Asst. Program Manager to Full Time, AU_01, $69,870, 0.5 FTE This package requests that the current IPR Assistant Program Manager transition from 0.5 FTE to 1.0 FTE. This request addresses requirements set forth by the state in House Bill 2002 and by the U.S. Department of Justice (DOJ) settlement agreement. A key element of the DOJ settlement is that all investigations be complete within 180 days. To meet this, IPR must complete their portion within a 60-day time frame. IPR strives to complete 45% of cases in a 60- day time frame. The percent of (estimated) cases that are projected to meet that goal in FY 2016-17 fell 5 percentage points from 29% in FY 2015-16 down to 24% in FY 2016-17. These percentages are misleading as they do not adequately reflect changes in workload. Among other things, increased workload and process inefficiencies pose challenges to IPR achieving their goal. As expected, there has been an increase in the total volume of complaints. There are two kinds of complaints: community initiated and Portland Police Bureau (PPB) initiated complaints. Each complaint requires some measure of intake and analysis from the IPR team. Bureau Initated Complaints are Growing Faster than Community Initiated \u2022 The composition of complaints is important because community-initiated 600 complaints often involve force, 500 65% growth and the majority of these are 400 12% growth referred for investigation either by internal affairs or IPR. 300 \u2022 Bureau-initiated complaints 200 Number of PPB Initiated grew 65% in the last year while 100 Complaints community initiated complaints 0 FY 2015-16 Actuals FY 2016-17 Projection Number of Community Initiated Complaints grew 12%. \u2022 Currently, the assistant manager is responsible for reviewing the majority of bureau initiated complaints, which are more time intensive because they include: officer involved shootings, in-custody deaths, and interpersonal workplace conflicts. To offset the additional workload, Council approved two additional investigators in FY 2016-17 bringing the total number of investigators to seven; however, until recently, only six of the seven positions were filled. Legislation that took effect in January 2016 changed criteria such that a significantly higher portion of cases are investigated. The number of cases referred requiring investigation grew 76% in the last year.", "Requested Appropriations With the fiscal year half-way completed, departments have had the opportunity to re-evaluate their current operations and identify any unforeseen needs that have become known. Staff is requesting the Council\u2019s consideration of budget appropriation changes for the General Fund totaling $457,952 with a revenue offset of $391,152. As discussed below, the net cost of $66,800 from these appropriations can be absorbed within the current General Fund budget with no actual cost impact. The appropriations requested for the Wastewater Fund total $50,700 which is the before-mentioned generator carried over from FY 2018-19). Below is further detail on these requested appropriation changes and pending Council direction on these requests, staff will return to the Council at a subsequent meeting for formal approval of these change: City Management"]
-img_path = "YOUR_DATA_PATH/selected_documents/by_class_finance_lang_english_pages_3_textp_85/Corporate_Finance_figures/5406059/figure-3-5.jpg"
-fig = "<<fig-80a961247206cffc00d575b5be36fb93>>"
-img = encode_image(img_path)
 
-user_prompt = [
+def create_user_prompt_example(text_contexts, image_path, fig_marker, templates):
+    """
+    Create an example user prompt for template selection.
+    This is a helper function and should not be called during module import.
+    """
+    img = encode_image(image_path)
+    
+    user_prompt = [
         {
             "type": "text",
-            "text": CHOOSE_TEMPLATE_PROMPT_USER.replace("{text_contexts}", json.dumps(Contexts, indent=4)).replace("{{TEMPLATES}}", TEMPLATES_REPORT)
+            "text": CHOOSE_TEMPLATE_PROMPT_USER.replace("{text_contexts}", json.dumps(text_contexts, indent=4)).replace("{{TEMPLATES}}", templates)
             + "\n\nThese are the tables and images in the above chunks:",
         }
     ]
-user_prompt += [
-            {
-                "type": "image_url",
-                "image_url": {"url": f"data:image/png;base64,{img}", "name": f"This is the image for {fig} in the above context."},
-            }
-        ]
+    user_prompt += [
+        {
+            "type": "image_url",
+            "image_url": {"url": f"data:image/png;base64,{img}", "name": f"This is the image for {fig_marker} in the above context."},
+        }
+    ]
+    
+    return user_prompt
 
-assistant_output = """```
+
+def create_message_with_example(text_contexts, image_path, fig_marker, templates, assistant_output):
+    """
+    Create a message with example for template selection.
+    This is a helper function and should not be called during module import.
+    """
+    user_prompt = create_user_prompt_example(text_contexts, image_path, fig_marker, templates)
+    
+    message = [
+        {
+            "role": "system",
+            "content": CHOOSE_TEMPLATE_PROMPT_SYSTEM,
+        },
+        {"role": "user", "content": user_prompt},
+        {"role": "assistant", "content": assistant_output},
+    ]
+    
+    return message
+
+
+def get_example_data():
+    """
+    Get example data for template selection.
+    Returns example text contexts, figure marker, templates, and assistant output.
+    Note: This function does not require actual image file.
+    """
+    Contexts = ["<<fig-80a961247206cffc00d575b5be36fb93>> FY 2013-14 Actuals FY 2014-15 Actuals FY 2015-16 Actuals FY 2016-17 FY 2017-18 Projections Requested Even though no two audits are the same, the number of audits produced is an industry (ALGA) accepted performance metric as well as a performance metric reported by the Auditor's Office. The ALGA Benchmarking and Best Practices report states that \"slightly more than three quarters of respondents indicated their audit department used performance measures\"(and) 85% agree that the performance measures have been successfully integrated into ongoing management of the audit shop. The data indicates the Auditor's Office is producing less than one third of an audit department with 11-16 staff and approximately two thirds of what an audit department with 6-10 staff produce. CBO recognizes that the number of audits issued is not a perfect measure due to variation in scope. However, CBO strongly encourages audit services to review its performance against its peers and use performance management to ensure it is providing the highest quality services at the lowest possible cost. Decision Package Analysis & Recommendations IPR Asst. Program Manager to Full Time, AU_01, $69,870, 0.5 FTE This package requests that the current IPR Assistant Program Manager transition from 0.5 FTE to 1.0 FTE. This request addresses requirements set forth by the state in House Bill 2002 and by the U.S. Department of Justice (DOJ) settlement agreement. A key element of the DOJ settlement is that all investigations be complete within 180 days. To meet this, IPR must complete their portion within a 60-day time frame. IPR strives to complete 45% of cases in a 60- day time frame. The percent of (estimated) cases that are projected to meet that goal in FY 2016-17 fell 5 percentage points from 29% in FY 2015-16 down to 24% in FY 2016-17. These percentages are misleading as they do not adequately reflect changes in workload. A[... 2479 chars omitted ...]"]
+    
+    fig_marker = "<<fig-80a961247206cffc00d575b5be36fb93>>"
+    
+    assistant_output = """```
 [
     {
         "question_category": "Factual Retrieval",
@@ -802,15 +839,11 @@ assistant_output = """```
 ]
 ```
 """
+    
+    return Contexts, fig_marker, TEMPLATES_REPORT, assistant_output
 
-MESSAGE_WITH_EXAMPLE = [
-        {
-            "role": "system",
-            "content": CHOOSE_TEMPLATE_PROMPT_SYSTEM,
-        },
-        {"role": "user", "content": user_prompt},
-        {"role": "assistant", "content": assistant_output},
-    ]
+
+MESSAGE_WITH_EXAMPLE = None
 
 
 def choose_fixed_templates(domain_name):
@@ -834,8 +867,3 @@ def choose_fixed_templates(domain_name):
         return TEMPLATES_CRM
     else:
         return TEMPLATES_REPORT
-
-
-
-
-        
