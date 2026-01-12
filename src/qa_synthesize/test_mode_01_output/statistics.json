@@ -1,0 +1,26 @@
+{
+  "image_as_answer": {
+    "total_groups": 1,
+    "total_chunks": 1,
+    "unique_files": 1,
+    "avg_chunks_per_group": 1.0
+  },
+  "table_as_answer": {
+    "total_groups": 1,
+    "total_chunks": 1,
+    "unique_files": 1,
+    "avg_chunks_per_group": 1.0
+  },
+  "text_as_answer": {
+    "total_groups": 2,
+    "total_chunks": 3,
+    "unique_files": 2,
+    "avg_chunks_per_group": 1.5
+  },
+  "image_plus_text_as_answer": {
+    "total_groups": 0,
+    "total_chunks": 0,
+    "unique_files": 0,
+    "avg_chunks_per_group": 0
+  }
+}
