@@ -3,9 +3,10 @@
   "num_groups": 1,
   "groups": [
     {
-      "num_chunks": 1,
+      "num_chunks": 2,
       "document_ids": [
-        "d2da11628e2711f0bdfa620ff33f7526"
+        "d2da11628e2711f0bdfa620ff33f7526",
+        "ddcca998944611f09be3260dfe58132f"
       ],
       "chunks": [
         {
@@ -45,6 +46,30 @@
           "similarity": 0.7636674519751522,
           "term_similarity": 0.8231341077145613,
           "vector_similarity": 0.624911921916531
+        },
+        {
+          "content": "<table><caption>表10服务需求代码</caption>\n<tr><td  >代码</td><td  >名 。</td><td  >说</td><td  >明</td></tr>\n<tr><td  >1</td><td  >承运人装货</td><td  >货物由承运人装入设备</td><td></td></tr>\n<tr><td  >2</td><td  >名</td><td  >说明</td><td></td></tr>\n<tr><td  >3</td><td  >承运</td><td  > 货物由承运人装入设备</td><td></td></tr>\n<tr><td  >4</td><td  >整箱</td><td  > 集装箱的装箱或拆</td><td></td></tr>\n<tr><td  >5</td><td  >交付</td><td  > 集装箱的装</td><td></td></tr>\n<tr><td  >6</td><td  >托</td><td  > 货物由托运人装入设备</td><td></td></tr>\n<tr><td  >7</td><td  >交</td><td  > 货物应按</td><td></td></tr>\n<tr><td  >8</td><td  >保</td><td  > 货物应予保留</td><td></td></tr>\n<tr><td  >9</td><td  >允许转</td><td  > 允许转运</td><td></td></tr>\n</table>",
+          "content_ltks": "表 10 服务 需求 代码 代码 名 说 明 1 承运人 装货 货物 由 承运人 装入 设备 2 名 说明 3 承运 货物 由 承运人 装入 设备 4 整箱 集装箱 的 装箱 或 拆 5 交付 集装箱 的 装 6 托 货物 由 托运人 装入 设备 7 交 货物 应 按 8 保 货物 应予 保留 9 允许 转 允许 转运",
+          "dataset_id": "c3f50858944611f09a1f260dfe58132f",
+          "doc_type_kwd": "image",
+          "document_id": "ddcca998944611f09be3260dfe58132f",
+          "document_keyword": "033_已解密.pdf",
+          "highlight": "表10服务需求<em>代码</em> <em>代码</em>名说明1承运人装货货物由承运人装入设备2名说明3承运货物由承运人装入设备4整箱<em>集装箱</em>的<em>装箱</em>或拆 5交付<em>集装箱</em>",
+          "id": "bffcd4b84b3fb1d4",
+          "image_id": "c3f50858944611f09a1f260dfe58132f-bffcd4b84b3fb1d4",
+          "important_keywords": [],
+          "positions": [
+            [
+              146,
+              65,
+              529,
+              574,
+              758
+            ]
+          ],
+          "similarity": 0.7501422800301073,
+          "term_similarity": 0.8353759393409699,
+          "vector_similarity": 0.5512637416380946
         }
       ]
     }
