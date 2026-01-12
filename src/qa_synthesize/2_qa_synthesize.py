@@ -11,7 +11,7 @@ import copy
 from openai import OpenAI
 from utils import flatten_unique_ignore_case
 from prompts.query_syn_prompt import obtain_user_prompt
-from prompts.templates import CHOOSE_TEMPLATE_PROMPT_USER, MESSAGE_WITH_EXAMPLE, choose_fixed_templates
+from prompts.templates import CHOOSE_TEMPLATE_PROMPT_USER, CHOOSE_TEMPLATE_PROMPT_SYSTEM, MESSAGE_WITH_EXAMPLE, choose_fixed_templates
 
 
 def find_fig_tables(text):
@@ -29,17 +29,36 @@ def chunk_match_back(chunk, chunks_metadata, folder_elements):
     output dict: element_id: img_path
     """
     tab_fig_dict = find_fig_tables(chunk)
-    file_name = os.path.splitext(os.path.basename(chunks_metadata["source"]))[0].split("_id")[0]
+    
     elements_dict = dict()
-    with open(os.path.join(folder_elements, file_name + ".json"), 'r') as f:
-        elements = json.load(f)
-        for element in elements["elements"]:
-            try:
-                element_id = element["element_id"]
-                image_path = element["metadata"]["image_path"]
-                elements_dict[element_id] = image_path
-            except Exception as error:
-                pass
+    
+    if 'source' not in chunks_metadata:
+        if hasattr(args, 'debug') and args.debug:
+            print(f"Warning: 'source' key not found in chunks_metadata, skipping image/table loading")
+        return {}, {}
+    
+    file_name = os.path.splitext(os.path.basename(chunks_metadata["source"]))[0].split("_id")[0]
+    elements_file_path = os.path.join(folder_elements, file_name + ".json")
+    
+    if not os.path.exists(elements_file_path):
+        if hasattr(args, 'debug') and args.debug:
+            print(f"Warning: Elements file not found: {elements_file_path}")
+        return {}, {}
+    
+    try:
+        with open(elements_file_path, 'r') as f:
+            elements = json.load(f)
+            for element in elements["elements"]:
+                try:
+                    element_id = element["element_id"]
+                    image_path = element["metadata"]["image_path"]
+                    elements_dict[element_id] = image_path
+                except Exception as error:
+                    pass
+    except Exception as error:
+        if hasattr(args, 'debug') and args.debug:
+            print(f"Warning: Failed to load elements file {elements_file_path}: {error}")
+        return {}, {}
 
     table_paths = dict()
     for table in tab_fig_dict["Table"]:
@@ -54,7 +73,7 @@ def chunk_match_back(chunk, chunks_metadata, folder_elements):
     return table_paths, figure_paths
 
 
-MESSAGE_WITH_EXAMPLE_ONCE = copy.deepcopy(MESSAGE_WITH_EXAMPLE)
+MESSAGE_WITH_EXAMPLE_ONCE = None
 MODEL = "gpt-4o"
 client = OpenAI(
     api_key=os.environ.get("OPENAI_API_KEY"),
@@ -358,7 +377,16 @@ def encode_image(image_path):
 
 
 def choose_templates(chunks, chunks_metadata, domain_name):
-    messages = copy.deepcopy(MESSAGE_WITH_EXAMPLE_ONCE)
+    if MESSAGE_WITH_EXAMPLE_ONCE is None:
+        messages = [
+            {
+                "role": "system",
+                "content": CHOOSE_TEMPLATE_PROMPT_SYSTEM,
+            }
+        ]
+    else:
+        messages = copy.deepcopy(MESSAGE_WITH_EXAMPLE_ONCE)
+    
     user_prompt = [
         {
             "type": "text",
@@ -371,9 +399,13 @@ def choose_templates(chunks, chunks_metadata, domain_name):
     ]
     images = {}
     for chunk, chunk_metadata in zip(chunks, chunks_metadata):
-        _, img = chunk_match_back(chunk, chunk_metadata, args.folder_elements)
-        for im, p in img.items():
-            images[f"<<fig-{im}>>"] = [encode_image(p), p]
+        try:
+            _, img = chunk_match_back(chunk, chunk_metadata, args.folder_elements)
+            for im, p in img.items():
+                images[f"<<fig-{im}>>"] = [encode_image(p), p]
+        except Exception as e:
+            if hasattr(args, 'debug') and args.debug:
+                print(f"Warning: Failed to load image for chunk: {e}")
 
     for fig, img in images.items():
         user_prompt += [
@@ -400,8 +432,12 @@ def choose_templates(chunks, chunks_metadata, domain_name):
             )
             response = response.replace("```json", "```").split("```")[1]
             templates = ast.literal_eval(response)
+            if hasattr(args, 'debug') and args.debug:
+                print(f"Templates chosen: {templates}")
             break
         except Exception as e:
+            if hasattr(args, 'debug') and args.debug:
+                print(f"Warning: Failed to get templates (attempt {j+1}/3): {e}")
             time.sleep(j+1)
     return templates
 
@@ -411,11 +447,15 @@ def build_prompt(chunks, chunks_metadata, hint, answer_type, query_type, templat
     tables = {}
 
     for chunk, chunk_metadata in zip(chunks, chunks_metadata):
-        tab, img = chunk_match_back(chunk, chunk_metadata, args.folder_elements)
-        for t, p in tab.items():
-            tables[f"<<tab-{t}>>"] = [encode_image(p), p]
-        for im, p in img.items():
-            images[f"<<fig-{im}>>"] = [encode_image(p), p]
+        try:
+            tab, img = chunk_match_back(chunk, chunk_metadata, args.folder_elements)
+            for t, p in tab.items():
+                tables[f"<<tab-{t}>>"] = [encode_image(p), p]
+            for im, p in img.items():
+                images[f"<<fig-{im}>>"] = [encode_image(p), p]
+        except Exception as e:
+            if hasattr(args, 'debug') and args.debug:
+                print(f"Warning: Failed to load image/table for chunk: {e}")
 
     combined_chunk_message = "\n\n".join(
         [f"**Chunk {i}:**\n\n{chunk}" for i, chunk in enumerate(chunks, start=1)]
@@ -514,7 +554,33 @@ if __name__ == "__main__":
         choices=["different_files_visited", "different_files_visited_random"],
         help="Control file source for image_plus_text_as_answer chunks"
     )
+    parser.add_argument(
+        "--debug", action="store_true", help="Enable debug mode with verbose output"
+    )
     args = parser.parse_args()
+
+    if args.debug:
+        print("=" * 80)
+        print("DEBUG MODE ENABLED")
+        print("=" * 80)
+        print(f"chunks_json_path: {args.chunks_json_path}")
+        print(f"folder_elements: {args.folder_elements}")
+        print(f"output_file: {args.output_file}")
+        print(f"testset_size: {args.testset_size}")
+        print(f"domain_name: {args.domain_name}")
+        print(f"test mode: {args.test}")
+        print(f"QA filter: {getattr(args, 'QA', None)}")
+        print("=" * 80)
+
+    if not os.path.exists(args.chunks_json_path):
+        print(f"Error: chunks_json_path does not exist: {args.chunks_json_path}")
+        sys.exit(1)
+    
+    if not os.path.exists(args.folder_elements):
+        print(f"Warning: folder_elements does not exist: {args.folder_elements}")
+        print("Continuing without image/table loading...")
+        if args.debug:
+            print("This may result in empty output if chunks contain images/tables")
 
 
     output_file = open(
@@ -570,9 +636,13 @@ if __name__ == "__main__":
                 templates = choose_templates(chunks, chunks_metadata, args.domain_name)
                 templates = [templates[-1]]
             except Exception as e:
+                if hasattr(args, 'debug') and args.debug:
+                    print(f"Warning: Failed to choose templates: {e}")
                 templates = []
 
             if not templates:
+                if hasattr(args, 'debug') and args.debug:
+                    print(f"Skipping chunk group: no templates available")
                 continue
 
             messages_lst, tables, images = build_prompt(
@@ -601,9 +671,14 @@ if __name__ == "__main__":
                         if "```" not in response
                         else response.replace("```json", "```").split("```")[1]
                     )
+                    if hasattr(args, 'debug') and args.debug:
+                        print(f"Response from API: {response[:200]}...")
 
                 except Exception as error:
+                    if hasattr(args, 'debug') and args.debug:
+                        print(f"Warning: API call failed: {error}")
                     time.sleep(idx+1)
+                    continue
 
                 try:
                     questions = ast.literal_eval(response.strip())
@@ -619,8 +694,12 @@ if __name__ == "__main__":
                         output_file.write(json.dumps(element) + "\n")
                         output_file.flush()
                         lines += 1
+                        if hasattr(args, 'debug') and args.debug:
+                            print(f"Written QA #{lines} to output file")
 
                 except Exception as error:
+                    if hasattr(args, 'debug') and args.debug:
+                        print(f"Warning: Failed to process response: {error}")
                     pass
 
     output_file.close()
