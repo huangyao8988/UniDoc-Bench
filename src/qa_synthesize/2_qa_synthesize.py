@@ -246,44 +246,46 @@ def combine_chunks_by_answer_type(batch_chunks_list, distribution, different_fil
     return result
 
 
-def test_mode01(batch_chunks_list, chunk_groups_by_answer_type):
+def test_mode01(batch_chunks_list, chunk_groups_by_answer_type, verbose=True):
     """
     Test mode 01: Display chunk combination statistics and output test files.
     
     Args:
         batch_chunks_list: List of dictionaries, each containing chunks_by_type for a batch result
         chunk_groups_by_answer_type: Dictionary with answer_type as key and list of chunk groups
+        verbose: If True, print statistics; if False, only output files
     """
-    print("=" * 80)
-    print("TEST MODE 01: Chunk Combination Statistics")
-    print("=" * 80)
-    
-    text_chunks = []
-    image_chunks = []
-    table_chunks = []
-    
-    for chunks_by_type in batch_chunks_list:
-        text_chunks.extend(chunks_by_type['text'])
-        image_chunks.extend(chunks_by_type['image'])
-        table_chunks.extend(chunks_by_type['table'])
-    
-    print("\nAvailable chunks by type:")
-    print(f"  Text chunks: {len(text_chunks)}")
-    print(f"  Image chunks: {len(image_chunks)}")
-    print(f"  Table chunks: {len(table_chunks)}")
-    
-    print("\nChunk groups by answer_type:")
-    for answer_type, chunk_groups in chunk_groups_by_answer_type.items():
-        print(f"\n  {answer_type}:")
-        print(f"    Number of groups: {len(chunk_groups)}")
-        for i, group in enumerate(chunk_groups, 1):
-            print(f"    Group {i}: {len(group)} chunks")
-            doc_ids = set([chunk['document_id'] for chunk in group])
-            print(f"      Document IDs: {doc_ids}")
-    
-    print("\n" + "=" * 80)
-    print("Outputting test files...")
-    print("=" * 80)
+    if verbose:
+        print("=" * 80)
+        print("TEST MODE 01: Chunk Combination Statistics")
+        print("=" * 80)
+        
+        text_chunks = []
+        image_chunks = []
+        table_chunks = []
+        
+        for chunks_by_type in batch_chunks_list:
+            text_chunks.extend(chunks_by_type['text'])
+            image_chunks.extend(chunks_by_type['image'])
+            table_chunks.extend(chunks_by_type['table'])
+        
+        print("\nAvailable chunks by type:")
+        print(f"  Text chunks: {len(text_chunks)}")
+        print(f"  Image chunks: {len(image_chunks)}")
+        print(f"  Table chunks: {len(table_chunks)}")
+        
+        print("\nChunk groups by answer_type:")
+        for answer_type, chunk_groups in chunk_groups_by_answer_type.items():
+            print(f"\n  {answer_type}:")
+            print(f"    Number of groups: {len(chunk_groups)}")
+            for i, group in enumerate(chunk_groups, 1):
+                print(f"    Group {i}: {len(group)} chunks")
+                doc_ids = set([chunk['document_id'] for chunk in group])
+                print(f"      Document IDs: {doc_ids}")
+        
+        print("\n" + "=" * 80)
+        print("Outputting test files...")
+        print("=" * 80)
     
     output_files = {
         'image_as_answer': 'test_image_as_answer.json',
@@ -311,11 +313,13 @@ def test_mode01(batch_chunks_list, chunk_groups_by_answer_type):
         with open(filename, 'w', encoding='utf-8') as f:
             json.dump(output_data, f, indent=2, ensure_ascii=False)
         
-        print(f"  Output: {filename} ({len(chunk_groups)} groups)")
+        if verbose:
+            print(f"  Output: {filename} ({len(chunk_groups)} groups)")
     
-    print("\n" + "=" * 80)
-    print("Test mode 01 completed!")
-    print("=" * 80)
+    if verbose:
+        print("\n" + "=" * 80)
+        print("Test mode 01 completed!")
+        print("=" * 80)
 
 
 def choose_distribution(testset_size):
@@ -603,10 +607,12 @@ if __name__ == "__main__":
         different_file_config
     )
 
-    if args.test == "mode01":
-        test_mode01(batch_chunks_list, chunk_groups_by_answer_type)
-        output_file.close()
-        sys.exit(0)
+    if args.test in ["mode01", "mode02"]:
+        verbose = (args.test == "mode01")
+        test_mode01(batch_chunks_list, chunk_groups_by_answer_type, verbose=verbose)
+        if args.test == "mode01":
+            output_file.close()
+            sys.exit(0)
 
     qa_filter = args.QA if hasattr(args, 'QA') and args.QA else None
     answer_types_to_process = [
