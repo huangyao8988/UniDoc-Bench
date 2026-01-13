@@ -419,16 +419,27 @@ def choose_templates(chunks, chunks_metadata, domain_name):
             if hasattr(args, 'debug') and args.debug:
                 print(f"Warning: Failed to load image for chunk: {e}")
 
-    for fig, img in images.items():
-        user_prompt += [
-            {
-                "type": "image_url",
-                "image_url": {
-                    "url": f"data:image/png;base64,{img[0]}",
-                    "name": f"This is the image for {fig} in the above context.",
+    # 如果没有找到图片，添加说明文本
+    if not images:
+        user_prompt.append({
+            "type": "text",
+            "text": "\n\nNote: No images or tables were found for the above chunks. Please analyze the text content and select appropriate templates based on the textual descriptions only.",
+        })
+    else:
+        for fig, img in images.items():
+            user_prompt += [
+                {
+                    "type": "text",
+                    "text": f"\n\nImage: {fig}",
                 },
-            }
-        ]
+                {
+                    "type": "image_url",
+                    "image_url": {
+                        "url": f"data:image/png;base64,{img[0]}",
+                        "name": f"This is the image for {fig} in the above context.",
+                    },
+                }
+            ]
     messages.append({"role": "user", "content": user_prompt})
     templates = None
     for j in range(3):
@@ -442,14 +453,29 @@ def choose_templates(chunks, chunks_metadata, domain_name):
                 .choices[0]
                 .message.content
             )
-            response = response.replace("```json", "```").split("```")[1]
-            templates = ast.literal_eval(response)
+            if hasattr(args, 'debug') and args.debug:
+                print(f"Raw response from API: {response[:500]}...")
+
+            # 更健壮的响应解析
+            if "```" not in response:
+                # 尝试直接解析
+                templates = ast.literal_eval(response.strip())
+            else:
+                # 移除 ```json 或 ``` 标记
+                response = response.replace("```json", "```").split("```")
+                if len(response) >= 2:
+                    templates = ast.literal_eval(response[1].strip())
+                else:
+                    raise ValueError(f"Invalid response format: {response[:200]}")
+
             if hasattr(args, 'debug') and args.debug:
                 print(f"Templates chosen: {templates}")
             break
         except Exception as e:
             if hasattr(args, 'debug') and args.debug:
                 print(f"Warning: Failed to get templates (attempt {j+1}/3): {e}")
+                if 'response' in locals():
+                    print(f"  Response was: {response[:200]}")
             time.sleep(j+1)
     return templates
 
@@ -474,6 +500,13 @@ def build_prompt(chunks, chunks_metadata, hint, answer_type, query_type, templat
     )
 
     user_prompt = [{"type": "text", "text": combined_chunk_message}]
+
+    # 如果没有表格或图片，添加说明
+    if not tables and not images:
+        user_prompt.append({
+            "type": "text",
+            "text": "\n\nNote: The above chunks contain textual descriptions of visual elements (images/tables) but no actual visual files were provided. Please analyze the textual descriptions to answer questions.",
+        })
 
     for tab, img in tables.items():
         user_prompt += [
@@ -686,7 +719,7 @@ if __name__ == "__main__":
             for idx, messages in enumerate(messages_lst):
 
                 try:
-                    response = (
+                    response_raw = (
                         client.chat.completions.create(
                             model=MODEL,
                             messages=messages,
@@ -695,13 +728,25 @@ if __name__ == "__main__":
                         .choices[0]
                         .message.content
                     )
-                    response = (
-                        response
-                        if "```" not in response
-                        else response.replace("```json", "```").split("```")[1]
-                    )
                     if hasattr(args, 'debug') and args.debug:
-                        print(f"Response from API: {response[:200]}...")
+                        print(f"Raw response from API: {response_raw[:500]}...")
+
+                    # 更健壮的响应解析
+                    if "```" not in response_raw:
+                        response_clean = response_raw.strip()
+                    else:
+                        response = response_raw.replace("```json", "```").split("```")
+                        if len(response) >= 2:
+                            response_clean = response[1].strip()
+                        else:
+                            raise ValueError(f"Invalid response format: {response_raw[:200]}")
+
+                    # 移除可能存在的 <format> 标签
+                    if response_clean.startswith("<format>"):
+                        response_clean = response_clean.split("</format>", 1)[-1].strip()
+
+                    if hasattr(args, 'debug') and args.debug:
+                        print(f"Cleaned response: {response_clean[:200]}...")
 
                 except Exception as error:
                     processing_stats[answer_type]['api_fail'] += 1
@@ -716,7 +761,7 @@ if __name__ == "__main__":
                     continue
 
                 try:
-                    questions = ast.literal_eval(response.strip())
+                    questions = ast.literal_eval(response_clean)
                     processing_stats[answer_type]['success'] += 1
                     for element in questions["questions"]:
                         element["answer_type"] = answer_type
@@ -738,7 +783,7 @@ if __name__ == "__main__":
                     processing_stats[answer_type]['failures'].append({
                         'stage': 'parse_response',
                         'error': str(error),
-                        'response_preview': response[:200] if response else ''
+                        'response_preview': response_clean[:200] if 'response_clean' in locals() else ''
                     })
                     if hasattr(args, 'debug') and args.debug:
                         print(f"Warning: Failed to process response: {error}")
