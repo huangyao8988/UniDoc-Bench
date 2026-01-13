@@ -1,0 +1,231 @@
+{
+  "answer_type": "image_plus_text_as_answer",
+  "num_groups": 1,
+  "groups": [
+    {
+      "num_chunks": 2,
+      "document_ids": [
+        "d32747988e2711f0bdfa620ff33f7526",
+        "37da527699da11f09a8172d72fdd2e6b"
+      ],
+      "chunks": [
+        {
+          "content": "关键：字内贸箱外贸箱、标识数据元：类型字、符型数据格式：：n1 JT /T 697. 3—2013值域内贸外贸4313：51 -集装，箱2-。. . 尺寸代码分. 类. 编号数据元名：称GK集03装01箱03尺00寸5代码英文名称：中文全拼：ContainerSizeCodema定义不同：j尺i-z寸hu的an集g-x装ia箱ng的-ch相i-c应un代-d码ai-。关键字：集装箱尺寸、代码数据元：类型字、符型数据格式：：an2备注例如为长度是英尺，宽度为2 591mm的标准箱。4313：6 危，险22 品箱或藏20 . . 冷箱代码分. 类. 编号数据元名称：GK危03险01品03箱00或6冷藏箱代码英文名称：erCode中文全拼：DangerousCargoContainerOrRefrigerationContain-cang-xiang-dai-ma定义危险：w品e箱i-x或ian冷-p藏in-箱xia的ng相-h应uo代-le码ng。关键：字危险品箱冷藏箱、代码数据元：类型字符、型数据格式：：an14. 3. 137 集装箱吞吐量分. 类. 编号数据元名：称GK集03装01箱03吞00吐7量英文名称：中文全拼：ContainerThroughput：ji-zhuang-xiang-tun-tu-liang同义名称港口集装箱吞吐量集装箱吞吐箱量，在港口拆装箱的集装箱吞吐量相关环境：交通统计信息基础，数据元定义统计：时间内的集装箱吞吐量。关键：字集装箱吞吐量数据元：类型数、字型数据格式：计量单位：标n. 准. 12箱，2TEU)",
+          "content_ltks": "关键 字 内贸 箱 外贸 箱 标识 数据 元 类型 字 符 型 数据格式 n1 jtt 697 3 2013 值域 内贸 外贸 4313 51 集装 箱 2 尺寸 代码 分 类 编号 数据 元 名 称 gk 集 03 装 01 箱 03 尺 00 寸 5 代码 英文名称 中文 全拼 containersizecodema 定义 不同 j 尺 iz 寸 hu 的 an 集 gx 装 ia 箱 ng 的 ch 相 ic 应 un 代 d 码 ai 关键字 集装箱 尺寸 代码 数据 元 类型 字 符 型 数据格式 an2 备注 例如 为 长度 是 英尺 宽度 为 2 591mm 的 标准箱 4313 6 危 险 22 品 箱 或 藏 20 冷 箱 代码 分 类 编号 数据 元 名称 gk 危 03 险 01 品 03 箱 00 或 6 冷藏箱 代码 英文名称 ercod 中文 全拼 dangerouscargocontainerorrefrigerationcontain cang xiang dai ma 定义 危险 w 品 e 箱 ix 或 ian 冷 p 藏 in 箱 xia 的 ng 相 h 应 uo 代 le 码 ng 关键 字 危险品 箱 冷藏箱 代码 数据 元 类型 字符 型 数据格式 an14 3 137 集装箱 吞吐量 分 类 编号 数据 元 名 称 gk 集 03 装 01 箱 03 吞 00 吐 7 量 英文名称 中文 全拼 containerthroughput ji zhuang xiang tun tu liang 同义 名称 港口 集装箱 吞吐量 集装箱 吞吐 箱 量 在 港口 拆 装箱 的 集装箱 吞吐量 相关 环境 交通 统计 信息 基础 数据 元 定义 统计 时间 内 的 集装箱 吞吐量 关键 字 集装箱 吞吐量 数据 元 类型 数 字型 数据格式 计量单位 标 n 准 12 箱 2teu",
+          "dataset_id": "7ebd0a808e2711f0a685620ff33f7526",
+          "doc_type_kwd": "",
+          "document_id": "d32747988e2711f0bdfa620ff33f7526",
+          "document_keyword": "028_已解密.pdf",
+          "highlight": "关键字内贸箱外贸箱标识数据元类型字符型数据格式n1 jtt 697 3 2013值域内贸外贸4313 51集装箱 2尺寸<em>代码</em>分类编号数据元名称...ch相ic应un代d码ai关键字<em>集装箱</em>尺寸<em>代码</em>数据元类型字符型数据格式an2备注例如为长度是英尺宽度为 2 591mm的标准箱4313 6...危险 22品箱或藏 20冷箱 <em>代码</em>分类编号数据元名称gk危03险01品03箱00或6冷藏箱<em>代码</em>英文名称ercod中文全拼dangerouscargocontainerorrefrigerationcontain...ji zhuang xiang tun tu liang同义名称港口<em>集装箱</em>吞吐量<em>集装箱</em>吞吐箱量在港口拆 <em>装箱</em>的<em>集装箱</em>吞吐量相关环境交通统计信息基础数据元...定义统计时间内的<em>集装箱</em>吞吐量关键字 <em>集装箱</em>吞吐量数据元类型数字型数据格式计量单位标 n准12箱2teu",
+          "id": "68de41c94c463193",
+          "image_id": "7ebd0a808e2711f0a685620ff33f7526-68de41c94c463193",
+          "important_keywords": [],
+          "positions": [
+            [
+              77,
+              88,
+              440,
+              719,
+              731
+            ],
+            [
+              77,
+              87,
+              439,
+              735,
+              747
+            ],
+            [
+              78,
+              66,
+              417,
+              63,
+              74
+            ],
+            [
+              78,
+              88,
+              440,
+              90,
+              102
+            ],
+            [
+              78,
+              65,
+              417,
+              106,
+              118
+            ],
+            [
+              78,
+              87,
+              439,
+              137,
+              150
+            ],
+            [
+              78,
+              87,
+              439,
+              169,
+              181
+            ],
+            [
+              78,
+              87,
+              439,
+              185,
+              197
+            ],
+            [
+              78,
+              86,
+              438,
+              199,
+              214
+            ],
+            [
+              78,
+              86,
+              437,
+              214,
+              228
+            ],
+            [
+              78,
+              88,
+              440,
+              247,
+              259
+            ],
+            [
+              78,
+              65,
+              417,
+              263,
+              275
+            ],
+            [
+              78,
+              88,
+              440,
+              294,
+              307
+            ],
+            [
+              78,
+              86,
+              437,
+              324,
+              339
+            ],
+            [
+              78,
+              87,
+              439,
+              342,
+              354
+            ],
+            [
+              78,
+              87,
+              438,
+              355,
+              370
+            ],
+            [
+              78,
+              64,
+              416,
+              403,
+              418
+            ],
+            [
+              78,
+              87,
+              439,
+              436,
+              448
+            ],
+            [
+              78,
+              86,
+              437,
+              465,
+              481
+            ],
+            [
+              78,
+              87,
+              439,
+              483,
+              495
+            ],
+            [
+              78,
+              88,
+              440,
+              499,
+              511
+            ],
+            [
+              78,
+              87,
+              439,
+              515,
+              527
+            ],
+            [
+              78,
+              88,
+              440,
+              530,
+              543
+            ],
+            [
+              78,
+              87,
+              439,
+              545,
+              557
+            ],
+            [
+              78,
+              85,
+              436,
+              575,
+              590
+            ]
+          ],
+          "similarity": 0.7540993777730737,
+          "term_similarity": 0.8353759393409699,
+          "vector_similarity": 0.5644540674479825
+        },
+        {
+          "content": "\n- Visual Type: Diagram (Hierarchical Structure / Data Model Diagram)\n- Title: 集装箱信息结构示意图\n- Axes / Legends / Labels: \n  - The diagram uses a hierarchical layout with numbered levels (0, 1, 2, 3) indicated by dotted lines and arrows along the top and bottom edges.\n  - Level 0: \"集装箱和货物信息\" (Container and Cargo Information), multiplicity: 1..999\n  - Level 1: \"集装箱信息\" (Container Information), multiplicity: 1..999\n  - Level 2: Contains multiple attributes under \"集装箱信息\", each with specific multiplicities:\n    - 记录类型标识 (Record Type Identifier): 1..9\n    - 集装箱箱号 (Container Number): 1..9\n    - 集装箱尺寸 (Container Size): 1..1\n    - 集装箱类型 (Container Type): 1..1\n    - 集装箱状态 (Container Status): 1..1\n    - 装箱时间 (Packing Time): 1..1\n    - 铅封号 (Seal Number): 1..1\n    - 箱经营人代码 (Container Operator Code): 0..1\n    - 箱经营人名称 (Container Operator Name): 0..1\n    - 箱自重 (Tare Weight): 1..9\n    - 箱总重 (Gross Weight): 1..1\n    - 前超 (Front Overhang): 0..1\n    - 后超 (Rear Overhang): 0..1\n    - 右超 (Right Overhang): 0..1\n    - 左超 (Left Overhang): 0..1\n    - 超高 (Overheight): 0..1\n    - 装箱单位 (Packing Unit): 0..1\n    - 装箱单位地址 (Packing Unit Address): 0..1\n    - 装箱联系人及联系人电话 (Packing Contact and Phone): 0..1\n    - 特殊装载要求 (Special Loading Requirements): 0..1\n  - Level 3: Indicates continuation with text \"接图4（续）\" (Continued in Figure 4).\n- Data Points: \n  - Each box represents a data field with its name and cardinality (e.g., \"集装箱箱号 1..9\").\n  - Multiplicities range from 0..1 (optional) to 1..999 (repeating).\n- Trends / Insights:\n  - The structure is hierarchical, showing that \"集装箱和货物信息\" contains one or more \"集装箱信息\" records.\n  - Each container information record includes a fixed set of mandatory fields (multiplicity 1..1) and optional fields (0..1), as well as some repeatable fields (e.g., \"记录类型标识\" up to 9 times).\n  - Fields like overhangs (前超, 后超, etc.) and special requirements are optional, indicating flexibility in data entry.\n  - The diagram emphasizes standardization of container data elements used in logistics or customs documentation.\n- Captions / Annotations:\n  - \"接图4（续）\" at the bottom indicates that this diagram continues in another figure (Figure 4).\n  - The watermark \"5ZIC\" appears near the center but is not part of the diagram content.图 4集装箱信息结构\nX\nX\nX\n?\n集装箱和货物信息\n集装箱信息\n记录类型标识\n1..999\n1.. 999\n1..9\n集装箱箱号\n1..9\n集装箱尺寸\n1..1\n集装箱类型\n1..1\n集装箱状态\n1..1\n装箱时间\n1.. 1\n铅封号\n1.. 1\n箱经营人代码\n0..1\n箱经营人名称\n0..1\n箱自重\n1..9\n箱总重\n1..1\n前超\n0..1\n后超\n0..1\n右超\n0..1\n左超\n0..1\n超高\n0..1\n装箱单位\n0..1\n装箱单位地址\n0..1\n装箱联系人及联系人\n电话0..1\n特殊装载要求\n0..1\n接图4(续)\nX\n3\n",
+          "content_ltks": "visual type diagram hierarch structur datamodel diagram titl 集装箱 信息结构 示意图 ax legend label the diagram usa hierarch layout with number level 01 23 indic by dot line and arrow along thetop and bottom edg level 0 集装箱 和 货物 信息 contain and cargo inform multipl 1 999 level 1 集装箱 信息 contain inform multipl 1 999 level 2 contain multipl attribut under 集装箱 信息 each with specif multipl 记录 类型 标识 record type identifi 19 集装箱 箱 号 contain number 19 集装箱 尺寸 contain size 11 集装箱 类型 contain type 11 集装箱 状态 contain statu 11 装箱 时间 pack time 11 铅 封号 seal number 11 箱 经营 人 代码 contain oper code 01 箱 经营 人 名称 contain oper name 01 箱 自重 tare weight 19 箱 总重 gross weight 11 前 超 front overhang 01 后 超 rear overhang 01 右 超 right overhang 01 左 超 left overhang 01 超高 overheight 01 装箱 单位 pack unit 01 装箱 单位地址 pack unit address 01 装箱 联系人 及 联系人 电话 pack contact and phone 01 特殊 装载 要求 special load requir 01 level 3 indic continu with text 接 图 4 续 continu in figur 4 datapoint each box represa datafield with it name and cardin eg 集装箱 箱 号 19 multipl rang from 01 option to 1 999 repeat trend insight the structur is hierarch show that 集装箱 和 货物 信息 contain one or more 集装箱 信息 record each contain inform record includ afix setof mandatori field multipl 11 and option field 01 a wella some repeat field eg 记录 类型 标识 upto 9 time field like overhang 前 超 后 超 etc and special requir are option indic flexibl indata entri the diagram emphas standard of contain data element use in logist or custom document caption annot 接 图 4 续 at the bottom indic that thi diagram continu in anoth figur figur 4 the watermark 5zic appear near the center but isnot partof the diagram content 图 4 集装箱 信息结构 xxx 集装箱 和 货物 信息 集装箱 信息 记录 类型 标识 1 999 1 999 19 集装箱 箱 号 19 集装箱 尺寸 11 集装箱 类型 11 集装箱 状态 11 装箱 时间 11 铅 封号 11 箱 经营 人 代码 01 箱 经营 人 名称 01 箱 自重 19 箱 总重 11 前 超 01 后 超 01 右 超 01 左 超 01 超高 01 装箱 单位 01 装箱 单位地址 01 装箱 联系人 及 联系人 电话 01 特殊 装载 要求 01 接 图 4 续 x 3",
+          "dataset_id": "7ebd0a808e2711f0a685620ff33f7526",
+          "doc_type_kwd": "image",
+          "document_id": "37da527699da11f09a8172d72fdd2e6b",
+          "document_keyword": "186_已解密_扫描版.pdf",
+          "highlight": "number 19 <em>集装箱</em>尺寸contain size 11 <em>集装箱</em>类型contain type 11 <em>集装箱</em>状态contain statu 11 <em>装箱</em>时间pack time 11铅...封号seal number 11箱经营人 <em>代码</em> contain oper code 01箱经营人名称contain oper name 01箱自重tare weight 19...单位pack unit 01 <em>装箱</em>单位地址pack unit address 01 <em>装箱</em>联系人及联系人电话pack contact and phone 01特殊装载要求special...信息结构xxx <em>集装箱</em>和货物信息<em>集装箱</em>信息记录类型标识1 999 1 999 19 <em>集装箱</em>箱号 19 <em>集装箱</em>尺寸11 <em>集装箱</em>类型11 <em>集装箱</em>状态11 <em>装箱</em>时间11...铅封号11箱经营人 <em>代码</em> 01箱经营人名称01箱自重19箱总重11前超 01后超 01右超 01左超 01超高01 <em>装箱</em>单位01 <em>装箱</em>单位地址",
+          "id": "3aca6d063112b1af",
+          "image_id": "7ebd0a808e2711f0a685620ff33f7526-3aca6d063112b1af",
+          "important_keywords": [],
+          "positions": [
+            [
+              8,
+              93,
+              510,
+              160,
+              727
+            ]
+          ],
+          "similarity": 0.7492062174253891,
+          "term_similarity": 0.8353759393409699,
+          "vector_similarity": 0.5481435329557006
+        }
+      ]
+    }
+  ]
+}

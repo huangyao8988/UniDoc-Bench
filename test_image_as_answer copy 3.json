@@ -1,0 +1,38 @@
+{
+  "answer_type": "image_as_answer",
+  "num_groups": 1,
+  "groups": [
+    {
+      "num_chunks": 1,
+      "document_ids": [
+        "37da527699da11f09a8172d72fdd2e6b"
+      ],
+      "chunks": [
+        {
+          "content": "\n- Visual Type: Diagram (Hierarchical Structure / Data Model Diagram)\n- Title: 集装箱信息结构示意图\n- Axes / Legends / Labels: \n  - The diagram uses a hierarchical layout with numbered levels (0, 1, 2, 3) indicated by dotted lines and arrows along the top and bottom edges.\n  - Level 0: \"集装箱和货物信息\" (Container and Cargo Information), multiplicity: 1..999\n  - Level 1: \"集装箱信息\" (Container Information), multiplicity: 1..999\n  - Level 2: Contains multiple attributes under \"集装箱信息\", each with specific multiplicities:\n    - 记录类型标识 (Record Type Identifier): 1..9\n    - 集装箱箱号 (Container Number): 1..9\n    - 集装箱尺寸 (Container Size): 1..1\n    - 集装箱类型 (Container Type): 1..1\n    - 集装箱状态 (Container Status): 1..1\n    - 装箱时间 (Packing Time): 1..1\n    - 铅封号 (Seal Number): 1..1\n    - 箱经营人代码 (Container Operator Code): 0..1\n    - 箱经营人名称 (Container Operator Name): 0..1\n    - 箱自重 (Tare Weight): 1..9\n    - 箱总重 (Gross Weight): 1..1\n    - 前超 (Front Overhang): 0..1\n    - 后超 (Rear Overhang): 0..1\n    - 右超 (Right Overhang): 0..1\n    - 左超 (Left Overhang): 0..1\n    - 超高 (Overheight): 0..1\n    - 装箱单位 (Packing Unit): 0..1\n    - 装箱单位地址 (Packing Unit Address): 0..1\n    - 装箱联系人及联系人电话 (Packing Contact and Phone): 0..1\n    - 特殊装载要求 (Special Loading Requirements): 0..1\n  - Level 3: Indicates continuation with text \"接图4（续）\" (Continued in Figure 4).\n- Data Points: \n  - Each box represents a data field with its name and cardinality (e.g., \"集装箱箱号 1..9\").\n  - Multiplicities range from 0..1 (optional) to 1..999 (repeating).\n- Trends / Insights:\n  - The structure is hierarchical, showing that \"集装箱和货物信息\" contains one or more \"集装箱信息\" records.\n  - Each container information record includes a fixed set of mandatory fields (multiplicity 1..1) and optional fields (0..1), as well as some repeatable fields (e.g., \"记录类型标识\" up to 9 times).\n  - Fields like overhangs (前超, 后超, etc.) and special requirements are optional, indicating flexibility in data entry.\n  - The diagram emphasizes standardization of container data elements used in logistics or customs documentation.\n- Captions / Annotations:\n  - \"接图4（续）\" at the bottom indicates that this diagram continues in another figure (Figure 4).\n  - The watermark \"5ZIC\" appears near the center but is not part of the diagram content.图 4集装箱信息结构\nX\nX\nX\n?\n集装箱和货物信息\n集装箱信息\n记录类型标识\n1..999\n1.. 999\n1..9\n集装箱箱号\n1..9\n集装箱尺寸\n1..1\n集装箱类型\n1..1\n集装箱状态\n1..1\n装箱时间\n1.. 1\n铅封号\n1.. 1\n箱经营人代码\n0..1\n箱经营人名称\n0..1\n箱自重\n1..9\n箱总重\n1..1\n前超\n0..1\n后超\n0..1\n右超\n0..1\n左超\n0..1\n超高\n0..1\n装箱单位\n0..1\n装箱单位地址\n0..1\n装箱联系人及联系人\n电话0..1\n特殊装载要求\n0..1\n接图4(续)\nX\n3\n",
+          "content_ltks": "visual type diagram hierarch structur datamodel diagram titl 集装箱 信息结构 示意图 ax legend label the diagram usa hierarch layout with number level 01 23 indic by dot line and arrow along thetop and bottom edg level 0 集装箱 和 货物 信息 contain and cargo inform multipl 1 999 level 1 集装箱 信息 contain inform multipl 1 999 level 2 contain multipl attribut under 集装箱 信息 each with specif multipl 记录 类型 标识 record type identifi 19 集装箱 箱 号 contain number 19 集装箱 尺寸 contain size 11 集装箱 类型 contain type 11 集装箱 状态 contain statu 11 装箱 时间 pack time 11 铅 封号 seal number 11 箱 经营 人 代码 contain oper code 01 箱 经营 人 名称 contain oper name 01 箱 自重 tare weight 19 箱 总重 gross weight 11 前 超 front overhang 01 后 超 rear overhang 01 右 超 right overhang 01 左 超 left overhang 01 超高 overheight 01 装箱 单位 pack unit 01 装箱 单位地址 pack unit address 01 装箱 联系人 及 联系人 电话 pack contact and phone 01 特殊 装载 要求 special load requir 01 level 3 indic continu with text 接 图 4 续 continu in figur 4 datapoint each box represa datafield with it name and cardin eg 集装箱 箱 号 19 multipl rang from 01 option to 1 999 repeat trend insight the structur is hierarch show that 集装箱 和 货物 信息 contain one or more 集装箱 信息 record each contain inform record includ afix setof mandatori field multipl 11 and option field 01 a wella some repeat field eg 记录 类型 标识 upto 9 time field like overhang 前 超 后 超 etc and special requir are option indic flexibl indata entri the diagram emphas standard of contain data element use in logist or custom document caption annot 接 图 4 续 at the bottom indic that thi diagram continu in anoth figur figur 4 the watermark 5zic appear near the center but isnot partof the diagram content 图 4 集装箱 信息结构 xxx 集装箱 和 货物 信息 集装箱 信息 记录 类型 标识 1 999 1 999 19 集装箱 箱 号 19 集装箱 尺寸 11 集装箱 类型 11 集装箱 状态 11 装箱 时间 11 铅 封号 11 箱 经营 人 代码 01 箱 经营 人 名称 01 箱 自重 19 箱 总重 11 前 超 01 后 超 01 右 超 01 左 超 01 超高 01 装箱 单位 01 装箱 单位地址 01 装箱 联系人 及 联系人 电话 01 特殊 装载 要求 01 接 图 4 续 x 3",
+          "dataset_id": "7ebd0a808e2711f0a685620ff33f7526",
+          "doc_type_kwd": "image",
+          "document_id": "37da527699da11f09a8172d72fdd2e6b",
+          "document_keyword": "186_已解密_扫描版.pdf",
+          "highlight": "number 19 <em>集装箱</em>尺寸contain size 11 <em>集装箱</em>类型contain type 11 <em>集装箱</em>状态contain statu 11 <em>装箱</em>时间pack time 11铅...封号seal number 11箱经营人 <em>代码</em> contain oper code 01箱经营人名称contain oper name 01箱自重tare weight 19...单位pack unit 01 <em>装箱</em>单位地址pack unit address 01 <em>装箱</em>联系人及联系人电话pack contact and phone 01特殊装载要求special...信息结构xxx <em>集装箱</em>和货物信息<em>集装箱</em>信息记录类型标识1 999 1 999 19 <em>集装箱</em>箱号 19 <em>集装箱</em>尺寸11 <em>集装箱</em>类型11 <em>集装箱</em>状态11 <em>装箱</em>时间11...铅封号11箱经营人 <em>代码</em> 01箱经营人名称01箱自重19箱总重11前超 01后超 01右超 01左超 01超高01 <em>装箱</em>单位01 <em>装箱</em>单位地址",
+          "id": "3aca6d063112b1af",
+          "image_id": "7ebd0a808e2711f0a685620ff33f7526-3aca6d063112b1af",
+          "important_keywords": [],
+          "positions": [
+            [
+              8,
+              93,
+              510,
+              160,
+              727
+            ]
+          ],
+          "similarity": 0.7492062174253891,
+          "term_similarity": 0.8353759393409699,
+          "vector_similarity": 0.5481435329557006
+        }
+      ]
+    }
+  ]
+}
