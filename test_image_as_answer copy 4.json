@@ -1,0 +1,152 @@
+{
+  "answer_type": "image_as_answer",
+  "num_groups": 3,
+  "groups": [
+    {
+      "num_chunks": 1,
+      "document_ids": [
+        "37da527699da11f09a8172d72fdd2e6b"
+      ],
+      "chunks": [
+        {
+          "content": "\n- Visual Type: Diagram (Hierarchical Structure / Data Model Diagram)\n- Title: 集装箱信息结构示意图\n- Axes / Legends / Labels: \n  - The diagram uses a hierarchical layout with numbered levels (0, 1, 2, 3) indicated by dotted lines and arrows along the top and bottom edges.\n  - Level 0: \"集装箱和货物信息\" (Container and Cargo Information), multiplicity: 1..999\n  - Level 1: \"集装箱信息\" (Container Information), multiplicity: 1..999\n  - Level 2: Contains multiple attributes under \"集装箱信息\", each with specific multiplicities:\n    - 记录类型标识 (Record Type Identifier): 1..9\n    - 集装箱箱号 (Container Number): 1..9\n    - 集装箱尺寸 (Container Size): 1..1\n    - 集装箱类型 (Container Type): 1..1\n    - 集装箱状态 (Container Status): 1..1\n    - 装箱时间 (Packing Time): 1..1\n    - 铅封号 (Seal Number): 1..1\n    - 箱经营人代码 (Container Operator Code): 0..1\n    - 箱经营人名称 (Container Operator Name): 0..1\n    - 箱自重 (Tare Weight): 1..9\n    - 箱总重 (Gross Weight): 1..1\n    - 前超 (Front Overhang): 0..1\n    - 后超 (Rear Overhang): 0..1\n    - 右超 (Right Overhang): 0..1\n    - 左超 (Left Overhang): 0..1\n    - 超高 (Overheight): 0..1\n    - 装箱单位 (Packing Unit): 0..1\n    - 装箱单位地址 (Packing Unit Address): 0..1\n    - 装箱联系人及联系人电话 (Packing Contact and Phone): 0..1\n    - 特殊装载要求 (Special Loading Requirements): 0..1\n  - Level 3: Indicates continuation with text \"接图4（续）\" (Continued in Figure 4).\n- Data Points: \n  - Each box represents a data field with its name and cardinality (e.g., \"集装箱箱号 1..9\").\n  - Multiplicities range from 0..1 (optional) to 1..999 (repeating).\n- Trends / Insights:\n  - The structure is hierarchical, showing that \"集装箱和货物信息\" contains one or more \"集装箱信息\" records.\n  - Each container information record includes a fixed set of mandatory fields (multiplicity 1..1) and optional fields (0..1), as well as some repeatable fields (e.g., \"记录类型标识\" up to 9 times).\n  - Fields like overhangs (前超, 后超, etc.) and special requirements are optional, indicating flexibility in data entry.\n  - The diagram emphasizes standardization of container data elements used in logistics or customs documentation.\n- Captions / Annotations:\n  - \"接图4（续）\" at the bottom indicates that this diagram continues in another figure (Figure 4).\n  - The watermark \"5ZIC\" appears near the center but is not part of the diagram content.图 4集装箱信息结构\nX\nX\nX\n?\n集装箱和货物信息\n集装箱信息\n记录类型标识\n1..999\n1.. 999\n1..9\n集装箱箱号\n1..9\n集装箱尺寸\n1..1\n集装箱类型\n1..1\n集装箱状态\n1..1\n装箱时间\n1.. 1\n铅封号\n1.. 1\n箱经营人代码\n0..1\n箱经营人名称\n0..1\n箱自重\n1..9\n箱总重\n1..1\n前超\n0..1\n后超\n0..1\n右超\n0..1\n左超\n0..1\n超高\n0..1\n装箱单位\n0..1\n装箱单位地址\n0..1\n装箱联系人及联系人\n电话0..1\n特殊装载要求\n0..1\n接图4(续)\nX\n3\n",
+          "content_ltks": "visual type diagram hierarch structur datamodel diagram titl 集装箱 信息结构 示意图 ax legend label the diagram usa hierarch layout with number level 01 23 indic by dot line and arrow along thetop and bottom edg level 0 集装箱 和 货物 信息 contain and cargo inform multipl 1 999 level 1 集装箱 信息 contain inform multipl 1 999 level 2 contain multipl attribut under 集装箱 信息 each with specif multipl 记录 类型 标识 record type identifi 19 集装箱 箱 号 contain number 19 集装箱 尺寸 contain size 11 集装箱 类型 contain type 11 集装箱 状态 contain statu 11 装箱 时间 pack time 11 铅 封号 seal number 11 箱 经营 人 代码 contain oper code 01 箱 经营 人 名称 contain oper name 01 箱 自重 tare weight 19 箱 总重 gross weight 11 前 超 front overhang 01 后 超 rear overhang 01 右 超 right overhang 01 左 超 left overhang 01 超高 overheight 01 装箱 单位 pack unit 01 装箱 单位地址 pack unit address 01 装箱 联系人 及 联系人 电话 pack contact and phone 01 特殊 装载 要求 special load requir 01 level 3 indic continu with text 接 图 4 续 continu in figur 4 datapoint each box represa datafield with it name and cardin eg 集装箱 箱 号 19 multipl rang from 01 option to 1 999 repeat trend insight the structur is hierarch show that 集装箱 和 货物 信息 contain one or more 集装箱 信息 record each contain inform record includ afix setof mandatori field multipl 11 and option field 01 a wella some repeat field eg 记录 类型 标识 upto 9 time field like overhang 前 超 后 超 etc and special requir are option indic flexibl indata entri the diagram emphas standard of contain data element use in logist or custom document caption annot 接 图 4 续 at the bottom indic that thi diagram continu in anoth figur figur 4 the watermark 5zic appear near the center but isnot partof the diagram content 图 4 集装箱 信息结构 xxx 集装箱 和 货物 信息 集装箱 信息 记录 类型 标识 1 999 1 999 19 集装箱 箱 号 19 集装箱 尺寸 11 集装箱 类型 11 集装箱 状态 11 装箱 时间 11 铅 封号 11 箱 经营 人 代码 01 箱 经营 人 名称 01 箱 自重 19 箱 总重 11 前 超 01 后 超 01 右 超 01 左 超 01 超高 01 装箱 单位 01 装箱 单位地址 01 装箱 联系人 及 联系人 电话 01 特殊 装载 要求 01 接 图 4 续 x 3",
+          "dataset_id": "7ebd0a808e2711f0a685620ff33f7526",
+          "doc_type_kwd": "image",
+          "document_id": "37da527699da11f09a8172d72fdd2e6b",
+          "document_keyword": "186_已解密_扫描版.pdf",
+          "highlight": "number 19 <em>集装箱</em>尺寸contain size 11 <em>集装箱</em>类型contain type 11 <em>集装箱</em>状态contain statu 11 <em>装箱</em>时间pack time 11铅...封号seal number 11箱经营人 <em>代码</em> contain oper code 01箱经营人名称contain oper name 01箱自重tare weight 19...单位pack unit 01 <em>装箱</em>单位地址pack unit address 01 <em>装箱</em>联系人及联系人电话pack contact and phone 01特殊装载要求special...信息结构xxx <em>集装箱</em>和货物信息<em>集装箱</em>信息记录类型标识1 999 1 999 19 <em>集装箱</em>箱号 19 <em>集装箱</em>尺寸11 <em>集装箱</em>类型11 <em>集装箱</em>状态11 <em>装箱</em>时间11...铅封号11箱经营人 <em>代码</em> 01箱经营人名称01箱自重19箱总重11前超 01后超 01右超 01左超 01超高01 <em>装箱</em>单位01 <em>装箱</em>单位地址",
+          "id": "3aca6d063112b1af",
+          "image_id": "7ebd0a808e2711f0a685620ff33f7526-3aca6d063112b1af",
+          "important_keywords": [],
+          "positions": [
+            [
+              8,
+              93,
+              510,
+              160,
+              727
+            ]
+          ],
+          "similarity": 0.7492062174253891,
+          "term_similarity": 0.8353759393409699,
+          "vector_similarity": 0.5481435329557006
+        }
+      ]
+    },
+    {
+      "num_chunks": 2,
+      "document_ids": [
+        "d2ee989e8e2711f0bdfa620ff33f7526",
+        "dd80bd62944611f09be3260dfe58132f"
+      ],
+      "chunks": [
+        {
+          "content": "\n- Visual Type: Diagram\n- Title: (None)\n- Axes / Legends / Labels: \n  - \"交通事件分类顺序码\" (Traffic Event Classification Sequence Code)\n  - \"交通事件分类代码\" (Traffic Event Classification Code)\n- Data Points: \n  - Two labeled branches from a hierarchical structure:\n    - Upper branch labeled \"交通事件分类顺序码\"\n    - Lower branch labeled \"交通事件分类代码\"\n- Trends / Insights: The diagram illustrates a hierarchical or categorical classification system for traffic events, where the classification code is further divided into a sequence code and a base code. This suggests a structured coding scheme used to categorize and organize traffic incidents.\n- Captions / Annotations: (None)图1 编码结构\n××\n交通事件分类顺序码\n交通事件分类代码",
+          "content_ltks": "visual type diagram titl none ax legend label 交通 事件 分类 顺序 码 traffic event classif sequenc code 交通 事件 分类 代码 traffic event classif code datapoint two label branch froma hierarch structur upper branch label 交通 事件 分类 顺序 码 lower branch label 交通 事件 分类 代码 trend insight the diagram illustra hierarch or categor classif system for traffic event where the classif code is further divid into a sequenc code anda base code thi suggest a structur code scheme use to categor and organ traffic incid caption annot none 图 1 编码 结构 交通 事件 分类 顺序 码 交通 事件 分类 代码",
+          "dataset_id": "c3f50858944611f09a1f260dfe58132f",
+          "doc_type_kwd": "image",
+          "document_id": "dd80bd62944611f09be3260dfe58132f",
+          "document_keyword": "011_已解密.pdf",
+          "highlight": "visual type diagram titl none ax legend label <em>交通</em> <em>事件</em> <em>分类</em>顺序码 traffic event classif sequenc code <em>交通</em> <em>事件</em>...<em>分类</em>代码traffic event classif code datapoint two label branch froma hierarch structur upper branch label...<em>交通</em> <em>事件</em> <em>分类</em>顺序码 lower branch label <em>交通</em> <em>事件</em> <em>分类</em>代码trend insight the diagram illustra hierarch or categor...code thi suggest a structur code scheme use to categor and organ traffic incid caption annot none图1 <em>编码</em>...结构<em>交通</em> <em>事件</em> <em>分类</em>顺序码 <em>交通</em> <em>事件</em> <em>分类</em>代码",
+          "id": "4f09805d66faedc0",
+          "image_id": "c3f50858944611f09a1f260dfe58132f-4f09805d66faedc0",
+          "important_keywords": [],
+          "positions": [
+            [
+              6,
+              226,
+              376,
+              91,
+              142
+            ]
+          ],
+          "similarity": 0.617752637956303,
+          "term_similarity": 0.6104108054354016,
+          "vector_similarity": 0.634883580505073
+        },
+        {
+          "content": "\n- Visual Type: Diagram  \n- Title: [Not present]  \n- Axes / Legends / Labels:  \n  - Label: \"交通事件分类顺序码\" (Traffic Event Classification Sequence Code)  \n  - Label: \"交通事件分类代码\" (Traffic Event Classification Code)  \n  - Two placeholder symbols \"XX\" are shown at the top, connected by lines to the respective labels.  \n- Data Points: [No numerical or categorical data points are present; only symbolic placeholders \"XX\" are shown.]  \n- Trends / Insights: [No trends or patterns can be derived as the image is a structural diagram illustrating labeling relationships, not data representation.]  \n- Captions / Annotations: [No captions or annotations are present in the image.]图1 编码结构\n××\n交通事件分类顺序码\n交通事件分类代码",
+          "content_ltks": "visual type diagram titl not present ax legend label label 交通 事件 分类 顺序 码 traffic event classif sequenc code label 交通 事件 分类 代码 traffic event classif code two placehold symbol xx are shown at thetop connect by lineto the respect label datapoint no numer or categor datapoint are present onli symbol placehold xx are shown trend insight no trend or pattern can be deriva the imag isa structur diagram illustr label relationship not data represent caption annot no caption or annot are present in the imag 图 1 编码 结构 交通 事件 分类 顺序 码 交通 事件 分类 代码",
+          "dataset_id": "7ebd0a808e2711f0a685620ff33f7526",
+          "doc_type_kwd": "image",
+          "document_id": "d2ee989e8e2711f0bdfa620ff33f7526",
+          "document_keyword": "012_已解密.pdf",
+          "highlight": "visual type diagram titl not present ax legend label label <em>交通</em> <em>事件</em> <em>分类</em>顺序码 traffic event classif sequenc...code label <em>交通</em> <em>事件</em> <em>分类</em>代码traffic event classif code two placehold symbol xx are shown at thetop connect...label relationship not data represent caption annot no caption or annot are present in the imag图1 <em>编码</em>...结构<em>交通</em> <em>事件</em> <em>分类</em>顺序码 <em>交通</em> <em>事件</em> <em>分类</em>代码",
+          "id": "fe45c9ea901c3626",
+          "image_id": "7ebd0a808e2711f0a685620ff33f7526-fe45c9ea901c3626",
+          "important_keywords": [],
+          "positions": [
+            [
+              6,
+              226,
+              376,
+              91,
+              142
+            ]
+          ],
+          "similarity": 0.6165846359196248,
+          "term_similarity": 0.6104108054354016,
+          "vector_similarity": 0.6309902403828123
+        }
+      ]
+    },
+    {
+      "num_chunks": 2,
+      "document_ids": [
+        "cffa9b068e2711f0bdfa620ff33f7526",
+        "066e96cc977b11f0a659b6a7ca88af7c"
+      ],
+      "chunks": [
+        {
+          "content": "\n- Visual Type: Flowchart / Hierarchical Diagram  \n- Title: [No title present]  \n- Axes / Legends / Labels:  \n  - No axes or legends are present.  \n  - The diagram includes labeled boxes connected by lines, forming a hierarchical structure.  \n  - Top-level label: \"ODC\"  \n  - Second-level labels: \"ODD\", \"驾乘人员状态\", \"车辆状态\"  \n  - Third-level labels:  \n    - Under \"ODD\": \"道路\", \"道路设施\", \"目标物\", \"天气环境\", \"数字信息\"  \n    - Under \"驾乘人员状态\": \"驾驶员/DDT后援用户状态\", \"乘客状态\"  \n    - Under \"车辆状态\": \"车辆运动状态\", \"自动驾驶系统状态\", \"车辆其他系统状态\"  \n- Data Points:  \n  - The diagram represents categorical data organized hierarchically:  \n    - ODC → ODD → 道路, 道路设施, 目标物, 天气环境, 数字信息  \n    - ODC → 驾乘人员状态 → 驾驶员/DDT后援用户状态, 乘客状态  \n    - ODC → 车辆状态 → 车辆运动状态, 自动驾驶系统状态, 车辆其他系统状态  \n- Trends / Insights:  \n  - The diagram illustrates the decomposition of the Operational Design Domain (ODC) into three primary components: ODD (Operational Design Domain), Occupant Status, and Vehicle Status.  \n  - Each component is further subdivided into specific subcategories, indicating a structured classification system for autonomous driving scenarios.  \n  - The hierarchy suggests that ODC encompasses environmental, human, and vehicle-related factors relevant to defining safe operational conditions for automated driving systems.  \n- Captions / Annotations:  \n  - No captions or annotations are present in the image.  \n  - A faint watermark \"SAC\" appears near the bottom-right corner of the \"自动驾驶系统状态\" box, but it is not part of the diagram's content and does not convey meaningful information.图1　ODC基础元素集合的第一层级及第二层级\nODC\nODD\n驾乘人员状态\n车辆状态\n驾驶员/DDT后援用户\n道路\n车辆运动状态\n状态\n道路设施\n乘客状态\n自动驾驶系统状态\n目标物\n车辆其他系统状态\n天气环境\n数字信息",
+          "content_ltks": "visual type flowchart hierarch diagram titl no titl present ax legend label no axor legend are present the diagram includ label box connect by line forma hierarch structur toplevel label odc second level label odd 驾乘 人员 状态 车辆 状态 third level label under odd 道路 道路设施 目标 物 天气 环境 数字信息 under 驾乘 人员 状态 驾驶员 ddt 后援 用户 状态 乘客 状态 under 车辆 状态 车辆 运动 状态 自动 驾驶 系统 状态 车辆 其他 系统 状态 datapoint the diagram repres categor data organ hierarch odc odd 道路 道路设施 目标 物 天气 环境 数字信息 odc 驾乘 人员 状态 驾驶员 ddt 后援 用户 状态 乘客 状态 odc 车辆 状态 车辆 运动 状态 自动 驾驶 系统 状态 车辆 其他 系统 状态 trend insight the diagram illustr the decomposit of the oper designdomain odc into three primari compon odd oper designdomain occup statu and vehicl statu each compon is further subdivid into specif subcategori indica structur classif system for autonom drive scenario the hierarchi suggest that odc encompass environment human and vehicl relat factor relev to defin safe oper condit for autom drive system caption annot no caption or annot are present in the imag a faint watermark sac appear near the bottom right corner of the 自动 驾驶 系统 状态 box but it isnot partof the diagram s content and doe not convey meaning inform 图 1 odc 基础 元素 集合 的 第一 层级 及 第二 层级 odc odd 驾乘 人员 状态 车辆 状态 驾驶员 ddt 后援 用户 道路 车辆 运动 状态 状态 道路设施 乘客 状态 自动 驾驶 系统 状态 目标 物 车辆 其他 系统 状态 天气 环境 数字信息",
+          "dataset_id": "f5efbf4c977a11f0b271b6a7ca88af7c",
+          "doc_type_kwd": "image",
+          "document_id": "066e96cc977b11f0a659b6a7ca88af7c",
+          "document_keyword": "077_已解密.pdf",
+          "highlight": "状态<em>车辆</em>运动状态<em>自动</em> <em>驾驶</em> <em>系统</em>状态<em>车辆</em>其他<em>系统</em>状态datapoint the diagram repres categor data organ hierarch odc odd...道路道路设施目标物天气环境数字信息odc驾乘人员状态驾驶员ddt后援用户状态乘客状态odc <em>车辆</em>状态<em>车辆</em>运动状态<em>自动</em> <em>驾驶</em> <em>系统</em>状态<em>车辆</em>其他<em>系统</em>...<em>驾驶</em> <em>系统</em>状态box but it isnot partof the diagram s content and doe not convey meaning inform图1 odc基础...元素集合的第一层级及第二层级odc odd驾乘人员状态<em>车辆</em>状态驾驶员ddt后援用户道路<em>车辆</em>运动状态状态道路设施乘客状态<em>自动</em> <em>驾驶</em> <em>系统</em>状态目标物...<em>车辆</em>其他<em>系统</em>状态天气环境数字信息",
+          "id": "b5944348df37deb9",
+          "image_id": "f5efbf4c977a11f0b271b6a7ca88af7c-b5944348df37deb9",
+          "important_keywords": [],
+          "positions": [
+            [
+              10,
+              94,
+              496,
+              96,
+              390
+            ]
+          ],
+          "similarity": 0.47706109626710846,
+          "term_similarity": 0.48294112120699484,
+          "vector_similarity": 0.46334103807404026
+        },
+        {
+          "content": "\n- Visual Type: Flowchart (Sequence Diagram)\n- Title: None\n- Axes / Legends / Labels: \n  - Three vertical lifelines labeled:\n    - 受理省运政系统 (Receiving Provincial Transportation System)\n    - 部级运政系统 (Ministry-Level Transportation System)\n    - 归属省运政系统 (Affiliated Provincial Transportation System)\n  - Horizontal arrows indicating message flow between systems:\n    - 营运车辆跨省备案申请 (Operating Vehicle Inter-Provincial Filing Application) → from left to 受理省运政系统\n    - 1a XB0101 → from 受理省运政系统 to 部级运政系统\n    - 1b XB0101 → from 部级运政系统 to 归属省运政系统\n    - 2a XS0122 → from 归属省运政系统 to 部级运政系统\n    - 2b XS0122 → from 部级运政系统 to 受理省运政系统\n    - 备案完成 (Filing Completed) ← from 受理省运政系统 to left\n- Data Points: \n  - Messages exchanged:\n    - 1a XB0101: Request from receiving province to ministry\n    - 1b XB0101: Request from ministry to affiliated province\n    - 2a XS0122: Response from affiliated province to ministry\n    - 2b XS0122: Response from ministry to receiving province\n  - Process initiation: 营运车辆跨省备案申请\n  - Process completion: 备案完成\n- Trends / Insights: \n  - The diagram illustrates a sequential process for inter-provincial filing of operating vehicles.\n  - It shows a two-way communication flow involving three systems: the receiving provincial system, the ministry-level system, and the affiliated provincial system.\n  - The process begins with an application submitted to the receiving province, which forwards it to the ministry (1a), then to the affiliated province (1b). The affiliated province responds back to the ministry (2a), which then relays the confirmation to the receiving province (2b), resulting in completion of filing.\n  - The use of message codes (XB0101, XS0122) suggests standardized communication protocols.\n- Captions / Annotations: None受理省运政系统\n部级运政系统\n归属省运政系统\n营运车辆\n跨省备案申请\n1a XB0101-\n-1bXB0101\n-2b XS0122-\n-2a XS0122-\n备案完成",
+          "content_ltks": "visual type flowchart sequenc diagram titl none ax legend label three vertic lifelin label 受理 省运 政 系统 receiv provinci transport system 部级 运 政 系统 ministri level transport system 归属 省运 政 系统 affili provinci transport system horizont arrow indic messag flow between system 营运 车辆 跨省 备案 申请 oper vehicl interprovinci file applic from left to 受理 省运 政 系统 1a xb0101 from 受理 省运 政 系统 to 部级 运 政 系统 1b xb0101 from 部级 运 政 系统 to 归属 省运 政 系统 2a xs0122 from 归属 省运 政 系统 to 部级 运 政 系统 2b xs0122 from 部级 运 政 系统 to 受理 省运 政 系统 备案 完成 file complet from 受理 省运 政 系统 to left datapoint messag exchang 1a xb0101 request from receiv provinc to ministri 1b xb0101 request from ministri to affili provinc 2a xs0122 respons from affili provinc to ministri 2b xs0122 respons from ministri to receiv provinc process initi 营运 车辆 跨省 备案 申请 process complet 备案 完成 trend insight the diagram illustra sequenti process for interprovinci file of oper vehicl it showa twoway commun flow involv three system the receiv provinci system the ministri level system and the affili provinci system the process begin with an applic submit to the receiv provinc which forward itto the ministri 1a then to the affili provinc 1b the affili provinc respond backto the ministri 2a which then relay the confirm to the receiv provinc 2b result incomplet of file the useof messag code xb0101 xs0122 suggest standard commun protocol caption annot none 受理 省运 政 系统 部级 运 政 系统 归属 省运 政 系统 营运 车辆 跨省 备案 申请 1a xb0101 1bxb0101 2b xs0122 2a xs0122 备案 完成",
+          "dataset_id": "7ebd0a808e2711f0a685620ff33f7526",
+          "doc_type_kwd": "image",
+          "document_id": "cffa9b068e2711f0bdfa620ff33f7526",
+          "document_keyword": "273_已解密.pdf",
+          "highlight": "transport system horizont arrow indic messag flow between system <em>营运</em> <em>车辆</em>跨省备案申请oper vehicl interprovinci...to归属省运政 <em>系统</em> 2a xs0122 from归属省运政 <em>系统</em> to部级运政<em>系统</em> 2b xs0122 from部级运政<em>系统</em> to受理省运政 <em>系统</em>备案完成file...respons from affili provinc to ministri 2b xs0122 respons from ministri to receiv provinc process initi <em>营运</em>...<em>车辆</em>跨省备案申请process complet备案完成trend insight the diagram illustra sequenti process for interprovinci...部级运政<em>系统</em>归属省运政 <em>系统</em> <em>营运</em> <em>车辆</em>跨省备案申请1a xb0101 1bxb0101 2b xs0122 2a xs0122备案完成",
+          "id": "1242cff96fe75c36",
+          "image_id": "7ebd0a808e2711f0a685620ff33f7526-1242cff96fe75c36",
+          "important_keywords": [],
+          "positions": [
+            [
+              34,
+              108,
+              482,
+              92,
+              267
+            ]
+          ],
+          "similarity": 0.47471765309014646,
+          "term_similarity": 0.48755070474296935,
+          "vector_similarity": 0.4447738659002264
+        }
+      ]
+    }
+  ]
+}
