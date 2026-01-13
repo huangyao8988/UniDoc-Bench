@@ -633,6 +633,14 @@ if __name__ == "__main__":
     if qa_filter:
         answer_types_to_process = [qa_filter] if qa_filter in answer_types_to_process else answer_types_to_process
 
+    # 统计每种 answer_type 的处理情况
+    processing_stats = {
+        'image_as_answer': {'total': 0, 'template_fail': 0, 'api_fail': 0, 'parse_fail': 0, 'success': 0, 'failures': []},
+        'image_plus_text_as_answer': {'total': 0, 'template_fail': 0, 'api_fail': 0, 'parse_fail': 0, 'success': 0, 'failures': []},
+        'text_as_answer': {'total': 0, 'template_fail': 0, 'api_fail': 0, 'parse_fail': 0, 'success': 0, 'failures': []},
+        'table_as_answer': {'total': 0, 'template_fail': 0, 'api_fail': 0, 'parse_fail': 0, 'success': 0, 'failures': []},
+    }
+
     lines = 0
     for answer_type in answer_types_to_process:
 
@@ -645,11 +653,18 @@ if __name__ == "__main__":
         for chunks, chunks_metadata, hints in tqdm(
             zip(chunks_answer, chunks_metadata_answer, hints_answer), desc=f"Generating for {answer_type}"
         ):
+            processing_stats[answer_type]['total'] += 1
             hints = flatten_unique_ignore_case(hints)
             try:
                 templates = choose_templates(chunks, chunks_metadata, args.domain_name)
                 templates = [templates[-1]]
             except Exception as e:
+                processing_stats[answer_type]['template_fail'] += 1
+                processing_stats[answer_type]['failures'].append({
+                    'stage': 'choose_templates',
+                    'error': str(e),
+                    'chunks_preview': chunks[0][:100] if chunks else ''
+                })
                 if hasattr(args, 'debug') and args.debug:
                     print(f"Warning: Failed to choose templates: {e}")
                 templates = []
@@ -689,6 +704,12 @@ if __name__ == "__main__":
                         print(f"Response from API: {response[:200]}...")
 
                 except Exception as error:
+                    processing_stats[answer_type]['api_fail'] += 1
+                    processing_stats[answer_type]['failures'].append({
+                        'stage': 'api_call',
+                        'error': str(error),
+                        'template_idx': idx
+                    })
                     if hasattr(args, 'debug') and args.debug:
                         print(f"Warning: API call failed: {error}")
                     time.sleep(idx+1)
@@ -696,6 +717,7 @@ if __name__ == "__main__":
 
                 try:
                     questions = ast.literal_eval(response.strip())
+                    processing_stats[answer_type]['success'] += 1
                     for element in questions["questions"]:
                         element["answer_type"] = answer_type
                         element["contexts"] = chunks
@@ -712,9 +734,39 @@ if __name__ == "__main__":
                             print(f"Written QA #{lines} to output file")
 
                 except Exception as error:
+                    processing_stats[answer_type]['parse_fail'] += 1
+                    processing_stats[answer_type]['failures'].append({
+                        'stage': 'parse_response',
+                        'error': str(error),
+                        'response_preview': response[:200] if response else ''
+                    })
                     if hasattr(args, 'debug') and args.debug:
                         print(f"Warning: Failed to process response: {error}")
                     pass
+
+    # 输出统计报告
+    print("\n" + "=" * 80)
+    print("PROCESSING STATISTICS REPORT")
+    print("=" * 80)
+
+    for atype, stats in processing_stats.items():
+        print(f"\n{atype}:")
+        print(f"  Total groups: {stats['total']}")
+        print(f"  Success: {stats['success']}")
+        print(f"  Failed (choose_templates): {stats['template_fail']}")
+        print(f"  Failed (API call): {stats['api_fail']}")
+        print(f"  Failed (parse response): {stats['parse_fail']}")
+
+        if stats['failures'] and hasattr(args, 'debug') and args.debug:
+            print(f"\n  Failure details (first 5):")
+            for i, fail in enumerate(stats['failures'][:5]):
+                print(f"    {i+1}. Stage: {fail['stage']}, Error: {fail.get('error', 'N/A')}")
+                if 'chunks_preview' in fail:
+                    print(f"       Chunks preview: {fail['chunks_preview']}")
+                if 'response_preview' in fail:
+                    print(f"       Response preview: {fail['response_preview']}")
+
+    print("\n" + "=" * 80)
 
     output_file.close()
 
