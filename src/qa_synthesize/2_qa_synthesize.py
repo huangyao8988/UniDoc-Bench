@@ -29,22 +29,30 @@ def chunk_match_back(chunk, chunks_metadata, folder_elements):
     output dict: element_id: img_path
     """
     tab_fig_dict = find_fig_tables(chunk)
-    
+
     elements_dict = dict()
-    
-    if 'source' not in chunks_metadata:
+
+    # 兼容外部检索数据：如果没有 source 字段，从 document_keyword 构造
+    file_name = None
+    if 'source' in chunks_metadata:
+        file_name = os.path.splitext(os.path.basename(chunks_metadata["source"]))[0].split("_id")[0]
+    elif 'document_keyword' in chunks_metadata:
+        # 从 document_keyword 构造（例如：026_已解密.pdf -> 026_已解密）
+        file_name = chunks_metadata["document_keyword"].replace('.pdf', '')
+
+    # 如果没有文件名信息，返回空字典（但不影响后续处理）
+    if not file_name:
         if hasattr(args, 'debug') and args.debug:
-            print(f"Warning: 'source' key not found in chunks_metadata, skipping image/table loading")
+            print(f"Warning: No file name info found in chunks_metadata")
         return {}, {}
-    
-    file_name = os.path.splitext(os.path.basename(chunks_metadata["source"]))[0].split("_id")[0]
+
     elements_file_path = os.path.join(folder_elements, file_name + ".json")
-    
+
     if not os.path.exists(elements_file_path):
         if hasattr(args, 'debug') and args.debug:
             print(f"Warning: Elements file not found: {elements_file_path}")
         return {}, {}
-    
+
     try:
         with open(elements_file_path, 'r') as f:
             elements = json.load(f)
