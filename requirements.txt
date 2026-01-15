@@ -1,0 +1,2 @@
+# Langfuse integration for dataset import
+langfuse>=2.0.0
